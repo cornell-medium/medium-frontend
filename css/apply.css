@@ -1,0 +1,165 @@
+h1 {
+  cursor: default;
+  padding-top: 40px;
+  color: #ff4e88;
+  font-family: 'Source Code Pro';
+  font-size: 22px;
+  text-align: center; }
+
+h2 {
+  font-family: 'Source Sans Pro';
+  font-size: 15px;
+  font-weight: normal; }
+
+div#positions {
+  position: relative;
+  top: 10px; }
+  div#positions div.description {
+    display: none;
+    text-align: left;
+    font-size: 15px;
+    border-bottom: 3px solid #CCCCCC;
+    padding-right: 15px; }
+  div#positions div.position {
+    display: inline-block;
+    position: relative;
+    top: 0px;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 10px;
+    width: 250px;
+    height: 100px;
+    border: 3px solid #ff4e88;
+    transition: ease-in-out 0.25s;
+    box-shadow: inset 0px 0px 0px 0px #ff4e88;
+    text-align: center; }
+    div#positions div.position p.title {
+      margin-top: 25px;
+      font-family: 'Source Code Pro';
+      font-size: 20px;
+      font-weight: 600;
+      transition: ease-in-out 0.2s; }
+    div#positions div.position p.team {
+      margin-top: -19px;
+      font-family: 'Source Sans Pro';
+      font-size: 15px;
+      transition: ease-in-out 0.2s; }
+  div#positions div.position:hover {
+    cursor: pointer;
+    box-shadow: inset 250px 0px 0px 0px #ff4e88; }
+    div#positions div.position:hover p {
+      color: white; }
+  div#positions h2 {
+    padding-left: 6px; }
+  @media (max-width: 551px) {
+    div#positions {
+      text-align: center; } }
+
+form {
+  position: relative;
+  top: 10px; }
+  form div.radio-group {
+    padding-left: 10px; }
+  form div.radio-indicator {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: 3px solid #CCCCCC;
+    transition: ease-in 0.10s; }
+    form div.radio-indicator div {
+      position: absolute;
+      margin-top: 3px;
+      margin-left: 3px;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #FFF;
+      transition: ease-in 0.10s; }
+  form div.radio-single {
+    display: inline-block;
+    padding-right: 50px; }
+    form div.radio-single label {
+      position: relative;
+      top: -6px; }
+  form div.radio-single input:focus ~ div.radio-indicator div {
+    background: #ff4e88; }
+  form div.radio-single input:checked ~ div.radio-indicator div {
+    background: #ff4e88; }
+  form div.radio-single div.radio-indicator:after {
+    top: 7px;
+    left: 7px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #DDD; }
+  form div.g-recaptcha {
+    padding-top: 10px;
+    padding-bottom: 10px; }
+  form input[type=text] {
+    outline: none;
+    display: block;
+    width: 100%;
+    height: 25px;
+    border: 0px;
+    border-bottom: 3px solid #CCCCCC;
+    background: none;
+    padding-left: 4px;
+    padding-bottom: 10px;
+    margin: 33px 3px 30px 3px;
+    font-family: 'Source Sans Pro';
+    font-size: 15px;
+    transition: ease-in-out 0.15s; }
+  form input[type=text]:focus {
+    border-bottom: 3px solid #ff4e88; }
+  form input[type=radio] {
+    position: absolute;
+    margin-top: 1px;
+    margin-left: 1px;
+    z-index: 2;
+    width: 21px;
+    height: 20px;
+    opacity: 0; }
+  form input[type=submit] {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 3px solid #ff4e88;
+    background: #ff4e88;
+    color: white;
+    font-family: 'Source Code Pro';
+    font-size: 18px;
+    margin-top: 10px;
+    padding: 11px 20px 8px 20px;
+    transition: ease-in-out 0.1s; }
+  form input[type=submit]:hover {
+    background: white;
+    color: #ff4e88;
+    cursor: pointer; }
+  form label {
+    margin-left: 7px;
+    font-family: 'Source Sans Pro';
+    font-size: 15px;
+    transition: ease-in-out 0.15s; }
+  form label.dynamic {
+    position: absolute;
+    margin-top: -57px;
+    z-index: -1; }
+  form textarea {
+    outline: none;
+    display: block;
+    width: 100%;
+    height: 100px;
+    border: 3px solid #CCCCCC;
+    background: none;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-family: 'Source Sans Pro';
+    font-size: 15px;
+    resize: none;
+    transition: ease-in-out 0.15s; }
+  form textarea:focus {
+    border: 3px solid #ff4e88; }
+
+/*# sourceMappingURL=apply.css.map */

@@ -1,0 +1,213 @@
+a#join-us {
+  position: absolute;
+  top: 130px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #ff4e88;
+  font-size: 18px;
+  text-decoration: none;
+  border-bottom: 3px solid rgba(255, 78, 136, 0);
+  transition: ease-in-out 0.1s; }
+
+a#join-us:hover {
+  border-bottom: 3px solid #ff4e88; }
+
+div#current-sect {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 100px;
+  width: 8px;
+  background: #ff4e88; }
+
+div#current-sect:hover {
+  cursor: default; }
+
+div#current-sect div {
+  position: relative;
+  top: 50%;
+  transform: translate(-12%, -50%) rotate(270deg);
+  color: black;
+  height: auto;
+  display: inline-block;
+  font-family: 'Source Code Pro';
+  white-space: nowrap; }
+
+div#dynamic-text {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -24vw;
+  color: #ff4e88;
+  font-family: 'Source Code Pro';
+  font-size: 3vw;
+  font-weight: 600;
+  text-align: center; }
+
+div#indicator-left {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 8px;
+  height: 100%;
+  background: #CCCCCC; }
+
+div#join form div {
+  float: left;
+  text-align: center;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%); }
+
+div#join form i {
+  position: relative;
+  left: -8px;
+  top: 6px;
+  color: #CCCCCC; }
+
+div#join form i:hover {
+  cursor: default; }
+
+div#join input[type=email] {
+  display: inline-block;
+  border: 0px;
+  border-bottom: 1px solid #CCCCCC;
+  background: none;
+  color: #AAAAAA;
+  padding: 5px 0px 10px 30px;
+  margin-top: 10px;
+  margin-left: -30px;
+  font-family: 'Source Code Pro';
+  font-size: 18px; }
+
+div#join input[type=submit] {
+  display: inline-block;
+  border: 3px solid #ff4e88;
+  background: #ff4e88;
+  color: white;
+  font-family: 'Source Code Pro';
+  font-size: 18px;
+  margin-top: 10px;
+  padding: 11px 20px 8px 20px;
+  transition: ease-in-out 0.1s; }
+
+div#join input[type=submit]:hover {
+  background: white;
+  color: #ff4e88;
+  cursor: pointer; }
+
+div#join input:focus {
+  outline: none; }
+
+div#join div.response {
+  margin: 25px 30px 0px 30px;
+  font-family: 'Source Sans Pro';
+  font-size: 14px; }
+
+div.section {
+  position: relative;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100vh;
+  padding: 0px 0px 4px 0px;
+  margin: 0px;
+  border-bottom: 1px dashed #CCCCCC; }
+
+div.section div {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  padding-right: 15px;
+  padding-left: 15px;
+  margin: 0px;
+  font-family: 'Source Code Pro'; }
+
+div.section p {
+  font-family: 'Source Sans Pro';
+  font-size: 18px; }
+
+div#splash:hover {
+  cursor: default; }
+
+div#splash h1 {
+  background: url("../imgs/back_gif.gif");
+  background-repeat: repeat-x;
+  background-position: 0 0;
+  background-size: contain;
+  font-family: 'Cooper Hewitt Bold';
+  font-size: 35vw;
+  text-align: center;
+  opacity: 0.2;
+  color: transparent;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 0; }
+
+span.block-down-arrow {
+  bottom: 12px; }
+
+span.block-up-arrow {
+  top: 8px; }
+
+span.nav-arrow {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  color: #999999;
+  transition: ease-in-out 0.3s; }
+
+span.nav-arrow:hover {
+  cursor: pointer;
+  color: #ff4e88; }
+
+span.nav-arrow p {
+  color: white;
+  font-family: 'Source Code Pro';
+  font-size: 12px;
+  padding: 0px;
+  transition: ease-in-out 0.3s; }
+
+span.nav-arrow:hover p {
+  color: #ff4e88; }
+
+span#typed {
+  text-align: center;
+  letter-spacing: 2px; }
+
+span.typed-cursor {
+  background: #ff4e88;
+  padding-right: 4px;
+  padding-top: 5px;
+  margin-left: 8px;
+  opacity: 1;
+  -webkit-animation: blink 0.7s infinite;
+  -moz-animation: blink 0.7s infinite;
+  animation: blink 0.7s infinite; }
+
+@keyframes blink {
+  0% {
+    opacity: 1; }
+  50% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+@-webkit-keyframes blink {
+  0% {
+    opacity: 1; }
+  50% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+@-moz-keyframes blink {
+  0% {
+    opacity: 1; }
+  50% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+/*# sourceMappingURL=home.css.map */

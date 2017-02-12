@@ -1,0 +1,39 @@
+{% load static %}
+
+{% block styles %}
+    <link rel="stylesheet" href="{% static "css/noapply.css" %}">
+{% endblock %}
+
+{% include "header.html" %}
+
+<div id="watermark">
+		<span>:(</span>
+	</div>
+<div class="content-wrapper">
+	<div id="center-box">
+		<h1 class="unselectable">Medium is not currently accepting applications.</h1>
+		<p>We typically recruit new members at the beginning of the academic year.
+		</p>
+
+		<h1 class="unselectable">Interested in all things design?</h1>
+		<p>Join our list-serve for regular emails about our upcoming events and happenings on campus.
+		</p>
+
+		<div id="form-wrapper">
+			<form action="//facebook.us14.list-manage.com/subscribe/post?u=c1fc50d19af45d5476d2e29dd&amp;id=e9b8d5f6b3" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+				<div><i class="material-icons unselectable">email</i>
+					<input type="email" value="" placeholder="email" name="EMAIL" id="mce-EMAIL">
+					<div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_c1fc50d19af45d5476d2e29dd_e9b8d5f6b3" tabindex="-1" value=""></div>
+					<input type="submit" value="I can't say no" name="subscribe" id="mc-embedded-subscribe"></div>
+					<div id="mce-responses">
+						<div class="response" id="mce-error-response" style="display:none"></div>
+						<div class="response" id="mce-success-response" style="display:none"></div>
+					</div>
+			</form>
+		</div>
+	</div>
+</div>
+
+<script src="{% static "js/apply.js" %}"></script>
+
+{% include "footer.html" %}

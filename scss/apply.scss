@@ -1,0 +1,208 @@
+@import "utilities/variables";
+
+h1 {
+	cursor: default;
+	padding-top: 40px;
+	color: $pink;
+	font-family: 'Source Code Pro';
+	font-size: 22px;
+	text-align: center;
+}
+
+h2 {
+	font-family: 'Source Sans Pro';
+	font-size: 15px;
+	font-weight: normal;
+}
+
+div#positions {
+	position: relative;
+	top: 10px;
+
+	div.description {
+		display: none;
+		text-align: left;
+		font-size: 15px;
+		border-bottom: 3px solid #CCCCCC;
+		padding-right: 15px;
+		// transition: border ease-in-out 0.3s;
+	}
+	div.position {
+		display: inline-block;
+		position: relative;
+		top: 0px;
+		margin-left: 5px;
+		margin-right: 5px;
+		margin-bottom: 10px;
+		width: 250px;
+		height: 100px;
+		border: 3px solid $pink;
+
+		transition: ease-in-out 0.25s;
+		box-shadow: inset 0px 0px 0px 0px $pink;
+
+		text-align: center;
+
+		p.title {
+			margin-top: 25px;
+			font-family: 'Source Code Pro';
+			font-size: 20px;
+			font-weight: 600;
+			transition: ease-in-out 0.2s;
+		}
+		p.team {
+			margin-top: -19px;
+			font-family: 'Source Sans Pro';
+			font-size: 15px;
+			transition: ease-in-out 0.2s;
+		}
+	}
+	div.position:hover {
+		cursor: pointer;
+		box-shadow: inset 250px 0px 0px 0px $pink;
+
+		p {
+			color: white;
+		}
+	}
+
+	h2 {
+		padding-left: 6px;
+	}
+	
+	@media (max-width: 551px) {
+		text-align: center;
+
+	}
+}
+
+form {
+	position: relative;
+	top: 10px;
+	// background: #BBB;
+
+	div.radio-group {
+		padding-left: 10px;
+	}
+	div.radio-indicator {
+		display: inline-block;
+		width: 16px;
+		height: 16px;
+		border-radius: 50%;
+		border: 3px solid #CCCCCC;
+		transition: ease-in 0.10s;
+
+		div {
+			position: absolute;
+			margin-top: 3px;
+			margin-left: 3px;
+			width: 10px;
+			height: 10px;
+			border-radius: 50%;
+			background: #FFF;
+			transition: ease-in 0.10s;
+		}
+	}
+	div.radio-single {
+		display: inline-block;
+		padding-right: 50px;
+
+		label {
+			position: relative;
+			top: -6px;
+		}
+	}
+	div.radio-single input:focus ~ div.radio-indicator div {
+		background: $pink;
+	}
+	div.radio-single input:checked ~ div.radio-indicator div {
+			background: $pink;
+	}
+	div.radio-single div.radio-indicator:after {
+		top: 7px;
+		left: 7px;
+		width: 6px;
+		height: 6px;
+		border-radius: 50%;
+		background: #DDD;
+	}
+	div.g-recaptcha {
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+	input[type=text]  {
+		outline: none;
+		display: block;
+		width: 100%;
+		height: 25px;
+		border: 0px;
+		border-bottom: 3px solid #CCCCCC;
+		background: none;
+		padding-left: 4px;
+		padding-bottom: 10px;
+		margin: 33px 3px 30px 3px;
+		font-family: 'Source Sans Pro';
+		font-size: 15px;
+		transition: ease-in-out 0.15s;
+	}
+	input[type=text]:focus {
+		border-bottom: 3px solid $pink;
+	}
+	input[type=radio] {
+		position: absolute;
+		margin-top: 1px;
+		margin-left: 1px;
+		z-index: 2;
+		width: 21px;
+		height: 20px;
+		opacity: 0;
+	}
+	input[type=submit] {
+		position: relative;
+		left: 50%;
+		transform: translateX(-50%);
+		border: 3px solid $pink;
+		background: $pink;
+		color: white;
+		font-family: 'Source Code Pro';
+		font-size: 18px;
+		margin-top: 10px;
+		padding: 11px 20px 8px 20px;
+		transition: ease-in-out 0.1s;
+	}
+	input[type=submit]:hover {
+		background: white;
+		color: $pink;
+		cursor: pointer;
+	}
+
+	label {
+		margin-left: 7px;
+		font-family: 'Source Sans Pro';
+		font-size: 15px;
+		transition: ease-in-out 0.15s;
+	}
+	label.dynamic {
+		position: absolute;
+		margin-top: -57px;
+		z-index: -1;
+	}
+	textarea {
+		outline: none;
+		display: block;
+		width: 100%;
+		height: 100px;
+		border: 3px solid #CCCCCC;
+		background: none;
+		padding: 10px;
+		margin-top: 10px;
+		margin-bottom: 10px;
+		font-family: 'Source Sans Pro';
+		font-size: 15px;
+		resize: none;
+		transition: ease-in-out 0.15s;
+	}
+	textarea:focus {
+		border: 3px solid $pink;
+	}
+}

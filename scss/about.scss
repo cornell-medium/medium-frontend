@@ -1,0 +1,57 @@
+@import "utilities/variables";
+
+div#main-wrap {
+	margin-top: 150px;
+}
+div.section {
+	margin-bottom: 90px;
+}
+div.section p {
+	font-family: 'Source Sans Pro';
+	font-size: 15px;
+}
+div.section strong {
+	font-weight: 700;
+}
+
+h1 {
+	padding-bottom: 30px;
+	color: $pink;
+	font-family: 'Source Code Pro';
+	font-size: 22px;
+	text-align: center;
+}
+
+h2 {
+	padding-top: 45px;
+	padding-bottom: 15px;
+	color: $pink;
+	font-family: 'Source Code Pro';
+	font-size: 17px;
+	text-align: center;
+}
+
+img.section-banner {
+	width: 100%;
+}
+
+li {
+	padding-bottom: 10px;
+}
+li img {
+	float: left;
+	width: 60px;
+	height: 60px;
+	padding-right: 25px;
+}
+
+ol {
+	font-family: 'Source Sans Pro';
+	font-size: 15px;
+}
+
+ul {
+	list-style-type: none;
+	padding-left: 0;
+	padding-right: 0;
+}
