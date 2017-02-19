@@ -18,7 +18,7 @@ div#watermark {
     top: 60%;
     transform: translateY(-50%);
     left: 45%;
-    color: #ff4e88;
+    color: #df0985;
     opacity: 0.1;
     font-family: 'Source Code Pro';
     font-size: 50vw;
@@ -55,8 +55,8 @@ input[type=email] {
 
 input[type=submit] {
   display: inline-block;
-  border: 3px solid #ff4e88;
-  background: #ff4e88;
+  border: 3px solid #df0985;
+  background: #df0985;
   color: white;
   font-family: 'Source Code Pro';
   font-size: 18px;
@@ -66,7 +66,7 @@ input[type=submit] {
 
 input[type=submit]:hover {
   background: white;
-  color: #ff4e88;
+  color: #df0985;
   cursor: pointer; }
 
 input:focus {

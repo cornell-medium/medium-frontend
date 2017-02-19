@@ -1,3 +1,7 @@
-$blue: #52D8D8;
-$pink-rgb: (255, 78, 136);
+// Colors from the style guide
+$yellow-rgb: (250, 224, 20);
+$yellow: rgb(nth($yellow-rgb, 1), nth($yellow-rgb, 2), nth($yellow-rgb, 3));
+$blue-rgb: (0, 161, 211);
+$blue: rgb(nth($blue-rgb, 1), nth($blue-rgb, 2), nth($blue-rgb, 3));
+$pink-rgb: (223, 9, 133);
 $pink: rgb(nth($pink-rgb, 1), nth($pink-rgb, 2), nth($pink-rgb, 3));

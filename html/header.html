@@ -23,6 +23,25 @@
 <body>
 	<header class="content-wrapper">
 		<a href="{% url 'index' %}"><img id="logo" src="{% static "imgs/logo.png" %}"></a>
+
+		<div id="nav-bar">
+			<div>
+				<div class="unselectable" id="background">&nbsp;</div>
+				<ul>
+					<li><a class="nav-link" data-icon="home" href="{% url 'index' %}">Home</a></li>
+					<li><a class="nav-link" data-icon="comp" href="{% url 'competition' %}">Competition</a></li>
+					<li><a class="nav-link" data-icon="events" href="{% url 'events' %}">Events</a></li>
+					<li><a class="nav-link" data-icon="about" href="{% url 'about' %}">About Us</a></li>
+					<li><a class="nav-link" data-icon="join" href="{% url 'apply' %}">Join Us</a></li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="indicator">
+			<img id="ind-1" src="{% static "imgs/navigation/events_pink.png" %}">
+			<img id="ind-2" src="{% static "imgs/navigation/events_white.png" %}">
+			<img id="ind-3" src="{% static "imgs/navigation/events_pink.png" %}">
+		</div>
 	</header>
 
 	<!-- Always on top, fixed on page -->

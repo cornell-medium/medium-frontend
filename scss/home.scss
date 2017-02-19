@@ -8,11 +8,11 @@ a#join-us {
 	color: $pink;
 	font-size: 18px;
 	text-decoration: none;
-	border-bottom: 3px solid rgba(nth($pink-rgb, 1), nth($pink-rgb, 2), nth($pink-rgb, 3), 0.0);
+	border-bottom: 3px solid rgba(nth($blue-rgb, 1), nth($blue-rgb, 2), nth($blue-rgb, 3), 0.0);
 	transition: ease-in-out 0.1s;
 }
 a#join-us:hover {
-	border-bottom: 3px solid rgba(nth($pink-rgb, 1), nth($pink-rgb, 2), nth($pink-rgb, 3), 1.0);
+	border-bottom: 3px solid rgba(nth($blue-rgb, 1), nth($blue-rgb, 2), nth($blue-rgb, 3), 1.0);
 }
 div#current-sect {
 	position: fixed;
@@ -20,7 +20,7 @@ div#current-sect {
 	transform: translateY(-50%);
 	height: 100px;
 	width: 8px;
-	background: $pink;
+	background: $blue;
 }
 div#current-sect:hover {
 	cursor: default;
@@ -32,7 +32,6 @@ div#current-sect div {
 	color: black;
 	height: auto;
 	display: inline-block;
-	font-family: 'Source Code Pro';
 	white-space: nowrap;
 }
 div#dynamic-text {
@@ -40,8 +39,7 @@ div#dynamic-text {
 	left: 50%;
 	transform: translateX(-50%);
 	top: -24vw;
-	color: $pink;
-	font-family: 'Source Code Pro';
+	color: $blue;
 	font-size: 3vw;
 	font-weight: 600;
 	text-align: center;
@@ -79,15 +77,13 @@ div#join input[type=email] {
 	padding: 5px 0px 10px 30px;
 	margin-top: 10px;
 	margin-left: -30px;
-	font-family: 'Source Code Pro';
 	font-size: 18px;
 }
 div#join input[type=submit] {
 	display: inline-block;
-	border: 3px solid $pink;
-	background: $pink;
+	border: 3px solid $blue;
+	background: $blue;
 	color: white;
-	font-family: 'Source Code Pro';
 	font-size: 18px;
 	margin-top: 10px;
 	padding: 11px 20px 8px 20px;
@@ -95,7 +91,7 @@ div#join input[type=submit] {
 }
 div#join input[type=submit]:hover {
 	background: white;
-	color: $pink;
+	color: $blue;
 	cursor: pointer;
 }
 div#join input:focus {
@@ -103,7 +99,6 @@ div#join input:focus {
 }
 div#join div.response {
 	margin: 25px 30px 0px 30px;
-	font-family: 'Source Sans Pro';
 	font-size: 14px;
 }
 div.section {
@@ -124,10 +119,8 @@ div.section div {
 	padding-right: 15px;
 	padding-left: 15px;
 	margin: 0px;
-	font-family: 'Source Code Pro';
 }
 div.section p {
-	font-family: 'Source Sans Pro';
 	font-size: 18px;
 }
 div#splash:hover {
@@ -138,7 +131,7 @@ div#splash h1 {
     background-repeat:repeat-x;
     background-position:0 0;
     background-size: contain;
-    font-family: 'Cooper Hewitt Bold';
+	font-weight: bolder;
     font-size: 35vw;
     text-align: center;
     opacity: 0.2;
@@ -166,24 +159,23 @@ span.nav-arrow {
 }
 span.nav-arrow:hover {
 	cursor: pointer;
-	color: $pink;
+	color: $blue;
 }
 span.nav-arrow p {
 	color: white;
-	font-family: 'Source Code Pro';
 	font-size: 12px;
 	padding: 0px;
 	transition: ease-in-out 0.3s;
 }
 span.nav-arrow:hover p {
-	color: $pink;
+	color: $blue;
 }
 span#typed {
 	text-align: center;
 	letter-spacing: 2px;
 }
 span.typed-cursor {
-	background: $pink;
+	background: $blue;
 	padding-right: 4px;
 	padding-top: 5px;
 	margin-left: 8px;

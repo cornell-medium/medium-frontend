@@ -1,6 +1,101 @@
 @font-face {
-  font-family: "Cooper Hewitt Bold";
-  src: url("../imgs/CooperHewitt-Bold.woff") format("woff"); }
+  font-family: "Cooper Hewitt";
+  src: url("../fonts/CooperHewitt-Thin.woff") format("woff");
+  font-style: normal;
+  font-weight: 200; }
+@font-face {
+  font-family: "Cooper Hewitt";
+  src: url("../fonts/CooperHewitt-ThinItalic.woff") format("woff");
+  font-style: italic;
+  font-weight: 200; }
+@font-face {
+  font-family: "Cooper Hewitt";
+  src: url("../fonts/CooperHewitt-Light.woff") format("woff");
+  font-style: normal;
+  font-weight: 300; }
+@font-face {
+  font-family: "Cooper Hewitt";
+  src: url("../fonts/CooperHewitt-LightItalic.woff") format("woff");
+  font-style: italic;
+  font-weight: 300; }
+@font-face {
+  font-family: "Cooper Hewitt";
+  src: url("../fonts/CooperHewitt-Book.woff") format("woff");
+  font-style: normal;
+  font-weight: 400; }
+@font-face {
+  font-family: "Cooper Hewitt";
+  src: url("../fonts/CooperHewitt-BookItalic.woff") format("woff");
+  font-style: italic;
+  font-weight: 400; }
+@font-face {
+  font-family: "Cooper Hewitt";
+  src: url("../fonts/CooperHewitt-Medium.woff") format("woff");
+  font-style: normal;
+  font-weight: 500; }
+@font-face {
+  font-family: "Cooper Hewitt";
+  src: url("../fonts/CooperHewitt-MediumItalic.woff") format("woff");
+  font-style: italic;
+  font-weight: 500; }
+@font-face {
+  font-family: "Cooper Hewitt";
+  src: url("../fonts/CooperHewitt-SemiBold.woff") format("woff");
+  font-style: normal;
+  font-weight: 600; }
+@font-face {
+  font-family: "Cooper Hewitt";
+  src: url("../fonts/CooperHewitt-SemiBoldItalic.woff") format("woff");
+  font-style: italic;
+  font-weight: 600; }
+@font-face {
+  font-family: "Cooper Hewitt";
+  src: url("../fonts/CooperHewitt-Bold.woff") format("woff");
+  font-style: normal;
+  font-weight: 700; }
+@font-face {
+  font-family: "Cooper Hewitt";
+  src: url("../fonts/CooperHewitt-BoldItalic.woff") format("woff");
+  font-style: italic;
+  font-weight: 700; }
+@font-face {
+  font-family: "Cooper Hewitt";
+  src: url("../fonts/CooperHewitt-Heavy.woff") format("woff");
+  font-style: normal;
+  font-weight: 800; }
+@font-face {
+  font-family: "Cooper Hewitt";
+  src: url("../fonts/CooperHewitt-HeavyItalic.woff") format("woff");
+  font-style: italic;
+  font-weight: 800; }
+/*
+	Glitch code thanks to: Chris Coyier
+	https://css-tricks.com/glitch-effect-text-images-svg/
+*/
+/* 
+  (IMAGE) PARAMS
+  =================
+  @mixin imgGlitch($name, $intensity, $width, $height, $top, $left)
+  =================
+  1. Namespace
+  2. Intensity
+  3. Width (px)
+  4. Height (px)
+  5. Top (px, abs pos)
+  6. Left (px, abs pos)
+*/
+/*
+  (TEXT) PARAMS
+  =================
+  1. Namespace
+  2. Intensity
+  3. Text color
+  4. Background color (flat)
+  5. Highlight #1 color
+  6. Highlight #2 color
+  7. Width (px)
+  8. Height (px)
+*/
 .content-wrapper {
   position: relative;
   display: block;
@@ -16,35 +111,33 @@
   user-select: none; }
 
 body {
-  font-family: 'Source Sans Pro';
+  font-family: 'Cooper Hewitt';
   font-size: 15px; }
 
 button.hamburger {
   position: absolute;
-  right: 0px;
-  top: 40px; }
+  right: 30px;
+  top: 22px; }
 
 button.hamburger:focus {
   outline: 0; }
 
 div#attributions {
   padding-bottom: 5px;
-  font-family: 'Source Sans Pro';
   font-size: 9px;
   text-align: center; }
 
 div#attributions a {
-  color: #ff4e88;
+  color: #00a1d3;
   text-decoration: none; }
 
 div#hamburger-wrapper {
+  display: none;
   position: absolute;
   max-width: 900px;
   width: 100%;
   top: 0px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 101; }
+  z-index: 11; }
 
 div#main-wrap {
   padding-left: 30px;
@@ -56,45 +149,165 @@ div#nav-screen {
   left: 0px;
   width: 100%;
   height: 100%;
-  background: rgba(255, 78, 136, 0.9);
+  background: rgba(0, 161, 211, 0.95);
   display: none;
-  z-index: 100; }
+  z-index: 10; }
+  div#nav-screen a {
+    display: block;
+    padding: 19px 30px 15px 0px;
+    color: #FFFFFF;
+    font-size: 25px;
+    font-weight: 600;
+    text-align: right;
+    text-decoration: none;
+    transition: ease-in-out 0.1s; }
+  div#nav-screen a:hover {
+    background: rgba(255, 255, 255, 0.7);
+    color: #00a1d3; }
+  div#nav-screen ul {
+    position: relative;
+    top: 50%;
+    left: 0px;
+    transform: translateY(-50%);
+    margin: 0px;
+    padding: 0px;
+    list-style: none; }
 
-div#nav-screen ul {
-  position: relative;
-  top: 50%;
-  left: 0px;
-  transform: translateY(-50%);
-  margin: 0px;
-  padding: 0px;
-  list-style: none; }
-
-div#nav-screen a {
-  display: block;
-  padding: 19px 30px 15px 0px;
-  color: #FFFFFF;
-  font-family: 'Source Code Pro';
-  font-size: 25px;
-  font-weight: 600;
-  text-align: right;
-  text-decoration: none;
-  transition: ease-in-out 0.1s; }
-
-div#nav-screen a:hover {
-  background: rgba(255, 255, 255, 0.7);
-  color: #ff4e88; }
-
-img#logo {
-  position: relative;
+header {
+  position: absolute;
+  z-index: 10;
   display: inline-block;
-  top: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  max-width: 200px; }
+  padding-left: 30px;
+  padding-right: 30px;
+  overflow: hidden; }
+  header div.indicator {
+    display: none;
+    position: relative;
+    float: right;
+    right: 60px;
+    top: 13px; }
+@keyframes indicator-anim-1 {
+  0% {
+    clip: rect(14px, 50px, 25px, 0); }
+  6.66667% {
+    clip: rect(60px, 50px, 2px, 0); }
+  13.33333% {
+    clip: rect(49px, 50px, 35px, 0); }
+  20% {
+    clip: rect(21px, 50px, 26px, 0); }
+  26.66667% {
+    clip: rect(30px, 50px, 21px, 0); }
+  33.33333% {
+    clip: rect(60px, 50px, 36px, 0); }
+  40% {
+    clip: rect(49px, 50px, 37px, 0); }
+  46.66667% {
+    clip: rect(4px, 50px, 8px, 0); }
+  53.33333% {
+    clip: rect(47px, 50px, 21px, 0); }
+  60% {
+    clip: rect(39px, 50px, 13px, 0); }
+  66.66667% {
+    clip: rect(27px, 50px, 18px, 0); }
+  73.33333% {
+    clip: rect(25px, 50px, 17px, 0); }
+  80% {
+    clip: rect(54px, 50px, 23px, 0); }
+  86.66667% {
+    clip: rect(35px, 50px, 25px, 0); }
+  93.33333% {
+    clip: rect(48px, 50px, 2px, 0); }
+  100% {
+    clip: rect(13px, 50px, 32px, 0); } }
+@keyframes indicator-anim-2 {
+  0% {
+    clip: rect(15px, 50px, 7px, 0); }
+  6.66667% {
+    clip: rect(60px, 50px, 32px, 0); }
+  13.33333% {
+    clip: rect(39px, 50px, 33px, 0); }
+  20% {
+    clip: rect(14px, 50px, 22px, 0); }
+  26.66667% {
+    clip: rect(23px, 50px, 8px, 0); }
+  33.33333% {
+    clip: rect(50px, 50px, 16px, 0); }
+  40% {
+    clip: rect(23px, 50px, 25px, 0); }
+  46.66667% {
+    clip: rect(35px, 50px, 15px, 0); }
+  53.33333% {
+    clip: rect(15px, 50px, 23px, 0); }
+  60% {
+    clip: rect(20px, 50px, 5px, 0); }
+  66.66667% {
+    clip: rect(7px, 50px, 8px, 0); }
+  73.33333% {
+    clip: rect(60px, 50px, 30px, 0); }
+  80% {
+    clip: rect(33px, 50px, 5px, 0); }
+  86.66667% {
+    clip: rect(64px, 50px, 17px, 0); }
+  93.33333% {
+    clip: rect(13px, 50px, 28px, 0); }
+  100% {
+    clip: rect(3px, 50px, 38px, 0); } }
+    header div.indicator > img {
+      position: absolute;
+      top: 0px;
+      left: 0px; }
+    header div.indicator > img:nth-child(2),
+    header div.indicator > img:nth-child(3) {
+      clip: rect(0, 0, 0, 0); }
+    header div.indicator > img:nth-child(2) {
+      left: 2px;
+      animation: indicator-anim-1 3s infinite linear alternate-reverse; }
+    header div.indicator > img:nth-child(3) {
+      left: -2px;
+      animation: indicator-anim-2 2s infinite linear alternate-reverse; }
+    header div.indicator img {
+      max-height: 50px; }
+  header div#nav-bar {
+    display: none;
+    position: relative;
+    float: right; }
+    header div#nav-bar a {
+      border-bottom: 2px solid rgba(0, 161, 211, 0);
+      color: #848484;
+      font-weight: 500;
+      text-decoration: none;
+      padding-bottom: 3px;
+      transition: ease-in-out 0.1s; }
+    header div#nav-bar a:hover {
+      color: black;
+      border-bottom: 2px solid #00a1d3; }
+    header div#nav-bar div {
+      position: relative;
+      top: 18px; }
+      header div#nav-bar div div#background {
+        position: absolute;
+        top: 3px;
+        left: 10px;
+        background: #F3F3F3;
+        width: 110%;
+        height: 11px; }
+      header div#nav-bar div ul {
+        position: relative;
+        list-style: none;
+        padding: 0; }
+        header div#nav-bar div ul li {
+          display: inline-block;
+          padding: 0;
+          margin-left: 20px; }
+  header img#logo {
+    position: relative;
+    padding-bottom: 10px;
+    top: 10px;
+    left: 0px;
+    max-width: 145px; }
 
 h1 {
-  color: #ff4e88;
-  font-family: 'Source Code Pro';
+  color: #00a1d3;
   font-size: 22px;
   font-weight: 600;
   text-align: center; }

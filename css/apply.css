@@ -1,7 +1,7 @@
 h1 {
   cursor: default;
   padding-top: 40px;
-  color: #ff4e88;
+  color: #df0985;
   font-family: 'Source Code Pro';
   font-size: 22px;
   text-align: center; }
@@ -29,9 +29,9 @@ div#positions {
     margin-bottom: 10px;
     width: 250px;
     height: 100px;
-    border: 3px solid #ff4e88;
+    border: 3px solid #df0985;
     transition: ease-in-out 0.25s;
-    box-shadow: inset 0px 0px 0px 0px #ff4e88;
+    box-shadow: inset 0px 0px 0px 0px #df0985;
     text-align: center; }
     div#positions div.position p.title {
       margin-top: 25px;
@@ -46,7 +46,7 @@ div#positions {
       transition: ease-in-out 0.2s; }
   div#positions div.position:hover {
     cursor: pointer;
-    box-shadow: inset 250px 0px 0px 0px #ff4e88; }
+    box-shadow: inset 250px 0px 0px 0px #df0985; }
     div#positions div.position:hover p {
       color: white; }
   div#positions h2 {
@@ -83,9 +83,9 @@ form {
       position: relative;
       top: -6px; }
   form div.radio-single input:focus ~ div.radio-indicator div {
-    background: #ff4e88; }
+    background: #df0985; }
   form div.radio-single input:checked ~ div.radio-indicator div {
-    background: #ff4e88; }
+    background: #df0985; }
   form div.radio-single div.radio-indicator:after {
     top: 7px;
     left: 7px;
@@ -111,7 +111,7 @@ form {
     font-size: 15px;
     transition: ease-in-out 0.15s; }
   form input[type=text]:focus {
-    border-bottom: 3px solid #ff4e88; }
+    border-bottom: 3px solid #df0985; }
   form input[type=radio] {
     position: absolute;
     margin-top: 1px;
@@ -124,8 +124,8 @@ form {
     position: relative;
     left: 50%;
     transform: translateX(-50%);
-    border: 3px solid #ff4e88;
-    background: #ff4e88;
+    border: 3px solid #df0985;
+    background: #df0985;
     color: white;
     font-family: 'Source Code Pro';
     font-size: 18px;
@@ -134,7 +134,7 @@ form {
     transition: ease-in-out 0.1s; }
   form input[type=submit]:hover {
     background: white;
-    color: #ff4e88;
+    color: #df0985;
     cursor: pointer; }
   form label {
     margin-left: 7px;
@@ -160,6 +160,6 @@ form {
     resize: none;
     transition: ease-in-out 0.15s; }
   form textarea:focus {
-    border: 3px solid #ff4e88; }
+    border: 3px solid #df0985; }
 
 /*# sourceMappingURL=apply.css.map */

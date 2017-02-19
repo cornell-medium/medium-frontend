@@ -1,7 +1,10 @@
 {% load static %}
 
+<script>
+	var static_path = "{% get_static_prefix %}";
+</script>
 <script src="{% static "js/typed.min.js" %}"></script>
-<script src="{% static "js/blockscroll.js" %}"></script>
+<!-- <script src="{% static "js/blockscroll.js" %}"></script> -->
 <script src="{% static "js/universal.js" %}"></script>
 
 <!-- Google Analytics - enable only on server, temp fix until integrated with Django -->

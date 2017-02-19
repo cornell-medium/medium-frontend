@@ -8,7 +8,7 @@ $(document).ready(function() {
 		});
   	});
 
-    $("#main-wrap").blockScroll({
-    	scrollDuration: "fast"
-    }); 
+    // $("#main-wrap").blockScroll({
+    // 	scrollDuration: "fast"
+    // }); 
 });
