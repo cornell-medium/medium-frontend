@@ -5,3 +5,7 @@ $blue-rgb: (0, 161, 211);
 $blue: rgb(nth($blue-rgb, 1), nth($blue-rgb, 2), nth($blue-rgb, 3));
 $pink-rgb: (223, 9, 133);
 $pink: rgb(nth($pink-rgb, 1), nth($pink-rgb, 2), nth($pink-rgb, 3));
+
+// 50 shades of grey
+$light-grey: #F3F3F3;
+$mid-grey: #848484;

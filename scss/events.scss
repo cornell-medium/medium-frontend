@@ -1,24 +1,98 @@
 @import "utilities/variables";
 
-div#google_calendar {
-	position: relative;
-	height: 0px;
-	padding-bottom: 75%;
-	overflow: hidden;
-}
-div#google_calendar iframe {
-	position: absolute;
-	top: 0px;
-	left: 0px;
-	width: 100%;
-	height: 100%;
-}
+div#events-table {
+	div.column {
+		box-sizing: border-box;
+  		float: left;
+  		width: 50%;
+  		padding: 20px 8px 8px 8px;
 
+		border-color: $mid-grey;
+  		border-style: solid;
+  		border-width: 0px;
+	}
+	div.event-dot {
+		position: absolute;
+		bottom: -5px;
+		width: 6px;
+		height: 6px;
+		background-color: white;
+		border: 2px solid $blue;
+		border-radius: 100%;
+		z-index: 5;
+	}
+	div.left {
+		position: relative;
+		padding-right: 15px;
+		border-width: 0px 2px 2px 0px;
+		text-align: right;
+
+		div.event-dot {
+			right: -6px;
+		}
+	}
+	div.right {
+		position: relative;
+		padding-left: 15px;
+		margin-left: -2px;
+		border-width: 0px 0px 2px 2px;
+
+		div.event-dot {
+			left: -6px;
+		}
+	}
+	div.row {
+		padding-left: 1px;
+	}
+
+	span {
+		display: block;
+	}
+	span.date {
+		color: $blue;
+		font-size: 17px;
+		font-weight: 500;
+	}
+	span.title {
+		padding-top: 5px;
+		font-size: 20px;
+		font-weight: 600;
+	}
+	span.location {
+		text-transform: uppercase;
+	}
+	span.desc {
+		padding-top: 5px;
+
+	}
+
+	@media (max-width: 550px) {
+		div.column {
+			width: 100%;
+		}
+		div.left {
+			border-left: 2px solid $mid-grey;
+			border-right: 0px;
+			margin-left: 0px;
+			text-align: left;
+
+			div.event-dot {
+				left: -6px;
+			}
+		}
+		div.right {
+			margin-left: 0px;
+		}
+		div.row {
+			padding-left: 0%;
+		}
+		div.unselectable {
+			padding: 0;
+			display: none;
+			height: 0px;
+		}
+	}
+}
 h1 {
-	cursor: default;
-	padding-top: 40px;
-	color: $pink;
-	font-family: 'Source Code Pro';
-	font-size: 22px;
-	text-align: center;
+	padding-top: 20px;
 }
