@@ -7,7 +7,6 @@ div.section {
 	margin-bottom: 90px;
 }
 div.section p {
-	font-family: 'Source Sans Pro';
 	font-size: 15px;
 }
 div.section strong {
@@ -15,18 +14,13 @@ div.section strong {
 }
 
 h1 {
-	padding-bottom: 30px;
-	color: $pink;
-	font-family: 'Source Code Pro';
-	font-size: 22px;
-	text-align: center;
+	padding-bottom: 25px;
 }
 
 h2 {
 	padding-top: 45px;
 	padding-bottom: 15px;
-	color: $pink;
-	font-family: 'Source Code Pro';
+	color: $blue;
 	font-size: 17px;
 	text-align: center;
 }
@@ -46,7 +40,6 @@ li img {
 }
 
 ol {
-	font-family: 'Source Sans Pro';
 	font-size: 15px;
 }
 

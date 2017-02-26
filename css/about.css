@@ -5,24 +5,18 @@ div.section {
   margin-bottom: 90px; }
 
 div.section p {
-  font-family: 'Source Sans Pro';
   font-size: 15px; }
 
 div.section strong {
   font-weight: 700; }
 
 h1 {
-  padding-bottom: 30px;
-  color: #df0985;
-  font-family: 'Source Code Pro';
-  font-size: 22px;
-  text-align: center; }
+  padding-bottom: 25px; }
 
 h2 {
   padding-top: 45px;
   padding-bottom: 15px;
-  color: #df0985;
-  font-family: 'Source Code Pro';
+  color: #00a1d3;
   font-size: 17px;
   text-align: center; }
 
@@ -39,7 +33,6 @@ li img {
   padding-right: 25px; }
 
 ol {
-  font-family: 'Source Sans Pro';
   font-size: 15px; }
 
 ul {

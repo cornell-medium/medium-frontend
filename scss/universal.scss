@@ -114,13 +114,13 @@ header {
 		display: none;
 		position: relative;
 		float: right;
-		right: 60px;
-		top: 13px;
+		right: 40px;
+		top: 20px;
 
 		@include imgGlitch("indicator", 15, 50, 50, 0, 0);
 
 		img {
-			max-height: 50px;
+			max-height: 35px;
 		}
 	}
 

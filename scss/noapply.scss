@@ -21,18 +21,18 @@ div#watermark {
 		position: absolute;
 		top: 60%;
 		transform: translateY(-50%);
-		left: 45%;
-		color: $pink;
-		opacity: 0.1;
-		font-family: 'Source Code Pro';
-		font-size: 50vw;
-		font-weight: 600;
+		left: 60%;
+		font-family: "Cooper Hewitt";
+		color: $blue;
+		opacity: 0.06;
+		font-size: 600px;
+		font-weight: 700;
 		white-space: nowrap;
 
 		@media screen and (max-width: 500px) {
-			top: 40%;
-			left: 13%;
-			font-size: 300px;
+			top: 50%;
+			left: 30%;
+			font-size: 450px;
 		}
 	}
 }
@@ -55,17 +55,14 @@ input[type=email] {
 	background: #FFFFFF;
 	color: #AAAAAA;
 	padding: 15px 0px 10px 35px;
-	// margin-top: 10px;
 	margin-left: -30px;
-	font-family: 'Source Code Pro';
 	font-size: 18px;
 }
 input[type=submit] {
 	display: inline-block;
-	border: 3px solid $pink;
-	background: $pink;
+	border: 3px solid $blue;
+	background: $blue;
 	color: white;
-	font-family: 'Source Code Pro';
 	font-size: 18px;
 	margin-top: 10px;
 	padding: 11px 20px 8px 20px;
@@ -73,7 +70,7 @@ input[type=submit] {
 }
 input[type=submit]:hover {
 	background: white;
-	color: $pink;
+	color: $blue;
 	cursor: pointer;
 }
 input:focus {

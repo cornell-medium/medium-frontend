@@ -17,18 +17,18 @@ div#watermark {
     position: absolute;
     top: 60%;
     transform: translateY(-50%);
-    left: 45%;
-    color: #df0985;
-    opacity: 0.1;
-    font-family: 'Source Code Pro';
-    font-size: 50vw;
-    font-weight: 600;
+    left: 60%;
+    font-family: "Cooper Hewitt";
+    color: #00a1d3;
+    opacity: 0.06;
+    font-size: 600px;
+    font-weight: 700;
     white-space: nowrap; }
     @media screen and (max-width: 500px) {
       div#watermark span {
-        top: 40%;
-        left: 13%;
-        font-size: 300px; } }
+        top: 50%;
+        left: 30%;
+        font-size: 450px; } }
 
 form div {
   text-align: center; }
@@ -50,15 +50,13 @@ input[type=email] {
   color: #AAAAAA;
   padding: 15px 0px 10px 35px;
   margin-left: -30px;
-  font-family: 'Source Code Pro';
   font-size: 18px; }
 
 input[type=submit] {
   display: inline-block;
-  border: 3px solid #df0985;
-  background: #df0985;
+  border: 3px solid #00a1d3;
+  background: #00a1d3;
   color: white;
-  font-family: 'Source Code Pro';
   font-size: 18px;
   margin-top: 10px;
   padding: 11px 20px 8px 20px;
@@ -66,7 +64,7 @@ input[type=submit] {
 
 input[type=submit]:hover {
   background: white;
-  color: #df0985;
+  color: #00a1d3;
   cursor: pointer; }
 
 input:focus {
