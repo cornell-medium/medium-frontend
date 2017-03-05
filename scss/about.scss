@@ -31,12 +31,14 @@ img.section-banner {
 
 li {
 	padding-bottom: 10px;
-}
-li img {
-	float: left;
-	width: 60px;
-	height: 60px;
-	padding-right: 25px;
+
+	img {
+		float: left;
+		width: 60px;
+		height: 60px;
+		padding-right: 25px;
+		padding-bottom: 10px;
+	}
 }
 
 ol {

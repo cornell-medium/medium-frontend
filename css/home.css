@@ -33,14 +33,19 @@ div#current-sect div {
   white-space: nowrap; }
 
 div#dynamic-text {
-  position: relative;
+  position: absolute;
+  top: 50% !important;
   left: 50%;
-  transform: translateX(-50%);
+  width: 90%;
+  transform: translate(-50%, -50%);
   top: -24vw;
   color: #00a1d3;
-  font-size: 3vw;
+  font-size: 40px;
   font-weight: 600;
   text-align: center; }
+  @media screen and (max-width: 490px) {
+    div#dynamic-text {
+      font-size: 20px; } }
 
 div#indicator-left {
   position: fixed;
@@ -106,8 +111,7 @@ div.section {
   width: 100%;
   height: 100vh;
   padding: 0px 0px 4px 0px;
-  margin: 0px;
-  border-bottom: 1px dashed #CCCCCC; }
+  margin: 0px; }
 
 div.section div {
   position: relative;
@@ -127,9 +131,9 @@ div#splash h1 {
   background: url("../imgs/back_gif.gif");
   background-repeat: repeat-x;
   background-position: 0 0;
-  background-size: contain;
+  background-size: cover;
+  font-size: 450px;
   font-weight: bolder;
-  font-size: 35vw;
   text-align: center;
   opacity: 0.2;
   color: transparent;
@@ -137,7 +141,11 @@ div#splash h1 {
   -moz-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  margin: 0; }
+  margin: 0;
+  margin-top: 30px; }
+  @media screen and (max-width: 490px) {
+    div#splash h1 {
+      font-size: 250px; } }
 
 span.block-down-arrow {
   bottom: 12px; }
