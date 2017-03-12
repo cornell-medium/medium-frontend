@@ -6,7 +6,55 @@
 
 {% include "header.html" %}
 
+<div id="top-back"></div>
+<div id="top-gradient"></div>
+<svg width="900px" id="back-graphic" viewBox="0 0 100 100" preserveAspectRatio="none"></svg>
+<svg width="20px" height="20px" id="indicator" viewBox="0 0 4 4">
+	<path d="M0 0 L4 2 L 0 4" />
+</svg>
+
 <div class="content-wrapper">
+	<div class="event unselectable">
+		<span class="date">Saturday March 25, 2017</span>	
+		<span class="title">Design Panel</span>
+		<span class="location">Sibley Hall</span>
+		<span class="time">2-5PM</span>
+		<div class="dot"></div>
+	</div>
+
+	<div class="event unselectable">
+		<span class="date">Saturday March 25, 2017</span>	
+		<span class="title">Design Panel</span>
+		<span class="location">Sibley Hall</span>
+		<span class="time">2-5PM</span>
+		<div class="dot"></div>
+	</div>
+
+	<div class="event unselectable">
+		<span class="date">Saturday March 25, 2017</span>	
+		<span class="title">Design Panel</span>
+		<span class="location">Sibley Hall</span>
+		<span class="time">2-5PM</span>
+		<div class="dot"></div>
+	</div>
+
+	<!-- <div class="event-desc">
+		<img class="cover">
+		<span class="date">Saturday March 25, 2017</span>	
+		<span class="title">Design Panel</span>
+		<span class="location">Sibley Hall</span>
+		<span class="time">2-5PM</span>
+		<span class="details"></span>
+		<span class="facebook"></span>
+	</div> -->
+</div>
+<div id="bot-gradient"></div>
+
+<div id="cntr" style="position: fixed; top: 20px; left: 20px; width 100px; height: 100px; z-index: 100;"></div>
+
+<div style="position: absolute; top: 4000px; left: 0px;">asfda</div>
+
+<!-- <div class="content-wrapper">
 <h1 class="unselectable">Upcoming events</h1>
 <div id="events-table">
 	{% for event in events %}
@@ -27,6 +75,8 @@
 	</div>
 	{% endfor %}
 </div>
-</div>
+</div> -->
+
+<script src="{% static "js/events.js" %}"></script>
 
 {% include "footer.html" %}
