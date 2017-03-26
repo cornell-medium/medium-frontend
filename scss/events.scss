@@ -14,6 +14,55 @@ div#bot-gradient {
     z-index: 10;
     pointer-events: none;
 }
+div.details {
+	position: fixed;
+	top: 50%;
+	float: right;
+	right: calc(50% - 450px);
+	transform: translateY(-50%);
+	width: 350px;
+	// opacity: 0;
+	display: none;
+
+	img {
+		width: 350px;
+		margin-bottom: 15px;
+	}
+
+	p {
+		margin: 0px;
+	}
+	p.desc {
+		margin-top: 15px;
+	}
+
+	span {
+
+	}
+	span.date {
+		padding-top: 6px;
+		padding-left: 20px;
+		float: right;
+		color: $pink;
+		font-weight: 500;
+	}
+	span.location {
+		text-transform: uppercase;
+	}
+	span.time {
+		float: right;
+		color: $pink;
+		font-weight: 500;
+	}
+	span.title {
+		font-weight: 600;
+		font-size: 24px;
+	}
+
+	@media (max-width: 900px) {
+		right: 15px;
+	}
+}
 div.event {
 	position: absolute;
 	padding-left: 50px;
@@ -28,11 +77,13 @@ div.event {
 		margin-left: -50px;
 		padding-left: 50px;
 		color: $blue;
-		font-size: 17px;
+		font-size: 16px;
 		font-weight: 500;
 	}
 	span.title {
 		padding-top: 4px;
+		padding-right: 25px;
+		margin-right: -20px;
 		margin-bottom: 3px;
 		font-size: 20px;
 		font-weight: 600;
@@ -61,7 +112,8 @@ div.event:hover {
 	cursor: pointer;
 
 	span.title {
-		background: $yellow;
+		background: linear-gradient(0deg, rgba(nth($yellow-rgb, 1), nth($yellow-rgb, 2), nth($yellow-rgb, 3), 0.7) 70%, #FFFFFF 30%);
+		// background: $yellow;
 	}
 }
 div#top-back {
@@ -103,7 +155,8 @@ svg#back-graphic {
 	max-width: 900px;
 	height: 100%;
 
-  	line {
+  	circle {
+  		fill: none;
 		stroke: $mid-grey;
 		stroke-width: 0.25;
   	}

@@ -12,6 +12,40 @@ div#bot-gradient {
   z-index: 10;
   pointer-events: none; }
 
+div.details {
+  position: fixed;
+  top: 50%;
+  float: right;
+  right: calc(50% - 450px);
+  transform: translateY(-50%);
+  width: 350px;
+  display: none; }
+  div.details img {
+    width: 350px;
+    margin-bottom: 15px; }
+  div.details p {
+    margin: 0px; }
+  div.details p.desc {
+    margin-top: 15px; }
+  div.details span.date {
+    padding-top: 6px;
+    padding-left: 20px;
+    float: right;
+    color: #df0985;
+    font-weight: 500; }
+  div.details span.location {
+    text-transform: uppercase; }
+  div.details span.time {
+    float: right;
+    color: #df0985;
+    font-weight: 500; }
+  div.details span.title {
+    font-weight: 600;
+    font-size: 24px; }
+  @media (max-width: 900px) {
+    div.details {
+      right: 15px; } }
+
 div.event {
   position: absolute;
   padding-left: 50px; }
@@ -24,10 +58,12 @@ div.event {
     margin-left: -50px;
     padding-left: 50px;
     color: #00a1d3;
-    font-size: 17px;
+    font-size: 16px;
     font-weight: 500; }
   div.event span.title {
     padding-top: 4px;
+    padding-right: 25px;
+    margin-right: -20px;
     margin-bottom: 3px;
     font-size: 20px;
     font-weight: 600;
@@ -51,7 +87,7 @@ div.event {
 div.event:hover {
   cursor: pointer; }
   div.event:hover span.title {
-    background: #fae014; }
+    background: linear-gradient(0deg, rgba(250, 224, 20, 0.7) 70%, #FFFFFF 30%); }
 
 div#top-back {
   position: fixed;
@@ -89,7 +125,8 @@ svg#back-graphic {
   transform: translateX(-50%);
   max-width: 900px;
   height: 100%; }
-  svg#back-graphic line {
+  svg#back-graphic circle {
+    fill: none;
     stroke: #848484;
     stroke-width: 0.25; }
 
