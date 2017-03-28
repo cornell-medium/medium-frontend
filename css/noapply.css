@@ -6,6 +6,9 @@ div#center-box {
     div#center-box {
       top: 40vh; } }
 
+div#form-wrapper {
+  margin-top: -40px; }
+
 div#watermark {
   position: absolute;
   top: 0px;
@@ -69,6 +72,10 @@ input[type=submit]:hover {
 
 input:focus {
   outline: none; }
+
+h1#noaccept {
+  margin-top: 40px;
+  font-size: 18px; }
 
 p {
   margin-bottom: 50px;

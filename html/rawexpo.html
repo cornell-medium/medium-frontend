@@ -1,0 +1,45 @@
+{% load static %}
+
+{% block styles %}
+    <link rel="stylesheet" href="{% static "css/rawexpo.css" %}">
+{% endblock %}
+
+{% include "header.html" %}
+
+<div class="content-wrapper" style="height: calc(100% - 100px);">
+<div id="center-block">
+<p id="header-block">
+	<span class="unselectable" id="date">April 27, 5:00 PM</span>
+	<span class="raw grey unselectable">RAW EXPO</span>
+	<span class="raw blue unselectable">RAW EXPO</span>
+	<span class="raw pink unselectable">RAW EXPO</span>
+	<span class="unselectable" id="subtext">It's happening.</span>
+	<span id="learnmore">First time? <a class="pink" href="http://cornellsun.com/2016/05/06/design-empathy-collaboration-raw-expo-at-milstein-hall/">Learn more here</a></span>
+</p>
+
+<div class="unselectable" id="clock">
+	<span class="clock-item">
+		<span class="clock-num" id="days"></span>
+		<span class="clock-label">Days</span>
+	</span>
+	<span class="clock-item">
+		<span class="clock-num" id="hours"></span>
+		<span class="clock-label">Hours</span>
+	</span>
+	<span class="clock-item">
+		<span class="clock-num" id="minutes"></span>
+		<span class="clock-label">Minutes</span>
+	</span>
+	<span class="clock-item">
+		<span class="clock-num" id="seconds"></span>
+		<span class="clock-label">Seconds</span>
+	</span>
+</div>
+
+<p id="signup">Is your organization interested in being featured? <a class="pink" href="https://medium1.typeform.com/to/hHQrWc">Sign up</a></p>
+</div>
+</div>
+
+<script src="{% static "js/rawexpo.js" %}"></script>
+
+{% include "footer.html" %}
