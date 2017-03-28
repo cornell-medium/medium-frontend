@@ -14,6 +14,16 @@ div#bot-gradient {
     z-index: 10;
     pointer-events: none;
 }
+div.cover {
+	position: fixed;
+	z-index: 11;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background: $light-grey;
+	display: none;
+}
 div.details {
 	position: fixed;
 	top: 50%;
@@ -21,7 +31,7 @@ div.details {
 	right: calc(50% - 450px);
 	transform: translateY(-50%);
 	width: 350px;
-	// opacity: 0;
+	// opacity: 1;
 	display: none;
 
 	img {
@@ -59,6 +69,9 @@ div.details {
 		font-size: 24px;
 	}
 
+	@media (max-width: 875px) {
+		visibility: hidden;
+	}
 	@media (max-width: 900px) {
 		right: 15px;
 	}
@@ -114,6 +127,96 @@ div.event:hover {
 	span.title {
 		background: linear-gradient(0deg, rgba(nth($yellow-rgb, 1), nth($yellow-rgb, 2), nth($yellow-rgb, 3), 0.7) 70%, #FFFFFF 30%);
 		// background: $yellow;
+	}
+}
+div.modal {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background: $light-grey;
+	z-index: 12;
+	padding: 25px;
+
+	div.close {
+		display: block;
+		position: relative;
+		margin-top: -10px;
+		margin-bottom: 10px;
+		margin-right: -6px;
+		cursor: pointer;
+		float: right;
+		width: 40px; 
+		height: 40px;
+		border-radius: 100%;
+		font-size: 40px;
+		font-weight: 500;
+		text-align: center;
+		vertical-align: center;
+		color: $mid-grey;
+		transition: ease-in-out 0.1s;
+
+		-ms-transform: rotate(45deg); /* IE 9 */
+	    -webkit-transform: rotate(45deg); /* Chrome, Safari, Opera */
+	    transform: rotate(45deg);
+	}
+	div.close:hover {
+		// background: $pink;
+		color: $pink;
+
+		-ms-transform: rotate(-45deg); /* IE 9 */
+	    -webkit-transform: rotate(-45deg); /* Chrome, Safari, Opera */
+	    transform: rotate(-45deg);
+	}
+}
+div#readmore {
+	position: fixed;
+	top: 50%;
+	transform: translateY(-50%);
+	left: 75%;
+	// right: 30px;
+	width: 100px;
+	height: 100px;
+	background: $light-grey;
+	border-radius: 100%;
+	display: block;
+
+	text-align: center;
+	transition: ease-in-out 0.15s;
+
+	span#icon {
+		display: block;
+		font-size: 70px;
+		font-weight: 500;
+		color: $mid-grey;
+		transition: ease-in-out 0.15s;
+	}
+	span#icon:hover {
+		cursor: pointer;
+	}
+	span#text {
+		position: relative;
+		top: -30px;
+		color: $mid-grey;
+		transition: ease-in-out 0.15s;
+	}
+	span#text:hover {
+		cursor: pointer;
+	}
+
+	@media (max-width: 600px), (min-width: 875px) {
+		display: none;
+	}
+}
+div#readmore:hover {
+	cursor: pointer;
+	background: $pink;
+
+	span#icon {
+		color: $light-grey;
+	}
+	span#text {
+		color: $light-grey;
 	}
 }
 div#top-back {

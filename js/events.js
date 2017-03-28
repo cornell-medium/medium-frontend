@@ -11,6 +11,7 @@ $(document).ready(function() {
 	 "#back-graphic"];
 	updateFixed(fixedElems);
 
+	var inModal = false;
 	var numEvents = $(".event").length;
 	var selectedEvent = 1;
 	var scrollInProgress = false;
@@ -49,7 +50,29 @@ $(document).ready(function() {
 
 	/*** Handle event navigation ***/
 	$(".event").click( function() {
-		scrollTo("#" + $(this).attr("id"));
+		var id = $(this).attr("id");
+		selectedEvent = Number(parseID(id));
+		console.log(selectedEvent);
+		scrollTo($("#event-" + selectedEvent));
+	});
+
+	/*** Handle readmore modals ***/
+	$("#readmore").click( function() {
+		inModal = true;
+
+		$("body").append("<div class='cover'></div>");
+		$("#details-" + selectedEvent).wrap( "<div class='modal' style='display: none;'></div>" );
+		$("#details-" + selectedEvent).css({"position": "relative", "top": "0px", "right": "0px",
+											"transform": "none", "visibility": "visible"});
+		$(".modal").prepend("<div class='close unselectable'>+</div>")
+
+		$(".cover").fadeIn(300);
+		$(".modal").fadeIn(300);
+
+		// Has to be nested as .close does not exist on page load
+		$(".close").click( function() {
+			hideModal();
+		});
 	});
 
 	/*** Handle window change events ***/
@@ -57,6 +80,11 @@ $(document).ready(function() {
 		updateFixed(fixedElems);
 
 		polarMultiplier = getPolarMultiplier();
+
+		if($(window).width() > 875) {
+			if(inModal)
+				hideModal();
+		}
 
 		$("#indicator").css("left", ($(window).width() < 976) ? 
 			(($("#back-graphic").width() / 8)) + "px" : (($(window).width()/2 - 350) + "px"));
@@ -73,7 +101,7 @@ $(document).ready(function() {
 		// 	scrollReady = true;
 		// }, 50));
 
-		if(!scrollInProgress) {
+		if(!scrollInProgress && !inModal) {
 			scrollReady = false;
 	        if(e.originalEvent.wheelDelta > 0) {
 	        	if(selectedEvent !== 0) {
@@ -94,7 +122,7 @@ $(document).ready(function() {
     $(document).keydown(function(key) {
 	    switch(key.which) {
 	        case 38: // up
-	        	if(!scrollInProgress) {
+	        	if(!scrollInProgress && !inModal) {
 					scrollReady = false;
 					if(selectedEvent !== 0) {
 	        			selectedEvent -= 1;
@@ -104,7 +132,7 @@ $(document).ready(function() {
 	        break;
 
 	        case 40: // down
-	        	if(!scrollInProgress) {
+	        	if(!scrollInProgress && !inModal) {
 					scrollReady = false;
 					if(selectedEvent !== numEvents - 1) {
 	        			selectedEvent += 1;
@@ -184,6 +212,18 @@ $(document).ready(function() {
 		}
 	}
 
+	function hideModal() {
+		inModal = false;
+
+		$(".cover").fadeOut(300);
+		$(".modal").fadeOut(300, function() {
+			$(".close").remove();
+			$("#details-" + selectedEvent).unwrap();
+			$("#details-" + selectedEvent).css({"position": "fixed", "top": "50%", "right": "calc(50% - 450px)",
+												"transform": "translateY(-50%)", "visibility": "hidden"});
+		});
+	}
+
 	function parseID(id) {
 		return id.split("-")[1];
 	}
@@ -215,13 +255,13 @@ $(document).ready(function() {
 	}
 
 	function scrollTo(eventId) {
+		// Account for odd cases in which a 0 is appended to the front
 		scrollInProgress = true;
 		$(".details").each( function() {
-				if( parseID($(this).attr("id")) !== selectedEvent )
-					$(this).fadeOut(300);
-				// $(this).slideUp();
-			});
-		var viewY = $(eventId).offset().top + 24 - $(window).height()/2;
+			if( parseID($(this).attr("id")) !== selectedEvent )
+				$(this).fadeOut(300);
+		});
+		var viewY = $("#event-" + selectedEvent).offset().top + 24 - $(window).height()/2;
 		$("html, body").animate({ scrollTop: viewY + "px" }, 300, function() {
 			scrollInProgress = false;
 			$("#details-" + selectedEvent).slideDown(200);

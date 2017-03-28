@@ -12,6 +12,16 @@ div#bot-gradient {
   z-index: 10;
   pointer-events: none; }
 
+div.cover {
+  position: fixed;
+  z-index: 11;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #F3F3F3;
+  display: none; }
+
 div.details {
   position: fixed;
   top: 50%;
@@ -42,6 +52,9 @@ div.details {
   div.details span.title {
     font-weight: 600;
     font-size: 24px; }
+  @media (max-width: 875px) {
+    div.details {
+      visibility: hidden; } }
   @media (max-width: 900px) {
     div.details {
       right: 15px; } }
@@ -88,6 +101,83 @@ div.event:hover {
   cursor: pointer; }
   div.event:hover span.title {
     background: linear-gradient(0deg, rgba(250, 224, 20, 0.7) 70%, #FFFFFF 30%); }
+
+div.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #F3F3F3;
+  z-index: 12;
+  padding: 25px; }
+  div.modal div.close {
+    display: block;
+    position: relative;
+    margin-top: -10px;
+    margin-bottom: 10px;
+    margin-right: -6px;
+    cursor: pointer;
+    float: right;
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    font-size: 40px;
+    font-weight: 500;
+    text-align: center;
+    vertical-align: center;
+    color: #848484;
+    transition: ease-in-out 0.1s;
+    -ms-transform: rotate(45deg);
+    /* IE 9 */
+    -webkit-transform: rotate(45deg);
+    /* Chrome, Safari, Opera */
+    transform: rotate(45deg); }
+  div.modal div.close:hover {
+    color: #df0985;
+    -ms-transform: rotate(-45deg);
+    /* IE 9 */
+    -webkit-transform: rotate(-45deg);
+    /* Chrome, Safari, Opera */
+    transform: rotate(-45deg); }
+
+div#readmore {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 75%;
+  width: 100px;
+  height: 100px;
+  background: #F3F3F3;
+  border-radius: 100%;
+  display: block;
+  text-align: center;
+  transition: ease-in-out 0.15s; }
+  div#readmore span#icon {
+    display: block;
+    font-size: 70px;
+    font-weight: 500;
+    color: #848484;
+    transition: ease-in-out 0.15s; }
+  div#readmore span#icon:hover {
+    cursor: pointer; }
+  div#readmore span#text {
+    position: relative;
+    top: -30px;
+    color: #848484;
+    transition: ease-in-out 0.15s; }
+  div#readmore span#text:hover {
+    cursor: pointer; }
+  @media (max-width: 600px), (min-width: 875px) {
+    div#readmore {
+      display: none; } }
+
+div#readmore:hover {
+  cursor: pointer;
+  background: #df0985; }
+  div#readmore:hover span#icon {
+    color: #F3F3F3; }
+  div#readmore:hover span#text {
+    color: #F3F3F3; }
 
 div#top-back {
   position: fixed;
