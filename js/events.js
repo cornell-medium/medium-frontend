@@ -18,8 +18,6 @@ $(document).ready(function() {
 	var scrollReady = true;
 	var scrollReadyChecker;
 
-	var polarMultiplier = getPolarMultiplier();
-
 	$("#back-graphic").fadeIn(600);
 	$("#indicator").css("left", ($(window).width() < 975) ? 
 			(($("#back-graphic").width() / 8)) + "px" : (($(window).width()/2 - 340) + "px")).fadeIn(600);
@@ -79,14 +77,15 @@ $(document).ready(function() {
 	$(window).resize(function() {
 		updateFixed(fixedElems);
 
-		polarMultiplier = getPolarMultiplier();
-
 		if($(window).width() > 875) {
-			if(inModal)
+			if(inModal) {
 				hideModal();
+				alert(selectedEvent);
+				$("#details-" + selectedEvent).css({"visibility": "visible"});
+			}
 		}
 
-		$("#indicator").css("left", ($(window).width() < 976) ? 
+		$("#indicator").css("left", ($(window).width() < 975) ? 
 			(($("#back-graphic").width() / 8)) + "px" : (($(window).width()/2 - 350) + "px"));
 
 		$(".event").each( function() {
@@ -96,11 +95,6 @@ $(document).ready(function() {
 
 	/*** Handle mouse scroll events (since normal scrolling is disabled) ***/
 	$('body').bind('mousewheel', function(e) {
-		// clearTimeout($.data(this, 'scrollActive'));
-		// $.data(this, 'scrollActive', setTimeout(function() {
-		// 	scrollReady = true;
-		// }, 50));
-
 		if(!scrollInProgress && !inModal) {
 			scrollReady = false;
 	        if(e.originalEvent.wheelDelta > 0) {
@@ -153,65 +147,7 @@ $(document).ready(function() {
 		});
 	});
 
-	// 	clearInterval(scrollStopChecker);
-	// 	// clearTimeout($.data(this, 'scrollAdjust'));
-		
-	// 	// Get centermost event
-	// 	var bestElem = $(".event").first();
-	// 	var bestDelta = Math.abs( $(window).scrollTop() + $(window).height()/2 + 24 - $(bestElem).offset().top );
-	// 	$(".event").each( function() {
-	// 		var delta =  Math.abs( $(window).scrollTop() + $(window).height()/2 + 24 - $(this).offset().top );
-	// 		if (delta < bestDelta) {
-	// 			bestElem = this;
-	// 			bestDelta = delta;
-	// 		}
-	// 	});
-
-	// 	if( bestDelta > 5) {
-	// 	// $.data(this, 'scrollAdjust', setTimeout(function() {
- //    	scrollStopChecker = setInterval(function() {
- //    		if( Math.abs(lastScrollTop - $(window).scrollTop()) < 10) {
-	// 			clearInterval(scrollStopChecker);
-
-	// 			// Get centermost event
-	//     		var bestElem = $(".event").first();
-	//     		var bestDelta = Math.abs( $(window).scrollTop() + $(window).height()/2 + 24 - $(bestElem).offset().top );
-	//     		$(".event").each( function() {
-	//     			var delta =  Math.abs( $(window).scrollTop() + $(window).height()/2 + 24 - $(this).offset().top );
-	//     			if (delta < bestDelta) {
-	//     				bestElem = this;
-	//     				bestDelta = delta;
-	//     			}
-	// 			});
-
-	// 			// "Snap" to the closest event
-	// 			var viewY = $(bestElem).offset().top + 24 - $(window).height()/2;
-	// 			scrollState = true;
-	// 			$("html", "body").scrollTop(viewY);
-	// 			$("html, body").animate({ scrollTop: viewY + "px" }, 300, function() {
-	// 				lastScrollTop = viewY;
-	// 			});
- //    		} else {
- //    			lastScrollTop = $(window).scrollTop();
- //    		}
-    		
- //    	}, 50);
- //    	}
-
- //    	lastScrollTop = $(window).scrollTop();
-	// });
-
 	/*** Define helper functions ***/
-	function getPolarMultiplier() {
-		if( $(window).width() > 938 ) {
-			return 900;
-		} else {
-			// var a = $(window).height();
-			// var b = ($(window).width() - 76)/2;
-			return ($(window).width() + 76);
-		}
-	}
-
 	function hideModal() {
 		inModal = false;
 
@@ -230,12 +166,17 @@ $(document).ready(function() {
 
 	function updateEvent(event) {
 		// The svg is drawn over a 100x100 viewport, so we use that scale
-		var y = 50 - ($(event).offset().top - $(window).scrollTop() + 24) * (100/$(window).height());
+		var y = $(window).height()/2 - ($(event).offset().top - $(window).scrollTop() + 24);
+		var a = background.outerWidth() * rad/100; //from ellipse equation - width axis
+		var b = background.outerHeight() * rad/100; //from ellipse equation - height axis
 
-		// Calculate x using polar coordinates
-		var theta = Math.asin(y / rad);
-		var x = circX + (rad * Math.cos(theta));
-		x *= polarMultiplier/100;
+		var centerX = circX * background.outerWidth() / 100;
+		if ( $(window).width() > 915 && $(window).width() < 975)
+			centerX += 30 - (($(window).width() - 915)/2);
+		else if( $(window).width() <= 929 )
+			centerX += background.offset().left - 8;
+
+		var x = centerX + Math.sqrt( (1 - (Math.pow(y, 2)/Math.pow(b, 2))) * Math.pow(a, 2) );
 
 		$(event).css("left", (x + "px"));
 	}
@@ -248,10 +189,6 @@ $(document).ready(function() {
 			else
 				$(d).css("width", ($(window).width() - 76) + "px");
 		});
-	}
-
-	function yToRads(y) {
-		return y * (Math.PI / 100);
 	}
 
 	function scrollTo(eventId) {

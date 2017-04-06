@@ -173,7 +173,7 @@ div#readmore {
 	position: fixed;
 	top: 50%;
 	transform: translateY(-50%);
-	left: 75%;
+	left: calc(20% + 325px);
 	// right: 30px;
 	width: 100px;
 	height: 100px;
