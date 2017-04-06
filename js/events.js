@@ -69,7 +69,7 @@ $(document).ready(function() {
 
 		// Has to be nested as .close does not exist on page load
 		$(".close").click( function() {
-			hideModal();
+			hideModal(false);
 		});
 	});
 
@@ -77,11 +77,28 @@ $(document).ready(function() {
 	$(window).resize(function() {
 		updateFixed(fixedElems);
 
+		if($(window).width() < 937) {
+			$(".details").each( function() {
+				$(this).css("right", "15px");
+			});
+		} else {
+			$(".details").each( function() {
+				$(this).css("right", "calc(50% - 450px)");
+			});
+		}
+
 		if($(window).width() > 875) {
-			if(inModal) {
-				hideModal();
-				alert(selectedEvent);
-				$("#details-" + selectedEvent).css({"visibility": "visible"});
+			$(".details").each( function() {
+				$(this).css("visibility", "visible");
+			});
+
+			if(inModal)
+				hideModal(true);
+		} else {
+			if(!inModal) {
+				$(".details").each( function() {
+					$(this).css("visibility", "hidden");
+				});
 			}
 		}
 
@@ -148,7 +165,7 @@ $(document).ready(function() {
 	});
 
 	/*** Define helper functions ***/
-	function hideModal() {
+	function hideModal(resize) {
 		inModal = false;
 
 		$(".cover").fadeOut(300);
@@ -156,7 +173,10 @@ $(document).ready(function() {
 			$(".close").remove();
 			$("#details-" + selectedEvent).unwrap();
 			$("#details-" + selectedEvent).css({"position": "fixed", "top": "50%", "right": "calc(50% - 450px)",
-												"transform": "translateY(-50%)", "visibility": "hidden"});
+												"transform": "translateY(-50%)"});
+
+			if(!resize)
+				$("#details-" + selectedEvent).css("visibility", "hidden");
 		});
 	}
 

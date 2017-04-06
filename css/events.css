@@ -55,9 +55,6 @@ div.details {
   @media (max-width: 875px) {
     div.details {
       visibility: hidden; } }
-  @media (max-width: 900px) {
-    div.details {
-      right: 15px; } }
 
 div.event {
   position: absolute;
