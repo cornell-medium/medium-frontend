@@ -1,9 +1,14 @@
 $(document).ready(function() {
 	// Disable scrolling
 	$('body').on('scroll mousewheel touchmove', function(e) {
-		e.preventDefault();
-	    e.stopPropagation();
-	    return false;
+		if($(window).width() > 600) {
+			e.preventDefault();
+		    e.stopPropagation();
+		    return false;
+		}
+		else {
+			return true;
+		}
 	});
 
 	/*** Run initializations ***/
@@ -12,6 +17,7 @@ $(document).ready(function() {
 	updateFixed(fixedElems);
 
 	var inModal = false;
+	var lastWidth = $(window).width();
 	var numEvents = $(".event").length;
 	var selectedEvent = 1;
 	var scrollInProgress = false;
@@ -28,6 +34,8 @@ $(document).ready(function() {
 		$(this).css("top", curY + "px");
 		curY += $(window).height()/4;
 	});
+
+	$("#page-extender").css("top", curY + $(window).height()/3);
 
 	// Draw background arc along the sine wave
 	var background = $("#back-graphic");
@@ -50,11 +58,11 @@ $(document).ready(function() {
 	$(".event").click( function() {
 		var id = $(this).attr("id");
 		selectedEvent = Number(parseID(id));
-		console.log(selectedEvent);
 		scrollTo($("#event-" + selectedEvent));
 	});
 
 	/*** Handle readmore modals ***/
+	// Read more button for desktop
 	$("#readmore").click( function() {
 		inModal = true;
 
@@ -73,19 +81,37 @@ $(document).ready(function() {
 		});
 	});
 
+	$(".readmore").click( function() {
+		selectedEvent = $(this).parent().data('details-id');
+
+		console.log(selectedEvent);
+
+		inModal = true;
+
+		$("body").append("<div class='cover'></div>");
+		$("#details-" + selectedEvent).wrap( "<div class='modal' style='display: none;'></div>" );
+		$("#details-" + selectedEvent).css({"position": "relative", "top": "0px", "right": "0px",
+											"transform": "none", "display": "block",
+											"visibility": "visible"});
+		$(".modal").prepend("<div class='close unselectable'>+</div>")
+
+		$(".cover").fadeIn(300);
+		$(".modal").fadeIn(300);
+
+		// Has to be nested as .close does not exist on page load
+		$(".close").click( function() {
+			hideModal(false);
+		});
+	});
+
 	/*** Handle window change events ***/
 	$(window).resize(function() {
 		updateFixed(fixedElems);
 
-		if($(window).width() < 937) {
-			$(".details").each( function() {
-				$(this).css("right", "15px");
-			});
-		} else {
-			$(".details").each( function() {
-				$(this).css("right", "calc(50% - 450px)");
-			});
-		}
+		$("#page-extender").css("top", curY + $(window).height()/3);
+
+		if($(window).width() > 600 && lastWidth < 600)
+			scrollTo($("#event-" + selectedEvent));
 
 		if($(window).width() > 875) {
 			$(".details").each( function() {
@@ -102,17 +128,29 @@ $(document).ready(function() {
 			}
 		}
 
+		if($(window).width() < 937) {
+			$(".details").each( function() {
+				$(this).css("right", "15px");
+			});
+		} else {
+			$(".details").each( function() {
+				$(this).css("right", "calc(50% - 450px)");
+			});
+		}
+
 		$("#indicator").css("left", ($(window).width() < 975) ? 
 			(($("#back-graphic").width() / 8)) + "px" : (($(window).width()/2 - 350) + "px"));
 
 		$(".event").each( function() {
 			updateEvent(this);
 		});
+
+		lastWidth = $(window).width();
 	});
 
 	/*** Handle mouse scroll events (since normal scrolling is disabled) ***/
 	$('body').bind('mousewheel', function(e) {
-		if(!scrollInProgress && !inModal) {
+		if($(window).width() > 600 && !scrollInProgress && !inModal) {
 			scrollReady = false;
 	        if(e.originalEvent.wheelDelta > 0) {
 	        	if(selectedEvent !== 0) {
@@ -131,37 +169,41 @@ $(document).ready(function() {
 
     /*** Handle keyboard navigation events ***/
     $(document).keydown(function(key) {
-	    switch(key.which) {
-	        case 38: // up
-	        	if(!scrollInProgress && !inModal) {
-					scrollReady = false;
-					if(selectedEvent !== 0) {
-	        			selectedEvent -= 1;
-	        			scrollTo($("#event-" + selectedEvent));
-					}
-	        	}
-	        break;
+    	if($(window).width() > 600) {
+		    switch(key.which) {
+		        case 38: // up
+		        	if(!scrollInProgress && !inModal) {
+						scrollReady = false;
+						if(selectedEvent !== 0) {
+		        			selectedEvent -= 1;
+		        			scrollTo($("#event-" + selectedEvent));
+						}
+		        	}
+		        break;
 
-	        case 40: // down
-	        	if(!scrollInProgress && !inModal) {
-					scrollReady = false;
-					if(selectedEvent !== numEvents - 1) {
-	        			selectedEvent += 1;
-	        			scrollTo($("#event-" + selectedEvent));
-					}
-	        	}
-	        break;
+		        case 40: // down
+		        	if(!scrollInProgress && !inModal) {
+						scrollReady = false;
+						if(selectedEvent !== numEvents - 1) {
+		        			selectedEvent += 1;
+		        			scrollTo($("#event-" + selectedEvent));
+						}
+		        	}
+		        break;
 
-	        default: return; // exit this handler for other keys
-	    }
-	    key.preventDefault(); // prevent the default action (scroll / move caret)
+		        default: return; // exit this handler for other keys
+		    }
+		    key.preventDefault(); // prevent the default action (scroll / move caret)
+		}
 	});
 
 	/*** Animate scrolling to make events follow the circle ***/
 	$(document).scroll(function() {
-		$(".event").each( function() {
-			updateEvent(this);
-		});
+		if($(window).width() > 600) {
+			$(".event").each( function() {
+				updateEvent(this);
+			});
+		}
 	});
 
 	/*** Define helper functions ***/

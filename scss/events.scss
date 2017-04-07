@@ -1,5 +1,22 @@
 @import "utilities/variables";
 
+@media (min-width: 600px) {
+	.desktop {
+		display: block !important;
+	}
+	.mobile {
+		display: none !important;
+	}
+}
+@media (max-width: 600px) {
+	.desktop {
+		display: none !important;
+	}
+	.mobile {
+		display: block !important;
+	}
+}
+
 div#bot-gradient {
 	position: fixed;
 	bottom: 0px;
@@ -16,7 +33,7 @@ div#bot-gradient {
 }
 div.cover {
 	position: fixed;
-	z-index: 11;
+	z-index: 13;
 	left: 0;
 	top: 0;
 	width: 100%;
@@ -30,13 +47,16 @@ div.details {
 	float: right;
 	right: calc(50% - 450px);
 	transform: translateY(-50%);
-	width: 350px;
-	// opacity: 1;
+	max-width: 350px;
 	display: none;
 
 	img {
 		width: 350px;
 		margin-bottom: 15px;
+
+		@media (max-width: 600px) {
+			width: 270px;
+		}
 	}
 
 	p {
@@ -44,6 +64,19 @@ div.details {
 	}
 	p.desc {
 		margin-top: 15px;
+	}
+	p.mobile {
+		padding-bottom: 15px;
+
+		span.date {
+			padding-top: 0px;
+			padding-left: 0px;
+			float: left;
+		}
+		span.time {
+			float: left;
+			padding-left: 10px;
+		}
 	}
 
 	span {
@@ -126,13 +159,65 @@ div.event:hover {
 		// background: $yellow;
 	}
 }
+div#events-table {
+	position: relative;
+	top: 90px;
+	padding: 8px;
+
+	div.event-dot {
+		position: absolute;
+		bottom: -5px;
+		left: -6px;
+		width: 6px;
+		height: 6px;
+		background-color: white;
+		border: 2px solid $blue;
+		border-radius: 100%;
+		z-index: 5;
+	}
+	div.row {
+		position: relative;
+		padding-left: 5px;
+		padding-top: 20px;
+		margin-left: -2px;
+		border-color: $blue;
+		border-style: solid;
+		border-width: 0px 0px 2px 2px;
+	}
+
+	span {
+		display: block;
+	}
+	span.date {
+		color: $blue;
+		font-size: 17px;
+		font-weight: 500;
+	}
+	span.title {
+		padding-top: 5px;
+		font-size: 20px;
+		font-weight: 600;
+	}
+	span.location {
+		text-transform: uppercase;
+	}
+	span.readmore {
+		margin-top: 5px;
+		margin-bottom: 3px;
+		transition: ease-in-out 0.1s;
+	}
+	span.readmore:hover {
+		cursor: pointer;
+		color: $pink;
+	}
+}
 div.modal {
 	position: fixed;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
 	background: $light-grey;
-	z-index: 12;
+	z-index: 14;
 	padding: 25px;
 
 	div.close {
@@ -165,6 +250,10 @@ div.modal {
 	    -webkit-transform: rotate(-45deg); /* Chrome, Safari, Opera */
 	    transform: rotate(-45deg);
 	}
+}
+div#page-extender {
+	position: absolute;
+	visibility: hidden;
 }
 div#readmore {
 	position: fixed;
@@ -239,6 +328,14 @@ div#top-gradient {
     pointer-events: none;
 }
 
+// The header must be fixed for this page
+div#hamburger-wrapper {
+	position: fixed !important;
+	z-index: 12 !important;
+}
+div#nav-screen {
+	z-index: 11 !important;
+}
 header {
 	position: fixed !important;
 	z-index: 11 !important;
@@ -273,102 +370,4 @@ svg#indicator {
 	path {
   		fill: $pink;
   	}
-}
-
-
-div#events-table {
-	div.column {
-		box-sizing: border-box;
-  		float: left;
-  		width: 50%;
-  		padding: 20px 8px 8px 8px;
-
-		border-color: $mid-grey;
-  		border-style: solid;
-  		border-width: 0px;
-	}
-	div.event-dot {
-		position: absolute;
-		bottom: -5px;
-		width: 6px;
-		height: 6px;
-		background-color: white;
-		border: 2px solid $blue;
-		border-radius: 100%;
-		z-index: 5;
-	}
-	div.left {
-		position: relative;
-		padding-right: 15px;
-		border-width: 0px 2px 2px 0px;
-		text-align: right;
-
-		div.event-dot {
-			right: -6px;
-		}
-	}
-	div.right {
-		position: relative;
-		padding-left: 15px;
-		margin-left: -2px;
-		border-width: 0px 0px 2px 2px;
-
-		div.event-dot {
-			left: -6px;
-		}
-	}
-	div.row {
-		padding-left: 1px;
-	}
-
-	span {
-		display: block;
-	}
-	span.date {
-		color: $blue;
-		font-size: 17px;
-		font-weight: 500;
-	}
-	span.title {
-		padding-top: 5px;
-		font-size: 20px;
-		font-weight: 600;
-	}
-	span.location {
-		text-transform: uppercase;
-	}
-	span.desc {
-		padding-top: 5px;
-
-	}
-
-	@media (max-width: 550px) {
-		div.column {
-			width: 100%;
-		}
-		div.left {
-			border-left: 2px solid $mid-grey;
-			border-right: 0px;
-			margin-left: 0px;
-			text-align: left;
-
-			div.event-dot {
-				left: -6px;
-			}
-		}
-		div.right {
-			margin-left: 0px;
-		}
-		div.row {
-			padding-left: 0%;
-		}
-		div.unselectable {
-			padding: 0;
-			display: none;
-			height: 0px;
-		}
-	}
-}
-h1 {
-	padding-top: 20px;
 }

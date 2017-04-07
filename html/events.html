@@ -8,12 +8,12 @@
 
 <div id="top-back"></div>
 <div id="top-gradient"></div>
-<svg width="900px" id="back-graphic" viewBox="0 0 100 100" preserveAspectRatio="none"></svg>
-<svg width="20px" height="20px" id="indicator" viewBox="0 0 4 4">
+<svg class="desktop" width="900px" id="back-graphic" viewBox="0 0 100 100" preserveAspectRatio="none"></svg>
+<svg class="desktop" width="20px" height="20px" id="indicator" viewBox="0 0 4 4">
 	<path d="M0 0 L4 2 L 0 4" />
 </svg>
 
-<div class="content-wrapper">
+<div class="content-wrapper desktop">
 	<div class="event unselectable" id="event-0" data-id="0">
 		<span class="date">Saturday March 25, 2017</span>	
 		<span class="title">Design Panel 0</span>
@@ -54,6 +54,66 @@
 		<div class="dot"></div>
 	</div>
 </div>
+<div class="content-wrapper mobile">
+	<div id="events-table">
+		<div class="row clear-fix" data-details-id="0">
+			<span class="date">03.25.17</span>
+			<span class="title">Publication Launch 0</span>
+			<span class="location">Sibley Hall</span>
+			<span class="readmore">Read more</span>
+			<div class="event-dot"></div>
+		</div>
+		<div class="row clear-fix" data-details-id="1">
+			<span class="date">03.25.17</span>
+			<span class="title">Publication Launch 1</span>
+			<span class="location">Sibley Hall</span>
+			<span class="readmore">Read more</span>
+			<div class="event-dot"></div>
+		</div>
+		<div class="row clear-fix" data-details-id="2">
+			<span class="date">03.25.17</span>
+			<span class="title">Publication Launch 2</span>
+			<span class="location">Sibley Hall</span>
+			<span class="readmore">Read more</span>
+			<div class="event-dot"></div>
+		</div>
+		<div class="row clear-fix" data-details-id="3">
+			<span class="date">03.25.17</span>
+			<span class="title">Publication Launch 3</span>
+			<span class="location">Sibley Hall</span>
+			<span class="readmore">Read more</span>
+			<div class="event-dot"></div>
+		</div>
+		<div class="row clear-fix" data-details-id="0">
+			<span class="date">03.25.17</span>
+			<span class="title">Publication Launch 0</span>
+			<span class="location">Sibley Hall</span>
+			<span class="readmore">Read more</span>
+			<div class="event-dot"></div>
+		</div>
+		<div class="row clear-fix" data-details-id="1">
+			<span class="date">03.25.17</span>
+			<span class="title">Publication Launch 1</span>
+			<span class="location">Sibley Hall</span>
+			<span class="readmore">Read more</span>
+			<div class="event-dot"></div>
+		</div>
+		<div class="row clear-fix" data-details-id="2">
+			<span class="date">03.25.17</span>
+			<span class="title">Publication Launch 2</span>
+			<span class="location">Sibley Hall</span>
+			<span class="readmore">Read more</span>
+			<div class="event-dot"></div>
+		</div>
+		<div class="row clear-fix" data-details-id="3">
+			<span class="date">03.25.17</span>
+			<span class="title">Publication Launch 3</span>
+			<span class="location">Sibley Hall</span>
+			<span class="readmore">Read more</span>
+			<div class="event-dot"></div>
+		</div>
+	</div>
+</div>
 <div id="readmore">
 	<span class="unselectable" id="icon">+</span>
 	<span class="unselectable" id="text">Read more</span>
@@ -62,75 +122,55 @@
 <div class="details" id="details-0">
 	<img src="{% static "imgs/temp.jpg" %}" />
 	<p><span class="title">Publication Launch 0</span>
-		<span class="date">03.25.17</span></p>
+		<span class="date desktop">03.25.17</span></p>
 	<p><span class="location">Sibley Hall</span>
-		<span class="time">2:00-5:00PM</span></p>
+		<span class="time desktop">2:00-5:00PM</span></p>
+	<p class="mobile"><span class="date">03.25.17</span><span class="time">2:00-5:00PM</span></p>
 	<p class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 </div>
 
 <div class="details" id="details-1">
 	<img src="{% static "imgs/temp.jpg" %}" />
 	<p><span class="title">Publication Launch 1</span>
-		<span class="date">03.25.17</span></p>
+		<span class="date desktop">03.25.17</span></p>
 	<p><span class="location">Sibley Hall</span>
-		<span class="time">2:00-5:00PM</span></p>
+		<span class="time desktop">2:00-5:00PM</span></p>
+	<p class="mobile"><span class="date">03.25.17</span><span class="time">2:00-5:00PM</span></p>
 	<p class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 </div>
 
 <div class="details" id="details-2">
 	<img src="{% static "imgs/temp.jpg" %}" />
 	<p><span class="title">Publication Launch 2</span>
-		<span class="date">03.25.17</span></p>
+		<span class="date desktop">03.25.17</span></p>
 	<p><span class="location">Sibley Hall</span>
-		<span class="time">2:00-5:00PM</span></p>
+		<span class="time desktop">2:00-5:00PM</span></p>
+	<p class="mobile"><span class="date">03.25.17</span><span class="time">2:00-5:00PM</span></p>
 	<p class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 </div>
 
 <div class="details" id="details-3">
 	<img src="{% static "imgs/temp.jpg" %}" />
 	<p><span class="title">Publication Launch 3</span>
-		<span class="date">03.25.17</span></p>
+		<span class="date desktop">03.25.17</span></p>
 	<p><span class="location">Sibley Hall</span>
-		<span class="time">2:00-5:00PM</span></p>
+		<span class="time desktop">2:00-5:00PM</span></p>
+	<p class="mobile"><span class="date">03.25.17</span><span class="time">2:00-5:00PM</span></p>
 	<p class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 </div>
 
 <div class="details" id="details-4">
 	<img src="{% static "imgs/temp.jpg" %}" />
 	<p><span class="title">Publication Launch 4</span>
-		<span class="date">03.25.17</span></p>
+		<span class="date desktop">03.25.17</span></p>
 	<p><span class="location">Sibley Hall</span>
-		<span class="time">2:00-5:00PM</span></p>
+		<span class="time desktop">2:00-5:00PM</span></p>
+	<p class="mobile"><span class="date">03.25.17</span><span class="time">2:00-5:00PM</span></p>
 	<p class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 </div>
-<div id="bot-gradient"></div>
+<div class="desktop" id="bot-gradient"></div>
 
-<div id="cntr" style="position: fixed; top: 20px; left: 20px; width 100px; height: 100px; z-index: 100;"></div>
-
-<div style="position: absolute; top: 4000px; left: 0px;">asfda</div>
-
-<!-- <div class="content-wrapper">
-<h1 class="unselectable">Upcoming events</h1>
-<div id="events-table">
-	{% for event in events %}
-	<div class="row clear-fix">
-		{% if event.side == "right" %}
-			<div class="column unselectable">&nbsp;</div>
-		{% endif %}
-		<div class="column {{ event.side }}">
-			<span class="date">{{ event.datestr }}</span>
-			<span class="title">{{ event.title }}</span>
-			<span class="location">{{ event.location }}</span>
-			<span class="desc">{{ event.description }}</span>
-			<div class="event-dot"></div>
-		</div>
-		{% if event.side == "left" %}
-			<div class="column unselectable">&nbsp;</div>
-		{% endif %}
-	</div>
-	{% endfor %}
-</div>
-</div> -->
+<div class="desktop" id="page-extender">&nbsp;</div>
 
 <script src="{% static "js/events.js" %}"></script>
 
