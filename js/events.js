@@ -1,6 +1,6 @@
 $(document).ready(function() {
 	// Disable scrolling on desktop devices
-	$('body').on('scroll mousewheel touchmove', function(e) {
+	$('body').on('scroll mousewheel wheel touchmove DOMMouseScroll', function(e) {
 		if($(window).width() > 600) {
 			e.preventDefault();
 		    e.stopPropagation();
@@ -28,13 +28,13 @@ $(document).ready(function() {
 			(($("#back-graphic").width() / 8)) + "px" : (($(window).width()/2 - 340) + "px")).fadeIn(600);
 
 	// Append events
-	var curY = $(window).height()/2 - 25; // this is the center
+	var curY = window.innerHeight/2 - 25; // this is the center
 	$(".event").each( function() {
 		$(this).css("top", curY + "px");
-		curY += $(window).height()/4;
+		curY += window.innerHeight/4;
 	});
 
-	$("#page-extender").css("top", curY + $(window).height()/3);
+	$("#page-extender").css("top", curY + window.innerHeight/3);
 
 	// Draw background arc along the sine wave
 	var background = $("#back-graphic");
@@ -107,7 +107,7 @@ $(document).ready(function() {
 	$(window).resize(function() {
 		updateFixed(fixedElems);
 
-		$("#page-extender").css("top", curY + $(window).height()/3);
+		$("#page-extender").css("top", curY + window.innerHeight/3);
 
 		if($(window).width() > 600 && lastWidth < 600)
 			scrollTo($("#event-" + selectedEvent));
@@ -148,10 +148,10 @@ $(document).ready(function() {
 	});
 
 	/*** Handle mouse scroll events (since normal scrolling is disabled) ***/
-	$('body').bind('mousewheel', function(e) {
+	$('body').bind('mousewheel wheel DOMMouseScroll', function(e) {
 		if($(window).width() > 600 && !scrollInProgress && !inModal) {
 			scrollReady = false;
-	        if(e.originalEvent.wheelDelta > 0) {
+	        if(e.originalEvent.deltaY > 0) {
 	        	if(selectedEvent !== 0) {
 	        		selectedEvent -= 1;
 	        		scrollTo($("#event-" + selectedEvent));
@@ -227,7 +227,7 @@ $(document).ready(function() {
 
 	function updateEvent(event) {
 		// The svg is drawn over a 100x100 viewport, so we use that scale
-		var y = $(window).height()/2 - ($(event).offset().top - $(window).scrollTop() + 24);
+		var y = window.innerHeight/2 - ($(event).offset().top - $(window).scrollTop() + 24);
 		var a = background.outerWidth() * rad/100; //from ellipse equation - width axis
 		var b = background.outerHeight() * rad/100; //from ellipse equation - height axis
 
@@ -259,7 +259,7 @@ $(document).ready(function() {
 			if( parseID($(this).attr("id")) !== selectedEvent )
 				$(this).fadeOut(300);
 		});
-		var viewY = $("#event-" + selectedEvent).offset().top + 24 - $(window).height()/2;
+		var viewY = $("#event-" + selectedEvent).offset().top + 24 - window.innerHeight/2;
 		$("html, body").animate({ scrollTop: viewY + "px" }, 300, function() {
 			scrollInProgress = false;
 			$("#details-" + selectedEvent).slideDown(200);
