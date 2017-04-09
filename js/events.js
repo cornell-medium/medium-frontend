@@ -1,5 +1,5 @@
 $(document).ready(function() {
-	// Disable scrolling
+	// Disable scrolling on desktop devices
 	$('body').on('scroll mousewheel touchmove', function(e) {
 		if($(window).width() > 600) {
 			e.preventDefault();
@@ -19,7 +19,6 @@ $(document).ready(function() {
 	var inModal = false;
 	var lastWidth = $(window).width();
 	var numEvents = $(".event").length;
-	var selectedEvent = 1;
 	var scrollInProgress = false;
 	var scrollReady = true;
 	var scrollReadyChecker;

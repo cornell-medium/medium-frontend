@@ -50,13 +50,25 @@ div.details {
 	max-width: 350px;
 	display: none;
 
-	img {
+	img.cover {
 		width: 350px;
 		margin-bottom: 15px;
 
 		@media (max-width: 600px) {
 			width: 270px;
 		}
+	}
+	img.facebook {
+		margin-top: 8px;
+		width: 20px;
+		height: 20px;
+
+		padding-right: 5px;
+		border-right: 2px solid transparent;
+		transition: ease-in-out 0.1s;
+	}
+	img.facebook:hover {
+		border-right: 2px solid $pink;
 	}
 
 	p {
@@ -340,6 +352,36 @@ header {
 	position: fixed !important;
 	z-index: 11 !important;
 	width: 900px;
+}
+
+p.down-message {
+	position: fixed;
+	bottom: 0px;
+	left: 50%;
+	transform: translateX(-50%);
+	opacity: 0.6;
+	color: $mid-grey;
+	font-size: 10px;
+	z-index: 11;
+
+	@media (max-width: 600px) {
+		display: none;
+	}
+}
+
+p.up-message {
+	position: fixed;
+	top: 80px;
+	left: 50%;
+	transform: translateX(-50%);
+	opacity: 0.6;
+	color: $mid-grey;
+	font-size: 10px;
+	z-index: 11;
+
+	@media (max-width: 600px) {
+		display: none;
+	}
 }
 
 svg#back-graphic {

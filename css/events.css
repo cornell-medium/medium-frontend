@@ -42,12 +42,21 @@ div.details {
   transform: translateY(-50%);
   max-width: 350px;
   display: none; }
-  div.details img {
+  div.details img.cover {
     width: 350px;
     margin-bottom: 15px; }
     @media (max-width: 600px) {
-      div.details img {
+      div.details img.cover {
         width: 270px; } }
+  div.details img.facebook {
+    margin-top: 8px;
+    width: 20px;
+    height: 20px;
+    padding-right: 5px;
+    border-right: 2px solid transparent;
+    transition: ease-in-out 0.1s; }
+  div.details img.facebook:hover {
+    border-right: 2px solid #df0985; }
   div.details p {
     margin: 0px; }
   div.details p.desc {
@@ -279,6 +288,32 @@ header {
   position: fixed !important;
   z-index: 11 !important;
   width: 900px; }
+
+p.down-message {
+  position: fixed;
+  bottom: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0.6;
+  color: #848484;
+  font-size: 10px;
+  z-index: 11; }
+  @media (max-width: 600px) {
+    p.down-message {
+      display: none; } }
+
+p.up-message {
+  position: fixed;
+  top: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0.6;
+  color: #848484;
+  font-size: 10px;
+  z-index: 11; }
+  @media (max-width: 600px) {
+    p.up-message {
+      display: none; } }
 
 svg#back-graphic {
   z-index: -1;
