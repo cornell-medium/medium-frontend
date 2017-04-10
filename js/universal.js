@@ -5,6 +5,7 @@ function stopScrolling (e) {
     e.stopPropagation();
     return false;
 }
+var _timeout = 0;
 
 $(document).ready(function() {
 	var desktop_mode = $(window).width() > $("#logo").width() + $("#nav-bar").width() + 100;
@@ -29,16 +30,29 @@ $(document).ready(function() {
 	});
 
 	$(".hamburger").click(function() {
+
 		if($(this).hasClass("is-active")) {
-			$(this).removeClass("is-active");
-			$(this).css("position", "absolute");
-			$("#nav-screen").fadeOut(100);
-			$('body').off('scroll mousewheel touchmove', stopScrolling);
-		} else {
-			$(this).addClass("is-active");
-			$(this).css("position", "fixed");
-			$("#nav-screen").fadeIn(100);
-			$('body').on('scroll mousewheel touchmove', stopScrolling);
+		    // for some reason click was being called twice. This code blocks
+		    // hamburger from being toggled within .5s of last toggle.
+		    console.log(_timeout + " end")
+		    if (_timeout < new Date().getTime()) {
+                $(this).removeClass("is-active");
+                $(this).css("position", "absolute");
+                $("#nav-screen").fadeOut(100);
+                $('body').off('scroll mousewheel touchmove', stopScrolling);
+                _timeout = new Date().getTime() + 100;
+		    }
+		}
+		else {
+
+		    if (_timeout < new Date().getTime()) {
+                _timeout = new Date().getTime() + 100;
+                console.log(_timeout + " start")
+                $(this).addClass("is-active");
+                $(this).css("position", "fixed");
+                $("#nav-screen").fadeIn(100);
+                $('body').on('scroll mousewheel touchmove', stopScrolling);
+            }
 		}
 	});
 
