@@ -214,27 +214,43 @@ h1 {
         left: 0;
 
         &--0 {
+            -webkit-transform: translateZ(0) scale(1);
+            -ms-transform: translateZ(0) scale(1);
             transform: translateZ(0) scale(1);
         }
         &--1 {
+            -webkit-transform: translateZ(-.5px) scale(1.5);
+            -ms-transform: translateZ(-.5px) scale(1.5);
             transform: translateZ(-.5px) scale(1.5);
         }
         &--2 {
+            -webkit-transform: translateZ(-1px) scale(2);
+            -ms-transform: translateZ(-1px) scale(2);
             transform: translateZ(-1px) scale(2);
         }
         &--3 {
+            -webkit-transform: translateZ(-1.5px) scale(2.5);
+            -ms-transform: translateZ(-1.5px) scale(2.5);
             transform: translateZ(-1.5px) scale(2.5);
         }
         &--4 {
+            -webkit-transform: translateZ(-2px) scale(3);
+            -ms-transform: translateZ(-2px) scale(3);
             transform: translateZ(-2px) scale(3);
         }
         &--5 {
+            -webkit-transform: translateZ(-2.5px) scale(3.5);
+            -ms-transform: translateZ(-2.5px) scale(3.5);
             transform: translateZ(-2.5px) scale(3.5);
         }
     }
 
     &__group {
         position: relative;
+
+
+        -webkit-transform-style: preserve-3d;
+        -ms-transform-style: preserve-3d;
         transform-style: preserve-3d;
         height: 100vh;
 
@@ -266,6 +282,10 @@ p {
 @media (min-width: 900px) {
     .parallax__svg {
         left: 50%;
+
+
+        -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
         transform: translateX(-50%);
     }
 }
