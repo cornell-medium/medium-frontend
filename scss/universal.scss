@@ -2,11 +2,11 @@
 @import "utilities/glitch";
 @import "utilities/variables";
 
-// *, *::before, *::after {
-//     box-sizing: border-box;
-//     margin: 0;
-//     padding: 0;
-// }
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
 // Clearfix from user Roko C. Buljan at StackOverflow
 // http://stackoverflow.com/questions/25110971/div-not-adjusting-height-based-on-contents
