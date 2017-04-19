@@ -1,4 +1,5 @@
 @import "utilities/variables";
+@import "utilities/mixins";
 
 .grey {
 	color: #595858;
@@ -11,10 +12,10 @@
 }
 
 div#center-block {
+    padding: 16px;
 	@media screen and (min-width: 450px) {
 		position: relative;
-		top: 50%;
-		transform: translateY(-50%);
+		margin-top: 100px;
 	}
 }
 div#clock {
@@ -87,4 +88,117 @@ p#signup {
 		display: block;
 		text-decoration: none;
 	}
+}
+
+.wrapper {
+    position: relative;
+    &__col {
+        float: left;
+        position: relative;
+        width: 50%;
+        height: 150px;
+	    overflow: hidden;
+    }
+
+    &__img {
+        max-width: 90%;
+        max-height: 90%;
+        height: auto;
+        background-color: white;
+        position: absolute;
+
+        left: 50%;
+        top: 50%;
+        @include transform(translate(-50%, -50%));
+    }
+
+    &__text {
+        padding: 32px;
+        margin-bottom: 64px;
+        margin-top: 92px;
+    }
+    &__title {
+        color: white;
+        font-size: 34px;
+        font-weight: 500;
+        margin-bottom: 16px;
+
+        &--black {
+            color: black;
+            text-align: center;
+        }
+    }
+    &__paragraph {
+        color: white;
+        font-size: 24px;
+        padding-bottom: 12px;
+    }
+    &__color-box {
+        z-index: -10;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        top: 0;
+        background-clip: content-box;
+
+        &--1 {
+            padding-right: 32px;
+            padding-bottom: 32px;
+            background-color: rgba(224,8,133,.65);
+        }
+        &--2 {
+            padding: 16px;
+            position: absolute;
+            background-color: rgba(250,224,20,.65);
+        }
+        &--3 {
+            padding-top: 32px;
+            padding-left: 32px;
+            background-color: rgba(00,160,211,.65);
+        }
+    }
+}
+
+.spacer {
+    clear: both;
+}
+
+.raw-video {
+    width: 100vw;
+    height: 700px;
+
+    position: absolute;
+    left: 50%;
+    @include transform(translateX(-50%));
+}
+
+.fb-img {
+    position: absolute;
+    margin: auto;
+    left: 50%;
+    @include transform(translate(-50%, 20px));
+}
+
+@media screen and (min-width: 450px) {
+    .wrapper {
+        &__text {
+            padding: 64px;
+        }
+        &__paragraph {
+            padding-left: 48px;
+        }
+        &__col {
+	        width: 33%;
+        }
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .wrapper__col {
+        width: 25%;
+    }
 }
