@@ -1,4 +1,5 @@
 @import "utilities/variables";
+@import "utilities/mixins";
 
 .grey {
 	color: #595858;
@@ -108,7 +109,7 @@ p#signup {
 
         left: 50%;
         top: 50%;
-        transform: translate(-50%, -50%);
+        @include transform(translate(-50%, -50%));
     }
 
     &__text {
@@ -172,14 +173,14 @@ p#signup {
 
     position: absolute;
     left: 50%;
-    transform: translateX(-50%);
+    @include transform(translateX(-50%));
 }
 
 .fb-img {
     position: absolute;
     margin: auto;
     left: 50%;
-    transform: translate(-50%, 20px);
+    @include transform(translate(-50%, 20px));
 }
 
 @media screen and (min-width: 450px) {

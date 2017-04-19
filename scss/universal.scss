@@ -1,6 +1,7 @@
 @import "utilities/fonts";
 @import "utilities/glitch";
 @import "utilities/variables";
+@import "utilities/mixins";
 
 *, *::before, *::after {
     box-sizing: border-box;
@@ -23,7 +24,8 @@
 	display: block;
 	max-width: 900px;
 	left: 50%;
-	transform: translateX(-50%);
+	@include transform(translateX(-50%));
+
 }
 .unselectable {
 	cursor: default;
@@ -99,7 +101,7 @@ div#nav-screen {
 		position: relative;
 		top: 50%;
 		left: 0px;
-		transform: translateY(-50%);
+		@include transform(translateY(-50%));
 
 		margin: 0px;
 		padding: 0px;
@@ -214,34 +216,22 @@ h1 {
         left: 0;
 
         &--0 {
-            -webkit-transform: translateZ(0) scale(1);
-            -ms-transform: translateZ(0) scale(1);
-            transform: translateZ(0) scale(1);
+            @include transform(translateZ(0) scale(1));
         }
         &--1 {
-            -webkit-transform: translateZ(-.5px) scale(1.5);
-            -ms-transform: translateZ(-.5px) scale(1.5);
-            transform: translateZ(-.5px) scale(1.5);
+            @include transform(translateZ(-.5px) scale(1.5));
         }
         &--2 {
-            -webkit-transform: translateZ(-1px) scale(2);
-            -ms-transform: translateZ(-1px) scale(2);
-            transform: translateZ(-1px) scale(2);
+            @include transform(translateZ(-1px) scale(2));
         }
         &--3 {
-            -webkit-transform: translateZ(-1.5px) scale(2.5);
-            -ms-transform: translateZ(-1.5px) scale(2.5);
-            transform: translateZ(-1.5px) scale(2.5);
+            @include transform(translateZ(-1.5px) scale(2.5));
         }
         &--4 {
-            -webkit-transform: translateZ(-2px) scale(3);
-            -ms-transform: translateZ(-2px) scale(3);
-            transform: translateZ(-2px) scale(3);
+            @include transform(translateZ(-2px) scale(3));
         }
         &--5 {
-            -webkit-transform: translateZ(-2.5px) scale(3.5);
-            -ms-transform: translateZ(-2.5px) scale(3.5);
-            transform: translateZ(-2.5px) scale(3.5);
+            @include transform(translateZ(-2.5px) scale(3.5));
         }
     }
 
@@ -284,9 +274,7 @@ p {
         left: 50%;
 
 
-        -webkit-transform: translateX(-50%);
-        -ms-transform: translateX(-50%);
-        transform: translateX(-50%);
+        @include transform(translateX(-50%));
     }
 }
 
