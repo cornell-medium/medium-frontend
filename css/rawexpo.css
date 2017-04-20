@@ -79,8 +79,8 @@ p#signup {
     height: 150px;
     overflow: hidden; }
   .wrapper__img {
-    max-width: 90%;
-    max-height: 90%;
+    max-width: 80%;
+    max-height: 80%;
     height: auto;
     background-color: white;
     position: absolute;
