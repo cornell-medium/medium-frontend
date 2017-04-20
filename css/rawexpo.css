@@ -117,7 +117,8 @@ p#signup {
     left: 0;
     right: 0;
     top: 0;
-    background-clip: content-box; }
+    background-clip: content-box;
+    box-sizing: border-box; }
     .wrapper__color-box--1 {
       padding-right: 32px;
       padding-bottom: 32px;
