@@ -39,16 +39,13 @@ div#dynamic-text {
   width: 90%;
   transform: translate(-50%, -50%);
   top: -24vw;
-  color: white;
+  color: #00a1d3;
   font-size: 40px;
   font-weight: 600;
-  text-align: center;
-  background-color: black;
-  padding-top: 6px;
-  font-family: 'Cooper Hewitt'; }
+  text-align: center; }
   @media screen and (max-width: 490px) {
     div#dynamic-text {
-      font-size: 22px; } }
+      font-size: 20px; } }
 
 div#indicator-left {
   position: fixed;
@@ -112,6 +109,7 @@ div.section {
   top: 0px;
   left: 0px;
   width: 100%;
+  height: 100vh;
   padding: 0px 0px 4px 0px;
   margin: 0px; }
 
@@ -181,7 +179,7 @@ span#typed {
   letter-spacing: 2px; }
 
 span.typed-cursor {
-  background: white;
+  background: #00a1d3;
   padding-right: 4px;
   padding-top: 5px;
   margin-left: 8px;

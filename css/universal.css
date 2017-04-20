@@ -96,11 +96,6 @@
   7. Width (px)
   8. Height (px)
 */
-*, *::before, *::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0; }
-
 .clear-fix:before,
 .clear-fix:after {
   content: " ";
@@ -202,70 +197,70 @@ header {
     top: 20px; }
 @keyframes indicator-anim-1 {
   0% {
-    clip: rect(53px, 50px, 13px, 0); }
+    clip: rect(33px, 50px, 9px, 0); }
   6.66667% {
-    clip: rect(57px, 50px, 26px, 0); }
+    clip: rect(37px, 50px, 20px, 0); }
   13.33333% {
-    clip: rect(62px, 50px, 26px, 0); }
+    clip: rect(12px, 50px, 36px, 0); }
   20% {
-    clip: rect(37px, 50px, 7px, 0); }
+    clip: rect(49px, 50px, 31px, 0); }
   26.66667% {
-    clip: rect(6px, 50px, 4px, 0); }
+    clip: rect(23px, 50px, 33px, 0); }
   33.33333% {
-    clip: rect(1px, 50px, 29px, 0); }
+    clip: rect(16px, 50px, 20px, 0); }
   40% {
-    clip: rect(13px, 50px, 16px, 0); }
+    clip: rect(41px, 50px, 19px, 0); }
   46.66667% {
-    clip: rect(30px, 50px, 37px, 0); }
+    clip: rect(63px, 50px, 3px, 0); }
   53.33333% {
-    clip: rect(23px, 50px, 6px, 0); }
+    clip: rect(41px, 50px, 34px, 0); }
   60% {
-    clip: rect(52px, 50px, 21px, 0); }
+    clip: rect(64px, 50px, 19px, 0); }
   66.66667% {
-    clip: rect(10px, 50px, 9px, 0); }
+    clip: rect(55px, 50px, 19px, 0); }
   73.33333% {
-    clip: rect(40px, 50px, 19px, 0); }
+    clip: rect(36px, 50px, 15px, 0); }
   80% {
-    clip: rect(55px, 50px, 34px, 0); }
+    clip: rect(52px, 50px, 34px, 0); }
   86.66667% {
-    clip: rect(4px, 50px, 12px, 0); }
+    clip: rect(44px, 50px, 20px, 0); }
   93.33333% {
-    clip: rect(47px, 50px, 35px, 0); }
+    clip: rect(14px, 50px, 37px, 0); }
   100% {
-    clip: rect(60px, 50px, 4px, 0); } }
+    clip: rect(43px, 50px, 26px, 0); } }
 @keyframes indicator-anim-2 {
   0% {
-    clip: rect(42px, 50px, 19px, 0); }
+    clip: rect(14px, 50px, 28px, 0); }
   6.66667% {
-    clip: rect(31px, 50px, 18px, 0); }
+    clip: rect(27px, 50px, 15px, 0); }
   13.33333% {
-    clip: rect(9px, 50px, 27px, 0); }
+    clip: rect(13px, 50px, 16px, 0); }
   20% {
-    clip: rect(60px, 50px, 26px, 0); }
+    clip: rect(18px, 50px, 16px, 0); }
   26.66667% {
-    clip: rect(15px, 50px, 37px, 0); }
+    clip: rect(47px, 50px, 37px, 0); }
   33.33333% {
-    clip: rect(62px, 50px, 8px, 0); }
+    clip: rect(20px, 50px, 10px, 0); }
   40% {
-    clip: rect(6px, 50px, 26px, 0); }
+    clip: rect(30px, 50px, 15px, 0); }
   46.66667% {
-    clip: rect(36px, 50px, 24px, 0); }
+    clip: rect(12px, 50px, 6px, 0); }
   53.33333% {
-    clip: rect(58px, 50px, 34px, 0); }
+    clip: rect(39px, 50px, 36px, 0); }
   60% {
-    clip: rect(20px, 50px, 20px, 0); }
+    clip: rect(56px, 50px, 18px, 0); }
   66.66667% {
-    clip: rect(63px, 50px, 31px, 0); }
+    clip: rect(15px, 50px, 16px, 0); }
   73.33333% {
-    clip: rect(48px, 50px, 3px, 0); }
+    clip: rect(63px, 50px, 27px, 0); }
   80% {
-    clip: rect(54px, 50px, 4px, 0); }
+    clip: rect(6px, 50px, 22px, 0); }
   86.66667% {
-    clip: rect(5px, 50px, 21px, 0); }
+    clip: rect(5px, 50px, 20px, 0); }
   93.33333% {
-    clip: rect(50px, 50px, 17px, 0); }
+    clip: rect(19px, 50px, 15px, 0); }
   100% {
-    clip: rect(19px, 50px, 16px, 0); } }
+    clip: rect(36px, 50px, 36px, 0); } }
     header div.indicator > img {
       position: absolute;
       top: 0px;
@@ -323,85 +318,8 @@ header {
 h1 {
   color: #00a1d3;
   cursor: default;
-  font-size: 32px;
+  font-size: 22px;
   font-weight: 600;
-  text-align: center;
-  margin-top: 32px;
-  margin-bottom: 32px; }
-
-.parallax {
-  z-index: -30;
-  perspective: 1px;
-  height: 100vh;
-  overflow-x: hidden;
-  overflow-y: auto; }
-  .parallax__svg {
-    position: absolute;
-    left: -80%;
-    height: 100%; }
-  .parallax__layer {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0; }
-    .parallax__layer--0 {
-      -webkit-transform: translateZ(0) scale(1);
-      -ms-transform: translateZ(0) scale(1);
-      transform: translateZ(0) scale(1); }
-    .parallax__layer--1 {
-      -webkit-transform: translateZ(-0.5px) scale(1.5);
-      -ms-transform: translateZ(-0.5px) scale(1.5);
-      transform: translateZ(-0.5px) scale(1.5); }
-    .parallax__layer--2 {
-      -webkit-transform: translateZ(-1px) scale(2);
-      -ms-transform: translateZ(-1px) scale(2);
-      transform: translateZ(-1px) scale(2); }
-    .parallax__layer--3 {
-      -webkit-transform: translateZ(-1.5px) scale(2.5);
-      -ms-transform: translateZ(-1.5px) scale(2.5);
-      transform: translateZ(-1.5px) scale(2.5); }
-    .parallax__layer--4 {
-      -webkit-transform: translateZ(-2px) scale(3);
-      -ms-transform: translateZ(-2px) scale(3);
-      transform: translateZ(-2px) scale(3); }
-    .parallax__layer--5 {
-      -webkit-transform: translateZ(-2.5px) scale(3.5);
-      -ms-transform: translateZ(-2.5px) scale(3.5);
-      transform: translateZ(-2.5px) scale(3.5); }
-  .parallax__group {
-    position: relative;
-    -webkit-transform-style: preserve-3d;
-    -ms-transform-style: preserve-3d;
-    transform-style: preserve-3d;
-    height: 100vh; }
-    .parallax__group--2 {
-      min-height: 150vh; }
-
-article {
-  margin: auto;
-  margin-top: 108px;
-  margin-bottom: 108px;
-  padding: 16px;
-  width: 100%;
-  max-width: 700px; }
-
-p {
-  font-size: 22px; }
-
-@media (min-height: 600px) {
-  .parallax__svg {
-    left: -100px; } }
-@media (min-width: 900px) {
-  .parallax__svg {
-    left: 50%;
-    -webkit-transform: translateX(-50%);
-    -ms-transform: translateX(-50%);
-    transform: translateX(-50%); } }
-.background--white {
-  background-color: white; }
-
-.inset-shadow {
-  box-shadow: inset 0 0 10px #555; }
+  text-align: center; }
 
 /*# sourceMappingURL=universal.css.map */
