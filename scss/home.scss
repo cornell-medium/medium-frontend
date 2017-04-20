@@ -45,17 +45,14 @@ div#dynamic-text {
 	width: 90%;
 	transform: translate(-50%, -50%);
 	top: -24vw;
-	color: white;
+	color: $blue;
 	font-size: 40px;
 	// font-size: 3vw;
 	font-weight: 600;
 	text-align: center;
-	background-color: black;
-	padding-top: 6px;
-	font-family: 'Cooper Hewitt';
 
 	@media screen and (max-width: 490px) {
-		font-size: 22px;
+		font-size: 20px;
 	}
 }
 div#indicator-left {
@@ -120,6 +117,7 @@ div.section {
 	top: 0px;
 	left: 0px;
 	width: 100%;
+	height: 100vh;
 	padding: 0px 0px 4px 0px;
 	// padding-bottom: 10px;
 	margin: 0px;
@@ -194,7 +192,7 @@ span#typed {
 	letter-spacing: 2px;
 }
 span.typed-cursor {
-	background: white;
+	background: $blue;
 	padding-right: 4px;
 	padding-top: 5px;
 	margin-left: 8px;
