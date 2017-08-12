@@ -37,6 +37,8 @@ Once the Django server is running, launch the Sass processor in watch mode from 
 sass --watch scss:css
 ```
 
+**Ensure you are in the static submodule of the backend repository.** If you have just cloned the backend, or see that the static directory is empty, run `git submodule update --init --recursive` from the root of the backend repo.
+
 ## Project Structure
 
 The structure presented here is meant to serve as a guide for how the project is organized, and keep the project as easy to understand as possible. It is not a mirror image of the project, nor show all of the project's contents.
