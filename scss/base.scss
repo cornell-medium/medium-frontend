@@ -13,7 +13,9 @@
     background-color: black;
     padding: 16px;
     color: white;
-    display: inline-block;
+    /* display: inline-block;*/
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
     height: 100vh;
     display: none;
 
@@ -44,4 +46,8 @@
     .nav {
         display: block;
     }
+}
+
+.content {
+    margin-left: 160px;
 }
