@@ -52,7 +52,8 @@ The structure presented here is meant to serve as a guide for how the project is
 │   └── components              # Markup for reusable app components, to be used across pages
 │       └── nav.html
 ├── scss                        # Sass (stylesheets) for the app
-│   ├── index.scss              # Gathering point for universal app styles
+|   ├── style.scss              # Import file for all .scss files
+│   ├── base.scss               # Gathering point for universal app styles
 │   ├── sections                # Styles for independent app sections
 │   │   ├── splash.scss
 │   │   └── events.scss
@@ -83,6 +84,11 @@ The structure presented here is meant to serve as a guide for how the project is
 └── fonts                       # Fonts used by the app
 ```
 
+## Adding a New Section
+
+* _HTML_: Should be in `html/sections`. Import all necessary styles and components by beginning the file with `{% extends "components/base.html" %}`. Wrap all content with `{% block content %}` and `{% endblock %}`.
+* _SCSS_: Add your `.scss` file to `scss/sections` and make sure the name is prefixed with an underscore. Under "Import specific page styles" in `style.scss`, add `@import './sections/<pagename>'`. The underscore is not necessary.
+
 ## Contribution Guidelines
 
 A few rules-of-thumb for contributing to this project.
@@ -112,6 +118,6 @@ Variable naming should remain consistent throughout the project, although naming
 
 ### Sass File Structure
 
-_External file structure_: the `index.scss` file serves only as a location to import all other `scss` files. This way, only a single `scss` file needs to be loaded in each `HTML` page. Stylesheets should be organized with the same directory structure as their respective `HTML` template.
+_External file structure_: the `style.scss` file serves only as a location to import all other `scss` files. This way, only a single `scss` file needs to be loaded in each `HTML` page. Stylesheets should be organized with the same directory structure as their respective `HTML` template.
 
 _Internal file structure_: one of the major benefit of Sass is the ability to write clearer, more readable stylesheets. Use variables wherever possible, and always defer to using a variable already created in the app: margins, padding, animations and colors should only be defined using variables. Elements within each stylesheet should be organized as children of their parents component. This gives a clear hierarchy of how elements are organized on the page.
