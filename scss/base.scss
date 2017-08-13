@@ -9,11 +9,10 @@
 }
 
 .nav {
-    width: 160px;
+    width: 180px;
     background-color: black;
     padding: 16px;
     color: white;
-    /* display: inline-block;*/
     position: fixed; /* Stay in place */
     z-index: 1; /* Stay on top */
     height: 100vh;
@@ -43,11 +42,15 @@
 }
 
 @media (min-width: 700px) {
+    .content {
+        margin-left: 180px;
+    
+        .container {
+            margin-left: 0px;
+        }
+    }
+    
     .nav {
         display: block;
     }
-}
-
-.content {
-    margin-left: 160px;
 }
