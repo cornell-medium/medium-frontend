@@ -8,38 +8,40 @@
     <link rel="shortcut icon" href="{% static 'imgs/favicon.ico' %}" >
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
     <link rel="stylesheet" href="{% static 'css/index.css' %}">
-    <link rel="stylesheet" href="{% static 'css/base.css' %}">
     <script src="{% static 'js/jquery-3.2.1.slim.min.js' %}"></script>
     <script src="{% static 'js/scripts.js' %}"></script>
 </head>
 <body>
     <div class="nav">
-        <div class="nav__icon">
-            medium<br>
-            design collective
-        </div>
+        <img class="nav__icon" src="{% static 'imgs/logo_white.png' %}">
         <div class="nav__options">
-            <div class="nav__option">
+            <div class="nav__option unselectable">
                 home
             </div>
-            <div class="nav__option">
+            <div class="nav__option unselectable">
                 our teams
             </div>
-            <div class="nav__option">
+            <div class="nav__option unselectable">
                 events
             </div>
-            <div class="nav__option">
+            <div class="nav__option unselectable">
                 raw expo
             </div>
-            <div class="nav__option">
+            <div class="nav__option unselectable">
                 publication
             </div>
-            <div class="nav__option">
+            <div class="nav__option unselectable">
                 join us
             </div>
         </div>
+        <div class="nav__divider"></div>
         <div class="nav__blurb">
-            empowering creative individuals through design
+            <div class="nav__blurb__mission">
+                empowering creative individuals through design
+            </div>
+            <div class="nav__blurb__description">
+                cornell’s first interdisiplinary design community and multi-dimensional platform
+            </div>
         </div>
     </div>
     <div class="content">
