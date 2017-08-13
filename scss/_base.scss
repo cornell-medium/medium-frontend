@@ -1,3 +1,16 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+.unselectable {
+  -moz-user-select: -moz-none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  cursor: default;
+}
+
 .nav {
     width: 180px;
     background-color: black;
