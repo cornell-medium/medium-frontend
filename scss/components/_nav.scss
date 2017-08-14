@@ -28,6 +28,7 @@
         &:hover {
             cursor: pointer;
             border-right: 2px solid $nav-highlight;
+            padding-right: $small-margin;
             // font-weight: 400;
         }
     }

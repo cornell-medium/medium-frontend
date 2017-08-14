@@ -1,0 +1,63 @@
+{% extends "components/base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="events row">
+    <div class="events__lst col-6">
+      <div class="events__lst__top-fade"></div>
+      <div class="events__lst__circle-back"></div>
+      <div class="events__lst__bot-fade"></div>
+
+      <div class="events__event unselectable" data-event-id="0">
+        <span class="events__event__date">thursday may 04, 2017</span>	
+        <span class="events__event__title">design panel</span>
+        <span class="events__event__location">ehub collegetown</span>
+        <span class="events__event__time">7:30 - 9:30pm</span>
+        <div class="events__event__dot"></div>
+      </div>
+      <div class="events__event unselectable" data-event-id="1">
+        <span class="events__event__date">thursday may 04, 2017</span>	
+        <span class="events__event__title">design panel</span>
+        <span class="events__event__location">ehub collegetown</span>
+        <span class="events__event__time">7:30 - 9:30pm</span>
+        <div class="events__event__dot"></div>
+      </div>
+      <div class="events__event unselectable" data-event-id="2">
+        <span class="events__event__date">thursday may 04, 2017</span>	
+        <span class="events__event__title">design panel</span>
+        <span class="events__event__location">ehub collegetown</span>
+        <span class="events__event__time">7:30 - 9:30pm</span>
+        <div class="events__event__dot"></div>
+      </div>
+      <div class="events__event unselectable" data-event-id="3">
+        <span class="events__event__date">thursday may 04, 2017</span>	
+        <span class="events__event__title">design panel</span>
+        <span class="events__event__location">ehub collegetown</span>
+        <span class="events__event__time">7:30 - 9:30pm</span>
+        <div class="events__event__dot"></div>
+      </div>
+      <div class="events__event unselectable" data-event-id="4">
+        <span class="events__event__date">thursday may 04, 2017</span>	
+        <span class="events__event__title">design panel</span>
+        <span class="events__event__location">ehub collegetown</span>
+        <span class="events__event__time">7:30 - 9:30pm</span>
+        <div class="events__event__dot"></div>
+      </div>
+    </div>
+    <div class="events__desc col-6">
+      <div class="events__desc__content-box">
+        <img class="events__desc__img" src="{% static 'imgs/events/designpanel.jpg' %}">
+        <h1 class="events__desc__title">design panel</h1>
+        <p class="events__desc__datetime">thursday may 04, 2017 from 7:30 - 9:30pm</p>
+        <p class="events__desc__location">ehub collegetown</p>
+        <div class="events__desc__divider"></div>
+        <p class="events__desc__blurb">lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="{% static 'js/vendor/jquery.path.js' %}"></script>
+<script src="{% static 'js/sections/events.js' %}"></script>
+{% endblock %}

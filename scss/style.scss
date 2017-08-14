@@ -1,5 +1,6 @@
 /* Import variables */
 @import './utilities/colors';
+@import './utilities/fonts';
 @import './utilities/margins';
 @import './utilities/transitions';
 
@@ -7,7 +8,8 @@
 @import './base';
 
 /* Import components */
-@import './components/nav'
+@import './components/nav';
 
 /* Import specific page styles */
+@import './sections/events';
 //@import './sections/rawexpo'
