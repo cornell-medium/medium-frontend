@@ -21,12 +21,17 @@
     }
 
     &__option {
+        display: block;
         padding: $smallest-margin;
         border-right: 2px solid transparent;
+        color: $white;
+        text-decoration: none;
         transition: $default-transition;
 
         &:hover {
             cursor: pointer;
+            color: $white;
+            text-decoration: none;
             border-right: 2px solid $nav-highlight;
             padding-right: $small-margin;
             // font-weight: 400;

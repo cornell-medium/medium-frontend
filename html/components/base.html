@@ -14,24 +14,21 @@
     <div class="nav">
         <img class="nav__icon" src="{% static 'imgs/logo_white.png' %}">
         <div class="nav__options">
-            <div class="nav__option unselectable">
+            <a class="nav__option unselectable" href="{% url 'index' %}">
                 home
-            </div>
-            <div class="nav__option unselectable">
+            </a>
+            <a class="nav__option unselectable">
                 our teams
-            </div>
-            <div class="nav__option unselectable">
+            </a>
+            <a class="nav__option unselectable" href="{% url 'events' %}">
                 events
-            </div>
-            <div class="nav__option unselectable">
+            </a>
+            <a class="nav__option unselectable" href="{% url 'rawexpo' %}">
                 raw expo
-            </div>
-            <div class="nav__option unselectable">
-                publication
-            </div>
-            <div class="nav__option unselectable">
+            </a>
+            <a class="nav__option unselectable">
                 join us
-            </div>
+            </a>
         </div>
         <div class="nav__divider"></div>
         <div class="nav__blurb">
