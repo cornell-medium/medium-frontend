@@ -51,8 +51,9 @@
       transition: $default-transition;
     }
   }
-  &__event:hover &__event__title {
-    background-color: $event-hover;
+  &__event:hover &__event__date {
+    margin-right: -35px;
+    padding-right: 35px;
   }
   .active {
     border-color: $event-active;

@@ -1,14 +1,15 @@
-$light-blue: #E6ECF5;
-$light-brown: #DDCEAE;
+$lightest-grey: #EEEEEE;
 $light-grey: #DDDDDD;
-$mid-grey: #797979;
-$pink: #CD67A2;
+$mid-grey: #AAAAAA;
+$dark-grey: #797979;
+$darkest-grey: #444444;
+
 $transparent-white: rgba(247, 247, 247, 0);
 $white: #F7F7F7;
 
-$event-active: $light-brown;
-$events-back: $light-blue;
-$event-hover: $light-blue;
+$event-active: $mid-grey;
+$events-back: $lightest-grey;
+$event-hover: $lightest-grey;
 $events-wheel: $light-grey;
-$nav-divier: $mid-grey;
-$nav-highlight: $pink;
+$nav-divier: $dark-grey;
+$nav-highlight: $white;
