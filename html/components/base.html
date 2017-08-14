@@ -46,9 +46,10 @@
     <div class="content">
         <div class="container">
         {% block content %}
-        if you are seeing this you need to wrap the content on your page with the block tags
         {% endblock %}
         </div>
+        {% block out-of-container %}
+        {% endblock %}
     </div>
 </body>
 <script src="http://code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous"></script>
