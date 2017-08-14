@@ -10,3 +10,28 @@
   user-select: none;
   cursor: default;
 }
+
+body {
+    background-color: #f7f7f7;
+}
+
+.newsletter {
+    width: 100%;
+    padding: 64px;
+    background-color: #d0d0d0;
+
+    &__text {
+        color: black;
+    }
+
+    &__field {
+        background-color: white;
+        height: 20px;
+    }
+}
+
+.footer {
+    height: 64px;
+    background-color: #303030;
+    width: 100%;
+}

@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <script src="{% static 'js/jquery-3.2.1.slim.min.js' %}"></script>
     <script src="{% static 'js/scripts.js' %}"></script>
+    {% block resources %}
+    {% endblock %}
 </head>
 <body>
     <div class="nav">
@@ -40,15 +42,17 @@
                 empowering creative individuals through design
             </div>
             <div class="nav__blurb__description">
-                cornell’s first interdisiplinary design community and multi-dimensional platform
+                a platform for interdisciplinary design at Cornell University
             </div>
         </div>
     </div>
     <div class="content">
-        <div class="container">
         {% block content %}
         if you are seeing this you need to wrap the content on your page with the block tags
         {% endblock %}
+        <div class="newsletter">
+            <div class="newsletter__text">newsletter</div>
+            <div class="newsletter__field"></div>
         </div>
     </div>
 </body>
