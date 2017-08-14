@@ -21,14 +21,20 @@
     }
 
     &__option {
+        display: block;
         padding: $smallest-margin;
         border-right: 2px solid transparent;
+        color: $white;
+        text-decoration: none;
         transition: $default-transition;
 
-        &:hover {
+        &:hover, &:focus {
             cursor: pointer;
+            color: $white;
+            text-decoration: none;
             border-right: 2px solid $nav-highlight;
-            // font-weight: 400;
+            padding-right: $small-margin;
+            outline: none;
         }
     }
 

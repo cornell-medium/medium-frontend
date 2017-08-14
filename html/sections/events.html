@@ -1,0 +1,84 @@
+{% extends "components/base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="events-container container-fluid h-100">
+  <div class="desktop row justify-content-end">
+    <div class="desktop__lst col-6">
+      <div class="desktop__lst__top-fade"></div>
+      <p class="desktop__lst__up-message unselectable">press &uarr; for earlier events</p>
+      <div class="desktop__lst__circle-back"></div>
+      <svg class="desktop__lst__indicator" width="26px" height="26px" viewBox="0 0 4 4">
+        <path d="M0 0 L4 2 L 0 4" />
+      </svg>
+      <div class="desktop__lst__bot-fade"></div>
+      <p class="desktop__lst__down-message unselectable">press &darr; for upcoming events</p>
+
+      {% for event in events %}
+      <div class="desktop__event unselectable" data-event-id="{{ event.id }}">
+        <span class="desktop__event__date">{{ event.full_date }}</span>	
+        <span class="desktop__event__title">{{ event.title }}</span>
+        {% if event.location %}<span>{{ event.location }}</span>{% endif %}
+        {% if event.time %}<span>{{ event.time }}</span>{% endif %}
+        <div class="desktop__event__dot"></div>
+      </div>
+      {% endfor %}
+    </div>
+    <div class="desktop__desc col-6">
+        {% for event in events %}
+        <div class="desktop__desc__content-box" id="event-{{ event.id }}">
+          <img class="desc__img" src="{% static event.image %}">
+          <h1 class="desc__title">{{ event.title }}</h1>
+          <p class="desc__datetime">{{ event.full_date }}{% if event.time %} from {{ event.time }}{% endif %}</p>
+          {% if event.location %}<p class="desc__location">{{ event.location }}</p>{% endif %}
+          <div class="desc__divider"></div>
+          <p class="desc__blurb">{{ event.description }}</p>
+          {% if event.facebook %}
+            <a class="desc__facebook" href="{{ event.facebook }}">
+              <i data-feather="facebook"></i>
+            </a>
+          {% endif %}
+        </div>
+        {% endfor %}
+    </div>
+  </div>
+  <div class="mobile">
+      {% for event in events %}
+      <div class="mobile__event" data-event-id="{{ event.id }}">
+        <span class="mobile__event__title">{{ event.title }}</span>
+        <span class="mobile__event__date">{{ event.full_date }}{% if event.time %} from {{ event.time }}{% endif %}</span>
+        {% if event.location %}<span class="mobile__event__location">{{ event.location }}</span>{% endif %}
+        <span class="mobile__event__readmore unselectable">tap to read more</span>
+        <div class="mobile__event__dot"></div>
+      </div>
+      {% endfor %}
+
+      {% for event in events %}
+      <div class="mobile__desc" id="mobile-event-{{ event.id }}">
+        <div class="mobile__desc__content-box">
+          <div class="mobile__desc__close close" data-event-id="{{ event.id }}">
+            <span class="mobile__desc__close__label">close</span> &times;
+          </div>
+          <img class="desc__img" src="{% static event.image %}">
+          <h1 class="desc__title">{{ event.title }}</h1>
+          <p class="desc__datetime">{{ event.full_date }}{% if event.time %} from {{ event.time }}{% endif %}</p>
+          {% if event.location %}<p class="desc__location">{{ event.location }}</p>{% endif %}
+          <div class="desc__divider"></div>
+          <p class="desc__blurb">{{ event.description }}</p>
+          {% if event.facebook %}
+            <a class="desc__facebook" href="{{ event.facebook }}">
+              <i data-feather="facebook"></i>
+            </a>
+          {% endif %}
+        </div>
+      </div>
+      {% endfor %}
+  </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="{% static 'js/vendor/jquery.path.js' %}"></script>
+<script>var initialEventId = {{ nearest_event }};</script>
+<script src="{% static 'js/sections/events.js' %}"></script>
+{% endblock %}

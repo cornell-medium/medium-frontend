@@ -1,0 +1,39 @@
+$small-header-font-size: 20px;
+$header-font-size: 28px;
+
+$default-font-size: 14px;
+$event-title: $small-header-font-size;
+$event-mobile-title: $small-header-font-size;
+$event-desc-title: $header-font-size;
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Roboto', sans-serif;
+}
+
+@font-face {
+  font-family: 'Cooper Hewitt';
+  src: url('../fonts/CooperHewitt-Book.woff');
+  font-style: normal;
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: 'Cooper Hewitt';
+  src: url('../fonts/CooperHewitt-BookItalic.woff');
+  font-style: italic;
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: 'Cooper Hewitt';
+  src: url('../fonts/CooperHewitt-Medium.woff');
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Cooper Hewitt';
+  src: url('../fonts/CooperHewitt-MediumItalic.woff');
+  font-style: italic;
+  font-weight: 400;
+}

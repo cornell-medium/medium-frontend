@@ -6,6 +6,7 @@
  	<title>Medium Design Collective</title>
  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="{% static 'imgs/favicon.ico' %}" >
+    <link href="https://fonts.googleapis.com/css?family=Roboto:500,700" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <script src="{% static 'js/jquery-3.2.1.slim.min.js' %}"></script>
@@ -17,24 +18,21 @@
     <div class="nav">
         <img class="nav__icon" src="{% static 'imgs/logo_white.png' %}">
         <div class="nav__options">
-            <div class="nav__option unselectable">
+            <a class="nav__option unselectable" href="{% url 'index' %}">
                 home
-            </div>
-            <div class="nav__option unselectable">
+            </a>
+            <a class="nav__option unselectable">
                 our teams
-            </div>
-            <div class="nav__option unselectable">
+            </a>
+            <a class="nav__option unselectable" href="{% url 'events' %}">
                 events
-            </div>
-            <div class="nav__option unselectable">
+            </a>
+            <a class="nav__option unselectable" href="{% url 'rawexpo' %}">
                 raw expo
-            </div>
-            <div class="nav__option unselectable">
-                publication
-            </div>
-            <div class="nav__option unselectable">
+            </a>
+            <a class="nav__option unselectable">
                 join us
-            </div>
+            </a>
         </div>
         <div class="nav__divider"></div>
         <div class="nav__blurb">
@@ -48,7 +46,6 @@
     </div>
     <div class="content">
         {% block content %}
-        if you are seeing this you need to wrap the content on your page with the block tags
         {% endblock %}
         <div class="newsletter">
             <div class="newsletter__text">newsletter</div>
@@ -56,7 +53,11 @@
         </div>
     </div>
 </body>
-<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script>
+<script src="http://code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+{% block scripts %}
+{% endblock %}
+<script>feather.replace();</script>
 </html>
