@@ -2,10 +2,14 @@
   color: #595858; }
 
 .pink {
-  color: #df0985; }
+	// color: #df0985; }
+	color: $dark-grey;
+}
 
 .blue {
-  color: #00a1d3; }
+	// color: #00a1d3; }
+	color: $light-grey;
+}
 
 .section {
 	width:100%;
