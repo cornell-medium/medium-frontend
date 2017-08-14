@@ -19,7 +19,7 @@ $(document).ready(function() {
   // Setup events
   var eventsAng = {};
   var curAngle = 90;
-  $('.events__event').each( function() {
+  $('.events__event').each(function() {
     var event = $(this);
     var id = event.data('event-id');
     eventsAng[id] = curAngle;
@@ -29,8 +29,14 @@ $(document).ready(function() {
     event.css('top', coords[1] + 'px');
     if(id === selectedEventId)
       event.addClass('active');
+    event.fadeIn(250);
 		curAngle += 30;
   });
+
+  $('#event-' + selectedEventId).fadeIn(250);
+
+  selectedEventId = initialEventId;
+  scrollTo(initialEventId);
   
   // Handle scrolling through events
   $('body').on('mousewheel wheel DOMMouseScroll', function(e) {
@@ -125,12 +131,15 @@ $(document).ready(function() {
           else
             event.removeClass('active');
 
-          scrollInProgress = false;
         });
       }
     });
 
-    currentEventId = selectedEventId;
+    $('#event-' + currentEventId).fadeOut(250, function() {
+      $('#event-' + selectedEventId).slideDown(250);
+      currentEventId = selectedEventId;
+      scrollInProgress = false;
+    });
   }
 
   function calcCoords(degAngle) {

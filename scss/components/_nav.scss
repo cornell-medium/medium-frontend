@@ -28,13 +28,13 @@
         text-decoration: none;
         transition: $default-transition;
 
-        &:hover {
+        &:hover, &:focus {
             cursor: pointer;
             color: $white;
             text-decoration: none;
             border-right: 2px solid $nav-highlight;
             padding-right: $small-margin;
-            // font-weight: 400;
+            outline: none;
         }
     }
 
