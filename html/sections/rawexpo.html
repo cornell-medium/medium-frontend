@@ -1,7 +1,8 @@
 {% extends "components/base.html" %}
+{% load static %}
 
 {% block content %}
-<div class="header section">
+<div class="header section" style="background-image: url('{% static 'imgs/raw.jpg' %}');">
 <div class="header__text">
 	<div class="header__tagline">
 		come curious
@@ -26,6 +27,7 @@
 </div>
 </div>
 <div class="video section">
+<iframe class="video__embed" src="https://www.youtube.com/embed/Z4S7TwntSUk" frameborder="0" allowfullscreen></iframe>
 </div>
 <div class="news section">
 <div class="news__content">

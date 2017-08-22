@@ -19,6 +19,8 @@
 	background-color:$mid-grey;
 	position: relative;
 	height:100vh;
+	background-size: cover;                     
+    background-repeat: no-repeat;
 
 	&__text {
 		width:auto;
@@ -94,6 +96,11 @@
 .video {
 	height:100vh;
 	background-color: black;
+
+	&__embed {
+		height:100%;
+		width:100%;
+	}
 }
 
 .news {
@@ -127,11 +134,52 @@
 		font-size:18px;
 		&__title {
 			font-weight: 500;
+			padding-top:$small-margin;
 		}
 		&__author {
 			display:inline-block;
 			font-style: italic;
 			font-weight: 300;
 		}
+	}
+}
+
+.gallery {
+
+	&__row {
+		margin-bottom: $small-margin;
+		margin-left: $small-margin;
+		height: 33vh;
+	}
+
+	&__img {
+		margin-right: $small-margin;
+		width: 32%;
+		height: 100%;
+		float: left;
+		background-size: cover;                     
+    	background-repeat: no-repeat;
+	}
+}
+
+.collaborators {
+	margin-top: $large-margin;
+	width: 100%;
+  	text-align: center;
+
+	&__row {
+		display: inline-block;
+	}
+	&__img {
+		height: 150px;
+		width: 150px;
+		float: left;
+		background-size: cover;                     
+    	background-repeat: no-repeat;
+    	margin: $small-margin;
+	}
+
+	h1 {
+		margin-bottom: $large-margin;
 	}
 }
