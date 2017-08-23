@@ -1,3 +1,7 @@
+@import 'utilities/colors';
+@import 'utilities/margins';
+@import 'utilities/transitions';
+
 .fullscreen-background {
     width: 100%;
     overflow: hidden;
@@ -11,7 +15,7 @@
     &__overlay {
         height: 100%;
         width: 100%;
-        background-color: rgba(0,0,0,.2);
+        background-color: rgba(0,0,0,.5);
         z-index: 5;
         position: absolute;
         top: 0;
@@ -38,6 +42,41 @@
         background-position: center;
     }
 
+    &__desc {
+        margin-top: $large-margin;
+    }
+
+    &__form {
+        margin-top: $med-margin;
+
+        &__email {
+            width: calc(100% - 140px);
+            background: transparent;
+            color: $darkest-grey;
+            padding-top: $smallest-margin;
+            padding-bottom: $smallest-margin;
+            border: none;
+            outline: none;
+            border-bottom: 3px solid $darkest-grey;
+        }
+
+        &__submit {
+            margin-left: $smallest-margin;
+            background: transparent;
+            color: $darkest-grey;
+            outline: none;
+            border: 3px solid $darkest-grey;
+            padding: $smallest-margin $small-margin $smallest-margin $small-margin;
+            cursor: pointer;
+            transition: $default-transition;
+
+            &:hover {
+                border-color: $dark-grey;
+                color: $dark-grey;
+            }
+        }
+    }
+
     &__text {
         padding: 32px;
         padding-top: 96px;
@@ -47,6 +86,7 @@
 
         &-wrap {
             width: 100%;
+            min-height: 360px;
             display: inline-block;
         }
     }
