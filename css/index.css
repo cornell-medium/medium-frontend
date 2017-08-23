@@ -1,0 +1,70 @@
+.fullscreen-background {
+  width: 100%;
+  overflow: hidden;
+  position: relative; }
+  .fullscreen-background__video {
+    overflow: none;
+    display: block; }
+  .fullscreen-background__overlay {
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    z-index: 5;
+    position: absolute;
+    top: 0; }
+  .fullscreen-background__text {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    text-align: center;
+    z-index: 10; }
+
+.narrative {
+  width: 100%; }
+  .narrative__img {
+    background-color: black;
+    height: 500px;
+    background-size: cover;
+    background-position: center; }
+  .narrative__text {
+    padding: 32px;
+    padding-top: 96px;
+    padding-bottom: 96px;
+    max-width: 450px;
+    margin: auto; }
+    .narrative__text-wrap {
+      width: 100%;
+      display: inline-block; }
+  .narrative__wrap {
+    position: relative; }
+    .narrative__wrap::after {
+      content: ' ';
+      display: block;
+      clear: both; }
+
+@media (min-width: 1200px) {
+  .left {
+    float: left; }
+
+  .right {
+    float: right; }
+
+  .narrative__img {
+    height: 100%;
+    width: 50%;
+    position: absolute;
+    top: 0; }
+  .narrative__right {
+    right: 0; }
+  .narrative__left {
+    left: 0; }
+  .narrative__text {
+    max-width: 300px;
+    padding-left: 0;
+    padding-right: 0; }
+    .narrative__text-wrap {
+      width: 50%; } }
+
+/*# sourceMappingURL=index.css.map */
