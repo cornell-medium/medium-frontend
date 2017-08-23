@@ -554,7 +554,10 @@ p {
     width: 55%;
     float: right;
     background: #828282;
-    color: #000; }
+    color: #000;
+    background-repeat: none;
+    background-position: center;
+    background-size: cover; }
   .applications__header {
     font-family: Roboto;
     font-size: 36px;
