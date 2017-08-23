@@ -464,12 +464,12 @@ html, body {
     width: 100%; }
 
 .listserve {
-  height: 75vh;
+  height: 60vh;
   position: relative; }
   .listserve__content {
     width: 75%;
     position: absolute;
-    margin-top: 12%;
+    margin-top: 8%;
     margin-left: 12%;
     display: inline-block; }
   .listserve__header {
