@@ -576,9 +576,6 @@ p {
     background-color: #AAAAAA;
     position: relative;
     margin: 12px 0px 12px 12%; }
-  .applications__pic {
-    height: 100%;
-    overflow: hidden; }
 
 input[type=submit] {
   background: transparent;
