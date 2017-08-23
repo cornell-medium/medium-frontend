@@ -12,19 +12,17 @@
     </video>
     <div class="fullscreen-background__overlay"></div>
     <div class="fullscreen-background__text">
-        <h1>medium design collective</h1>
+        <h1 class="unselectable">medium design collective</h1>
     </div>
 </div>
 <div class="narrative">
     <div class="narrative__wrap">
         <div class="narrative__text-wrap left">
             <div class="narrative__text">
-                lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
-                lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
-                lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
-                lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
-                lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
-                lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+                we believe the design process exists in every discipline. it is the blueprint that allows different
+                disciplines to collaborate and innovate. medium aims to make design more accessible by hosting
+                design-focused events, publishing an annual design review, and building a web platform to serve as
+                an easy access poinfor students interested in design.
             </div>
         </div>
         <div class="narrative__img narrative__right" style="background-image: url('{% static 'imgs/raw.jpg' %}');"></div>
@@ -32,19 +30,18 @@
     <div class="narrative__wrap">
         <div class="narrative__text-wrap right">
             <div class="narrative__text">
-                lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
-                lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
-                lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
-                lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
-                lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
-                lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+                <div class="narrative__desc">interested in hearing more about what's going on with design at cornell?</div>
+                <form class="narrative__form">
+                    <input type="email" class="narrative__form__email" placeholder="email address" />
+                    <button type="submit" class="narrative__form__submit">flood my inbox</button>
+                </form>
             </div>
         </div>
         <div class="narrative__img narrative__left" style="background-image: url('{% static 'imgs/team.jpg' %}');"></div>
     </div>
-    <div class="newsletter">
+    <!-- <div class="newsletter">
         <div class="newsletter__text">newsletter</div>
         <div class="newsletter__field"></div>
-    </div>
+    </div>-->
 </div>
 {% endblock %}
