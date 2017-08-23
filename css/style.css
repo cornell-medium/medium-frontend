@@ -41,6 +41,9 @@ html, body {
   user-select: none;
   cursor: default; }
 
+p {
+  margin-bottom: 0; }
+
 .newsletter {
   width: 100%;
   padding: 64px;
@@ -62,19 +65,31 @@ html, body {
 /* Import components */
 .nav {
   width: 180px;
+  display: block;
   background-color: black;
   padding: 20px;
   color: white;
   font-weight: 300;
   position: fixed;
   /* Stay in place */
-  z-index: 1;
+  z-index: 998;
   /* Stay on top */
-  height: 100vh;
-  display: none; }
+  height: 100vh; }
+  .nav__modal {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: -5; }
   .nav__icon {
     margin-top: 10px;
-    width: 100%; }
+    width: 140px;
+    height: 55px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top; }
   .nav__options {
     margin-top: 20px;
     margin-bottom: 20px;
@@ -109,9 +124,28 @@ html, body {
     font-size: 14px;
     font-style: italic; }
     .nav__blurb__description {
-      margin-top: 20px; }
+      margin-top: 30px; }
     .nav__blurb__mission {
       font-weight: 400; }
+
+#hamburger {
+  background-color: black;
+  padding: 8px 8px 0px 8px;
+  position: fixed;
+  top: 28px;
+  right: 32px;
+  z-index: 999;
+  color: white; }
+
+#hamburger:hover {
+  cursor: pointer; }
+
+.no-display {
+  display: none; }
+
+.no-scroll {
+  overflow: hidden;
+  height: 100vh; }
 
 @media (max-height: 650px) {
   .nav__divider {
@@ -119,13 +153,25 @@ html, body {
   .nav__blurb {
     display: none; } }
 @media (min-width: 700px) {
+  .no-display {
+    display: inherit; }
+
+  #hamburger {
+    display: none; }
+
   .content {
     margin-left: 180px; }
     .content .container {
       margin-left: 0px; }
 
+  .no-scroll {
+    overflow: initial; }
+
   .nav {
-    display: block; } }
+    display: block;
+    width: 180px; }
+    .nav__modal {
+      display: none; } }
 /* Import specific page styles */
 .events-container {
   max-width: 1400px; }

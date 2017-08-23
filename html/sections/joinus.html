@@ -1,4 +1,5 @@
 {% extends "components/base.html" %}
+{% load static %}
 
 {% block content %}
 
@@ -32,9 +33,7 @@
             eiusmod tempor incididunt ut labore et dolore magna aliqua. 
         </div>
     </div>
-    <div class="applications__right">
-        send help idk how pictures work w django
-    </div>
+    <div class="applications__right" style="background-image: url('{% static 'imgs/join.jpg' %}')"></div>
 </div>
 
 {% endblock %}
