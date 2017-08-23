@@ -1,0 +1,43 @@
+div#main-wrap {
+  margin-top: 150px; }
+
+div.section {
+  margin-bottom: 90px; }
+
+div.section p {
+  font-size: 15px; }
+
+div.section strong {
+  font-weight: 700; }
+
+h1 {
+  padding-bottom: 25px; }
+
+h2 {
+  padding-top: 45px;
+  padding-bottom: 15px;
+  color: #00a1d3;
+  font-size: 17px;
+  text-align: center; }
+
+img.section-banner {
+  width: 100%; }
+
+li {
+  padding-bottom: 10px; }
+  li img {
+    float: left;
+    width: 60px;
+    height: 60px;
+    padding-right: 25px;
+    padding-bottom: 10px; }
+
+ol {
+  font-size: 15px; }
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+  padding-right: 0; }
+
+/*# sourceMappingURL=about.css.map */

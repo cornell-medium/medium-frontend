@@ -1,0 +1,76 @@
+{% load static %}
+
+{% block styles %}
+    <link rel="stylesheet" href="{% static "css/events.css" %}">
+{% endblock %}
+
+{% include "header.html" %}
+
+<div id="top-back"></div>
+<div id="top-gradient"></div>
+<svg class="desktop" width="900px" id="back-graphic" viewBox="0 0 100 100" preserveAspectRatio="none"></svg>
+<svg class="desktop" width="20px" height="20px" id="indicator" viewBox="0 0 4 4">
+	<path d="M0 0 L4 2 L 0 4" />
+</svg>
+
+<p class="unselectable up-message">Press &uarr; for earlier events</p>
+
+<div class="content-wrapper desktop">
+	{% for event in events %}
+	<div class="event unselectable" id="event-{{ event.id }}">
+		<span class="date">{{ event.full_date }}</span>	
+		<span class="title">{{ event.title }}</span>
+		{% if event.location %}<span class="location">{{ event.location }}</span>{% endif %}
+		{% if event.time %}<span class="time">{{ event.time }}</span>{% endif %}
+		<div class="dot"></div>
+	</div>
+	{% endfor %}
+</div>
+
+<!-- The mobile view is seperate (it is much simpler) -->
+<div class="content-wrapper mobile">
+	<div id="events-table">
+		{% for event in events %}
+		<div class="row clear-fix" data-details-id="{{ event.id }}">
+			<span class="date">{{ event.short_date }}</span>
+			<span class="title">{{ event.title }}</span>
+			{% if event.location %}<span class="location">{{ event.location }}</span>{% endif %}
+			<span class="readmore">Read more</span>
+			<div class="event-dot"></div>
+		</div>
+		{% endfor %}
+	</div>
+</div>
+
+<div id="readmore">
+	<span class="unselectable" id="icon">+</span>
+	<span class="unselectable" id="text">Read more</span>
+</div>
+
+<!-- Event details are the same across both mobile and desktop -->
+{% for event in events %}
+<div class="details" id="details-{{ event.id }}">
+	<img class="cover" src="{% static event.image %}" />
+	<p><span class="title">{{ event.title }}</span>
+		<span class="date desktop">{{ event.short_date }}</span></p>
+	<p>{% if event.location %}<span class="location">{{ event.location }}</span> {% endif %}
+		{% if event.time %}<span class="time desktop">{{ event.time }}</span>{% endif %}</p>
+	<p class="mobile"><span class="date">{{ event.short_date }}</span>
+		{% if event.time %}<span class="time">{{ event.time }}</span>{% endif %}</p>
+	<p class="desc">{{ event.description }}</p>
+	{% if event.facebook %}
+		<a href="{{ event.facebook }}"><img class="facebook" src="{% static "imgs/facebook.png" %}" /></a>
+	{% endif %}
+</div>
+{% endfor %}
+
+<p class="unselectable down-message">Press &darr; for upcoming events</p>
+
+<div class="desktop" id="bot-gradient"></div>
+
+<div class="desktop" id="page-extender">&nbsp;</div>
+
+<script>var selectedEvent = {{ nearest_event }};</script>
+<script src="{% static "js/events.js" %}"></script>
+
+{% include "footer.html" %}

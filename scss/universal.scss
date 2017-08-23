@@ -1,0 +1,188 @@
+@import "utilities/fonts";
+@import "utilities/glitch";
+@import "utilities/variables";
+@import "utilities/mixins";
+
+// Clearfix from user Roko C. Buljan at StackOverflow
+// http://stackoverflow.com/questions/25110971/div-not-adjusting-height-based-on-contents
+.clear-fix:before,
+.clear-fix:after {
+	content:" ";
+	display:table;
+}
+.clear-fix:after {
+ 	clear:both;
+}
+.content-wrapper {
+	position: relative;
+	display: block;
+	max-width: 900px;
+	left: 50%;
+	@include transform(translateX(-50%));
+
+}
+.unselectable {
+	cursor: default;
+	-moz-user-select: -moz-none;
+	-khtml-user-select: none;
+	-webkit-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+}
+
+body {
+	font-family: 'Cooper Hewitt';
+	font-size: 15px;
+}
+
+button.hamburger {
+	position: absolute;	
+	right: 30px;
+	top: 22px;
+}
+button.hamburger:focus {
+	outline: 0;
+}
+
+div#attributions {
+	padding-bottom: 5px;
+	font-size: 9px;
+	text-align: center;
+}
+div#attributions a {
+	color: $blue;
+	text-decoration: none;
+}
+div#hamburger-wrapper {
+	display: none;
+	position: absolute;
+	max-width: 900px;
+	width: 100%;
+	top: 0px;
+	z-index: 11;
+}
+div#main-wrap {
+	padding-left: 2em;
+	padding-right: 2em;
+}
+div#nav-screen {
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	background: rgba(nth($blue-rgb, 1), nth($blue-rgb, 2), nth($blue-rgb, 3), 0.95);
+	display: none;
+	z-index: 10;
+
+	a {
+		display: block;
+		padding: 19px 30px 15px 0px;
+
+		color: white;
+		font-size: 25px;
+		font-weight: 600;
+		text-align: right;
+		text-decoration: none;
+		transition: ease-in-out 0.1s;
+	}
+	a:hover {
+		background: rgba(255, 255, 255, 0.7);
+		color: $blue;
+	}
+
+	ul {
+		position: relative;
+		top: 50%;
+		left: 0px;
+		@include transform(translateY(-50%));
+
+		margin: 0px;
+		padding: 0px;
+
+		list-style: none;
+	}
+}
+
+header {
+	position: absolute;
+	z-index: 10;
+	display: inline-block;
+	padding-left: 30px;
+	padding-right: 30px;
+	overflow: hidden;
+
+	div.indicator {
+		display: none;
+		position: relative;
+		float: right;
+		right: 40px;
+		top: 20px;
+
+		@include imgGlitch("indicator", 15, 50, 50, 0, 0);
+
+		img {
+			max-height: 35px;
+		}
+	}
+
+	div#nav-bar {
+		display: none;
+		position: relative;
+		float: right;
+
+		a {
+			border-bottom: 2px solid rgba(nth($blue-rgb, 1), nth($blue-rgb, 2), nth($blue-rgb, 3), 0.0);
+			color: $mid-grey;
+			font-weight: 500;
+			text-decoration: none;
+			padding-bottom: 3px;
+			transition: ease-in-out 0.1s;
+		}
+		a:hover {
+			color: black;
+			border-bottom: 2px solid $blue;
+		}
+
+		div {
+			position: relative;
+			top: 18px;
+
+			div#background {
+				position: absolute;
+				top: 3px;
+				left: 10px;
+				background: $light-grey;
+				width: 110%;
+				height: 11px;
+			}
+			ul {
+				position: relative;
+				list-style: none;
+				padding: 0;
+
+				li {
+					display: inline-block;
+					padding: 0;
+					margin-left: 20px;
+				}
+			}
+		}
+	}
+
+	img#logo {
+		position: relative;
+		padding-bottom: 10px;
+		top: 10px;
+		left: 0px;
+		max-width: 145px;
+	}
+}
+
+h1 {
+	color: $blue;
+	cursor: default;
+	font-size: 22px;
+	font-weight: 600;
+	text-align: center;
+}

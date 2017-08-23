@@ -1,0 +1,85 @@
+{% load static %}
+
+{% block styles %}
+    <link rel="stylesheet" href="{% static "css/about.css" %}">
+{% endblock %}
+
+{% include "header.html" %}
+
+<!-- Main body -->
+<div class="content-wrapper" style="margin-top: -90px;">
+	<div id="main-wrap">
+	<div class="section">
+		<h1>What We Do</h1>
+		<ul>
+			<li>
+				<img src="{% static "imgs/about/group_icon.png" %}">
+				<p><strong>Bring together people interested in design at Cornell</strong><br >
+				Our priority it to build a community by connecting and collaborating with existing organizations and disciplines through design. We were founded in response to a call from leaders across campus for a stronger student alliance towards design.</p>
+			</li>
+			<li>
+				<img src="{% static "imgs/about/hammer_icon.png" %}">
+				<p><strong>Increase access to design tools and resources</strong><br >
+				By uniting design organizations across campus, our objective is to make design tools and resources easier to reach for those in need. The focus of our web platform is to provide a connection point and centralized resource to people interested in design.</p>
+			</li>
+			<li>
+				<img src="{% static "imgs/about/publication_icon.png" %}">
+				<p><strong>Publish an annual design review</strong><br >
+				The objective of our publication is to expose the diverse design pockets on campus and provide a unified perspective on Cornell’s creative community. We typically publish in mid-spring of each year.</p>
+			</li>
+			<li>
+				<img src="{% static "imgs/about/events_icon.png" %}">
+				<p><strong>Host design events</strong><br >
+				We host events for the Cornell community throughout the year to drive excitement about design on campus. Past events include the Raw Expo, Adobe workshops, and the Cornell Creative Sprint.</p>
+			</li>
+			<li>
+				<img src="{% static "imgs/about/question_icon.png" %}">
+				<p><strong>Provide design consulting</strong><br >
+				As a center for the campus design community, we are always available to help connect people looking for help in their design pursuits with those who can help them. We pull knowledge from both our core team and the organizations we connect.</p>
+			</li>
+		</ul>
+	</div>
+	<div class="section">
+		<h1>Our Mission</h1>
+		<p><strong>Using design in its different forms to inspire dialogue across disciplines. </strong>Our mission is to build an interdisciplinary community that promotes design education, culture and dialogue by connecting organizations and individuals through design. Our core values are:
+
+		<ol>
+			<li>To increase dialogue amongst organizations about design on campus</li>
+			<li>To connect design to other organizations and teams to build more innovative and holistic solutions</li>
+			<li>To promote the value of design through interdisciplinary collaborations that have implications beyond academy into practice</li>
+		</ol></p>
+	</div>
+	<div class="section">
+		<h1>Who We Are</h1>
+		<img class="section-banner" src="{% static "imgs/about/who_banner.jpg" %}">
+		<p><strong>A group of like-minded individuals. </strong>Medium's team originated as a group of students from Cornell's College of Architecture, Art, and Planning, and has since grown to incorporate students from many colleges and disciplines. Our team focuses on specific deliverables and projects to connect, create, and sustain the design community on campus. We accomplish this through four subteams:</p>
+
+		<h2>Subteams</h2>
+		<ul>
+			<li>
+				<img src="{% static "imgs/about/events_icon.png" %}">
+				<p><strong>Events</strong><br >
+				The events team strives to plan, host, and organize events to drive excitement and initiate dialogue between students across all disciplines through design.</p>
+			</li>
+			<li>
+				<img src="{% static "imgs/about/brand_icon.png" %}">
+				<p><strong>Branding</strong><br >
+				The branding team is responsible for creating Medium's visual identity, which aims to bring together individuals interested in design at Cornell</p>
+			</li>
+			<li>
+				<img src="{% static "imgs/about/publication_icon.png" %}">
+				<p><strong>Publication</strong><br >
+				The publication team aims to expose the diverse design pockets on campus and provide a unified perspective on Cornell's creative community.</p>
+			</li>
+			<li>
+				<img src="{% static "imgs/about/web_icon.png" %}">
+				<p><strong>Web</strong><br >
+				The web team serves to connect students to the creative community. By uniting design organizations across campus, our objective is to make design tools and resources easier to reach for those in need. The focus of our web platform is to provide a connection point and centralized resource to people interested in design.</p>
+			</li>
+		</ul>
+	</div>
+	</div>
+</div>
+
+<div id="attributions">Icons by <a href="http://icons8.com">Icons8</a></div>
+{% include "footer.html" %}

@@ -1,0 +1,67 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+<head>
+ 	<meta charset="utf-8">
+
+ 	<title>Medium Design Collective</title>
+ 	<meta name="description" content="Medium Design Collective">
+ 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link href="https://fonts.googleapis.com/css?family=Material+Icons|Source+Code+Pro|Source+Sans+Pro:400,700" rel="stylesheet">
+	<link rel="stylesheet" href="{% static "css/universal.css" %}">
+	<link rel="stylesheet" href="{% static "css/hamburgers.css" %}" >
+
+	<link rel="shortcut icon" href="{% static "imgs/favicon.ico" %}" >
+	<link rel="icon" type="image/png" href="{% static "imgs/favicon-192x192.png" %}" sizes="192x192">
+	<link rel="apple-touch-icon" sizes="180x180" href="{% static "imgs/favicon-180x180.png" %}">
+
+	<script src="{% static "js/jquery-3.1.1.min.js" %}"></script>
+</head>
+
+<body>
+	<header class="content-wrapper">
+		<a href="{% url 'index' %}"><img id="logo" src="{% static "imgs/logo.png" %}"></a>
+
+		<div id="nav-bar">
+			<div>
+				<div class="unselectable" id="background">&nbsp;</div>
+				<ul>
+					<li><a class="nav-link" data-icon="home" href="{% url 'index' %}">Home</a></li>
+					<li><a class="nav-link" data-icon="raw" href="{% url 'rawexpo' %}">RAW EXPO</a></li>
+					<li><a class="nav-link" data-icon="publication" href="{% url 'publication' %}">Publication</a></li>
+					<li><a class="nav-link" data-icon="events" href="{% url 'events' %}">Events</a></li>
+					<li><a class="nav-link" data-icon="about" href="{% url 'about' %}">About Us</a></li>
+					<li><a class="nav-link" data-icon="join" href="{% url 'apply' %}">Join Us</a></li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="indicator">
+			<img id="ind-1" src="{% static "imgs/navigation/events_blue.png" %}">
+			<img id="ind-2" src="{% static "imgs/navigation/events_white.png" %}">
+			<img id="ind-3" src="{% static "imgs/navigation/events_blue.png" %}">
+		</div>
+	</header>
+
+	<!-- Always on top, fixed on page -->
+	<div id="hamburger-wrapper">
+		<button class="hamburger hamburger--collapse" type="button">
+			<span class="hamburger-box">
+				<span class="hamburger-inner hamburger-color"></span>
+			</span>
+		</button>
+	</div>
+
+	<!-- Only visible on click -->
+	<div class="unselectable" id="nav-screen">
+		<ul>
+			<li><a href="{% url 'index' %}"><span class="content-wrapper">Home</span></a></li>
+			<li><a href="{% url 'rawexpo' %}"><span class="content-wrapper">RAW EXPO</span></a></li>
+			<li><a href="{% url 'publication' %}"><span class="content-wrapper">Publication</span></a></li>
+			<li><a href="{% url 'events' %}"><span class="content-wrapper">Events</span></a></li>
+			<li><a href="{% url 'about' %}"><span class="content-wrapper">About Us</span></a></li>
+			<li><a href="{% url 'apply' %}"><span class="content-wrapper">Join Us</span></a></li>
+		</ul>
+	</div>

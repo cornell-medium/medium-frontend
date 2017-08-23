@@ -1,0 +1,31 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+<head>
+ 	<meta charset="utf-8">
+
+ 	<title>Medium Design Collective</title>
+ 	<meta name="description" content="Medium Design Collective">
+
+	<link href="https://fonts.googleapis.com/css?family=Material+Icons|Source+Code+Pro:400,700" rel="stylesheet">
+	<link rel="stylesheet" href="{% static "css/construction.css" %}">
+</head>
+
+<body>
+	<div id="particles-js"></div>
+
+	<img class="unselectable" id="logo" src="{% static "imgs/logo_white.png" %}">
+	<span class="unselectable" >
+		<img id="icon" src="{% static "imgs/construction_icon.png" %}">
+		<p>coming soon</p>
+	</span>
+	<a id="footer" href="http://icons8.com/">Icons by Icons8</a>
+</body>
+
+<script src="{% static "js/particles.min.js" %}"></script>
+<script>
+	particlesJS.load('particles-js', "{% static "js/particles.json" %}", function() {
+  		console.log('callback - particles.js config loaded');
+	});
+</script>
