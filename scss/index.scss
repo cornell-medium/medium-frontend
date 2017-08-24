@@ -9,6 +9,8 @@
 
     &__video {
         overflow: none;
+        // width: 100%;
+        height: 100vh;
         display: block;
     }
 
@@ -50,7 +52,7 @@
         margin-top: $med-margin;
 
         &__email {
-            width: calc(100% - 140px);
+            width: calc(100% - 90px);
             background: transparent;
             color: $darkest-grey;
             padding-top: $smallest-margin;
