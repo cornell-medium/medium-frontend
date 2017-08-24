@@ -109,6 +109,19 @@
 	}
 }
 
+.medium {
+	position: relative;
+	margin-top: $xlarge-margin;
+	margin-bottom: $xlarge-margin;
+	text-align: center;
+
+	&__content {
+		font-family: 'Roboto';
+		font-size: 72px;
+		font-weight: 700;
+	}
+}
+
 .video {
 	height:100vh;
 	background-color: black;
