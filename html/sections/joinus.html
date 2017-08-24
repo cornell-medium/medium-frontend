@@ -1,0 +1,39 @@
+{% extends "components/base.html" %}
+{% load static %}
+
+{% block content %}
+
+<div class="listserve section">
+    <div class="listserve__content">
+        <div class="listserve__header">Interested in all things design?</div>
+        <div class="listserve__accent"></div>
+        <div class="listserve__text">
+            lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do 
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+        </div>
+
+    <div class="listserve__input">
+        <form action="//facebook.us14.list-manage.com/subscribe/post?u=c1fc50d19af45d5476d2e29dd&amp;id=e9b8d5f6b3" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+        <input type="email" placeholder="enter your email" name="EMAIL" id="mce-EMAIL">
+        <input type="submit" value="flood my inbox" name="subscribe" id="mc-embedded-subscribe">
+        </form>
+    </div>
+    </div>
+</div>
+
+
+<div class="applications section">
+    <div class="applications__left">
+        <div class="applications__header">applications</div>
+        <div class="applications__accent"></div>
+        <div class="applications__text">
+            lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do 
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+            lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do 
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+        </div>
+    </div>
+    <div class="applications__right" style="background-image: url('{% static 'imgs/join.jpg' %}')"></div>
+</div>
+
+{% endblock %}
