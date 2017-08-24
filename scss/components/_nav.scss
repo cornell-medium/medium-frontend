@@ -1,7 +1,3 @@
-#nav {
-
-}
-
 .nav {
     width: 180px;
     display: block;
@@ -10,7 +6,7 @@
     color: white;
     font-weight: 300;
     position: fixed; /* Stay in place */
-    z-index: 1; /* Stay on top */
+    z-index: 998; /* Stay on top */
     height: 100vh;
 
     &__modal {
@@ -75,7 +71,7 @@
         font-style: italic;
 
         &__description {
-            margin-top: $med-margin;
+            margin-top: $large-margin;
         }
 
         &__mission {
@@ -86,13 +82,15 @@
 
 #hamburger {
     background-color: black;
-    width: 40px;
-    height: 40px;
+    padding: 8px 8px 0px 8px;
     position: fixed;
     top: 28px;
     right: 32px;
-    z-index: 50;
+    z-index: 999;
     color: white;
+}
+#hamburger:hover {
+    cursor: pointer;
 }
 
 .no-display {
