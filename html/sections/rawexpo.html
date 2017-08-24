@@ -1,17 +1,20 @@
 {% extends "components/base.html" %}
+{% load static %}
 
 {% block content %}
-<div class="header section">
-<div class="header__text">
-	<div class="header__tagline">
-		come curious
-		<div style="text-align:right">leave inspired</div>
+<div class="header section" style="background-image: url('{% static 'imgs/raw.jpg' %}');">
+<div class="header__overlay">
+	<div class="header__text">
+		<div class="header__tagline">
+			come curious
+			<div style="text-align:right">leave inspired</div>
+		</div>
+		<div class="header__date">spring 2018</div>
+		<div class="header__rawexpo">raw expo</div>
+		<div class="header__rawexpo dark-grey">raw expo</div>
+		<div class="header__rawexpo light-grey">raw expo</div>
+		<div class="header__place">milstein dome</div>
 	</div>
-	<div class="header__date">spring 2018</div>
-	<div class="header__rawexpo">raw expo</div>
-	<div class="header__rawexpo blue">raw expo</div>
-	<div class="header__rawexpo pink">raw expo</div>
-	<div class="header__place">milstein dome</div>
 </div>
 </div>
 <div class="about section">
@@ -26,14 +29,22 @@
 </div>
 </div>
 <div class="video section">
+<iframe class="video__embed" src="https://www.youtube.com/embed/Z4S7TwntSUk" frameborder="0" allowfullscreen></iframe>
 </div>
 <div class="news section">
 <div class="news__content">
 	<div class="news__header">in the news</div>
 	<div class="news__accent"></div>
 	<div class="news__articles">
-		<div class="news__articles__title">ARTICLE TITLE HERE <div class="news__articles__author"> -- Cornell Daily Sun</div></div>
+		<div class="news__articles__title"><a class="news__articles__link" href="http://www.association.aap.cornell.edu/raw-expo/" target="_blank">RAW EXPO 2015 </a><div class="news__articles__author">-- Cornell Daily Sun</div></div>
+		<div class="news__articles__title"><a class="news__articles__link" href="http://cornellsun.com/2016/05/06/design-empathy-collaboration-raw-expo-at-milstein-hall/" target="_blank">RAW EXPO at Milstein Hall </a><div class="news__articles__author"> -- Cornell Daily Sun</div></div>
+		<div class="news__articles__title"><a class="news__articles__link" href="http://cornellsun.com/2017/05/02/raw-expo-iii-the-raw-appeal-of-collaboration/" target="_blank">RAW Expo III </a><div class="news__articles__author"> -- Cornell Daily Sun</div></div>
 	</div>
 </div>
+</div>
+<div class="medium section">
+	<div class="medium__content">
+		-m-
+	</div>
 </div>
 {% endblock %}
