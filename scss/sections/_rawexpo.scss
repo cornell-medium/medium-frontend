@@ -111,8 +111,9 @@
 
 .medium {
 	position: relative;
-	margin-top: $xlarge-margin;
-	margin-bottom: $xlarge-margin;
+	top: $large-margin;
+	padding-top: $xlarge-margin;
+	padding-bottom: $xlarge-margin;
 	text-align: center;
 
 	&__content {
@@ -133,7 +134,7 @@
 }
 
 .news {
-	height:75vh;
+	position: relative;
 	margin-top: $xlarge-margin;
 	margin-bottom: $xlarge-margin;
 
@@ -151,7 +152,7 @@
 
 	&__accent {
 		width: 10px;
-		height: 200px;
+		height: 110px;
 		background-color: $mid-grey;
 		position: relative;
 		float:left;
@@ -161,6 +162,18 @@
 
 	&__articles {
 		font-size:18px;
+
+		&__link {
+			color: black;
+			border-bottom: 3px solid transparent;
+			transition: $default-transition;
+
+			&:hover {
+				color: black;
+				text-decoration: none;
+				border-bottom: 3px solid black;
+			}
+		}
 		&__title {
 			font-weight: 500;
 			padding-top:$small-margin;
