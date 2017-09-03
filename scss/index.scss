@@ -31,6 +31,23 @@
         color: white;
         text-align: center;
         z-index: 10;
+
+        .apply-btn {
+            position: relative;
+            color: $white;
+            border: 3px solid $white;
+            top: $med-margin;
+            padding: 12px $med-margin $small-margin $med-margin;
+            font-size: 18px;
+            transition: $default-transition;
+            font-weight: 500;
+
+            &:hover {
+                border-color: $mid-grey;
+                color: $mid-grey;
+                text-decoration: none;
+            }
+        }
     }
 }
 
@@ -46,6 +63,26 @@
 
     &__desc {
         margin-top: $large-margin;
+    }
+
+    .apply-btn-dark {
+        display: inline-block;
+        background: transparent;
+        color: $darkest-grey;
+        outline: none;
+        border: 3px solid $darkest-grey;
+        margin-top: $med-margin;
+        padding: 7px $small-margin $smallest-margin $small-margin;
+        cursor: pointer;
+        transition: $default-transition;
+        text-align: center;
+        font-weight: 500;
+
+        &:hover {
+            border-color: $dark-grey;
+            color: $dark-grey;
+            text-decoration: none;
+        }
     }
 
     &__form {
