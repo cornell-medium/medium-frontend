@@ -3,53 +3,65 @@
 
 {% block resources %}
 <link rel="stylesheet" href="{% static 'css/teams.css' %}">
+<link rel="stylesheet" href="{% static 'css/index.css' %}">
 {% endblock %}
 
 {% block content %}
-<div class="team">
-    <div class="team__text">
-        <div class="team__title">Events Team</div>
-        <div class="team__paragraph">
-            The events team develops and hosts numerous workshops,
-            panels, and talks throughout the semester, culminating
-            in the Spring with the RAW Expo. Additionally, the events
-            team hosts collaborative events with organizations throughout
-            campus in order to further strengthen and grow the
-            design community.
+<div class="narrative">
+    <div class="narrative__wrap">
+        <div class="narrative__img narrative__right" style="background-image: url('{% static 'imgs/raw.jpg' %}');"></div>
+        <div class="narrative__text-wrap left">
+            <div class="narrative__text">
+                <div class="narrative__title">Events Team</div>
+                The events team develops and hosts numerous workshops,
+                panels, and talks throughout the semester, culminating
+                in the Spring with the RAW Expo. Additionally, the
+                events team hosts collaborative events with organizations
+                throughout campus in order to further strengthen and
+                grow the design community.
+            </div>
         </div>
     </div>
-    <div class="team__text">
-        <div class="team__title">Design Team</div>
-        <div class="team__paragraph">
-            The design team is in charge of developing a compelling
-            brand around Medium. As a member of the design team, you
-            will work with the Web, Editorial, and Events teams to
-            iterate upon and ideate design solutions that further
-            Medium’s mission.
+    <div class="narrative__wrap">
+        <div class="narrative__img narrative__left" style="background-image: url('{% static 'imgs/design.jpg' %}');"></div>
+        <div class="narrative__text-wrap right">
+            <div class="narrative__text">
+                <div class="narrative__title">Design Team</div>
+                The design team is in charge of developing a compelling
+                brand around Medium. As a member of the design team,
+                you will work with the Web, Editorial, and Events teams
+                to iterate upon and ideate design solutions that further
+                Medium’s mission.
+            </div>
         </div>
     </div>
-    <div class="team__text">
-        <div class="team__title">Web Team</div>
-        <div class="team__paragraph">
-            The web team is responsible for maintaining MDC’s site.
-            As a member of the web team, you will learn how to build
-            and deploy web apps in python, as well as become
-            proficient with unix environments, version control,
-            front end web development, and UI + UX design.
+    <div class="narrative__wrap">
+        <div class="narrative__img narrative__right" style="background-image: url('{% static 'imgs/web.jpg' %}');"></div>
+        <div class="narrative__text-wrap left">
+            <div class="narrative__title"></div>
+            <div class="narrative__text">
+                <div class="narrative__title">Web Team</div>
+                The web team is responsible for maintaining Medium’s
+                site. As a member of the web team, you will learn how
+                to build and deploy web apps in python, as well as
+                become proficient with unix environments, version
+                control, front end web development, and UI + UX design.
+            </div>
         </div>
     </div>
-    <div class="team__text">
-        <div class="team__title">Publication Team</div>
-        <div class="team__paragraph">
-            The publication team researches and authors articles
-            concerning Cornell’s design community. As a member of
-            the publication team, you will work closely with the
-            Web team in order to generate content for Medium’s
-            digital publication.
+    <div class="narrative__wrap">
+        <div class="narrative__img narrative__left" style="background-image: url('{% static 'imgs/publication.jpg' %}');"></div>
+        <div class="narrative__text-wrap right">
+            <div class="narrative__title"></div>
+            <div class="narrative__text">
+                <div class="narrative__title">Publication Team</div>
+                The publication team researches and authors articles
+                concerning Cornell’s design community. As a member
+                of the publication team, you will work closely with
+                the Web team in order to generate content for Medium’s
+                digital publication.
+            </div>
         </div>
-    </div>
-    <div class="team__text">
-        <a class="apply-btn" href="https://medium1.typeform.com/to/unq12E">apply to join the 2017-18 team!</a>
     </div>
 </div>
 {% endblock %}
