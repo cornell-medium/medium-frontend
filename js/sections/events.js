@@ -85,7 +85,7 @@ $(document).ready(function() {
   $(document).keydown(function(key) {
     if(window.innerWidth > 850) {
       switch(key.which) {
-        case 38: // up
+        case 40: // down
           if(!scrollInProgress) {
             scrollReady = false;
             if(selectedEventId !== 0) {
@@ -95,7 +95,7 @@ $(document).ready(function() {
           }
         break;
 
-        case 40: // down
+        case 38: // up
           if(!scrollInProgress) {
             scrollReady = false;
             if(selectedEventId !== numEvents - 1) {
