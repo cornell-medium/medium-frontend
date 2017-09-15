@@ -31,23 +31,6 @@
         color: white;
         text-align: center;
         z-index: 10;
-
-        .apply-btn {
-            position: relative;
-            color: $white;
-            border: 3px solid $white;
-            top: $med-margin;
-            padding: 12px $med-margin $small-margin $med-margin;
-            font-size: 18px;
-            transition: $default-transition;
-            font-weight: 500;
-
-            &:hover {
-                border-color: $mid-grey;
-                color: $mid-grey;
-                text-decoration: none;
-            }
-        }
     }
 }
 
