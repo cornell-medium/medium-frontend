@@ -8,25 +8,27 @@
 {% block content %}
 
 <div class="container">
-    <div class="row">
-        <div class="col-6" style="background-image: url('{% static 'imgs/designpanel.png' %}')">
-        </div>
-        <div class="col-6">
-            <div style="float:left" >
-                <img src="{% static 'imgs/designpanel.png' %}" width="30%" height="30%" border-radius="50%">
-                This is some text that goes next to the image
-            </div>
-            <div style="float:right">
-                This is some text that goes next to the image
-                <img  src="{% static 'imgs/designpanel.png' %}" width="30%" height="30%" border-radius="50%">
-            </div>
-            <div style="float:left">
-                <img  src="{% static 'imgs/designpanel.png' %}" width="30%" height="30%" border-radius="50%">
-                This is some text that goes next to the image
-            </div>
-            <div style="float:right">
-                This is some text that goes next to the image
-                <img  src="{% static 'imgs/designpanel.png' %}" width="30%" height="30%" border-radius="50%">
+    <div class="row" style="background-size: auto 100%; background-repeat: no-repeat; background-image: url('{% static 'imgs/designpanel.png' %}')">
+        <div class="col-md-7 offset-md-6">
+            <div style="float: right">
+                <div style="float:left; display:inline"  >
+                    <img src="{% static 'imgs/design_panelist_1.jpg' %}" width="30%" height="30%" border-radius="50%">
+                    this is some text
+                </div>
+                <div style="float:right; display:inline-block">
+
+                    <img style="float:right" src="{% static 'imgs/design_panelist_2.jpg' %}" width="30%" height="30%" border-radius="50%">
+                    <p style="float:right">This is some text that goes next to the image</p>
+
+                </div>
+                <div style="float:left">
+                    <img  src="{% static 'imgs/design_panelist_1.jpg' %}" width="30%" height="30%" border-radius="50%">
+                    This is some text that goes next to the image
+                </div>
+                <div style="float:right">
+                    This is some text that goes next to the image
+                    <img style="float:right" src="{% static 'imgs/design_panelist_2.jpg' %}" width="30%" height="30%" border-radius="50%">
+                </div>
             </div>
         </div>
     </div>
@@ -81,7 +83,7 @@
       </div>
 
     </div>
-    
+
     <!-- lol i attempted to add the icon pls try another idea w/o having the icon tile -->
     <!-- <div class="container">
       <div class="row">
