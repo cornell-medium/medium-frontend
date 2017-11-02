@@ -1,0 +1,30 @@
+{% extends "components/base.html" %}
+{% load static %}
+
+{% block content %}
+
+<div class="container">
+    <div class="row">
+        <div class="col-6" style="background-image: url('{% static 'imgs/designpanel.png' %}')">
+        </div>
+        <div class="col-6">
+            <div style="float:left" >
+                <img src="{% static 'imgs/designpanel.png' %}" width="30%" height="30%" border-radius="50%">
+                This is some text that goes next to the image
+            </div>
+            <div style="float:right">
+                This is some text that goes next to the image
+                <img  src="{% static 'imgs/designpanel.png' %}" width="30%" height="30%" border-radius="50%">
+            </div>
+            <div style="float:left">
+                <img  src="{% static 'imgs/designpanel.png' %}" width="30%" height="30%" border-radius="50%">
+                This is some text that goes next to the image
+            </div>
+            <div style="float:right">
+                This is some text that goes next to the image
+                <img  src="{% static 'imgs/designpanel.png' %}" width="30%" height="30%" border-radius="50%">
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
