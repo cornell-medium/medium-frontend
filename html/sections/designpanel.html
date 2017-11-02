@@ -1,6 +1,10 @@
 {% extends "components/base.html" %}
 {% load static %}
 
+{% block resources %}
+<link rel="stylesheet" href="{% static 'css/designpanel.css' %}">
+{% endblock %}
+
 {% block content %}
 
 <div class="container">
@@ -26,5 +30,53 @@
             </div>
         </div>
     </div>
-</div>
+  </div>
+
+  <div class="narrative">
+    <div class ="narrative_quote">
+      "Good Design comes from the successful synthesis of a solution that recognizes
+      all the relevant constraints, and the nature of the constraints defines the
+      difference between design disciplines."
+      <div class="narrative_quote_author">
+        Bill Moddrige, Designing Interactions
+      </div>
+    </div>
+      <div class="narrative__wrap">
+          <div class="narrative__img narrative__right" style="background-image: url('{% static 'imgs/designpanel_2.png' %}');"></div>
+          <div class="narrative__text-wrap left">
+              <div class="narrative__text">
+                  Now in its third iteration, discover how design is a way
+                  of thinking and problem solving that can be applied by
+                  any person to any field and any medium. Engage in dialogue
+                  with leading design professionals across iteration, user
+                  experience, design-thinking, architecture, about their approach
+                  and applciation of design across different mediums.
+              </div>
+          </div>
+      </div>
+      <div class="narrative__wrap">
+          <div class="narrative__img narrative__left" style="background-image: url('{% static 'imgs/designpanel_3.png' %}');"></div>
+          <div class="narrative__text-wrap right">
+              <div class="narrative__text">
+                  The first half of the event will feature a Q&A session, while
+                  the second half will feature a breakout session to foster
+                  more intimate conversation between attendees and panelists.
+                  Come curious, and prepare to be inspired!
+              </div>
+          </div>
+      </div>
+      <div class="narrative__wrap">
+          <div class="narrative__img narrative__right" style="background-image: url('{% static 'imgs/designpanel_4.png' %}');"></div>
+          <div class="narrative__text-wrap left">
+              <div class="narrative__title"></div>
+              <div class="narrative__text">
+                  Our goal is for the panel to be an informal dialogue between
+                  students and panelists. Share questions you want us to ask during
+                  the panel here! <br/>
+
+                  <a href="#" class="narrative__form__submit" role="button">submit questions</a>
+              </div>
+          </div>
+      </div>
+
 {% endblock %}
