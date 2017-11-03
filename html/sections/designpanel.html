@@ -9,25 +9,23 @@
 
 <div class="container">
     <div class="row" style="background-size: auto 100%; background-repeat: no-repeat; background-image: url('{% static 'imgs/designpanel.png' %}')">
-        <div class="col-md-7 offset-md-6">
-            <div style="float: right">
-                <div style="float:left; display:inline"  >
-                    <img src="{% static 'imgs/design_panelist_1.jpg' %}" width="30%" height="30%" border-radius="50%">
-                    this is some text
+        <div class="col-md-7 offset-md-6" style="margin-left: 45%;  padding-right:100px;  margin-top: 50px;">
+            <div style="float: right;">
+                <div style="float:left; display:inline;">
+                    <img class="circularimg" src="{% static 'imgs/design_panelist_1.png' %}" style="float: left; width: 30%;">
+                    <p style="float:left; margin-top: 5%; margin-left: 2%;">Name </p>
                 </div>
-                <div style="float:right; display:inline-block">
-
-                    <img style="float:right" src="{% static 'imgs/design_panelist_2.jpg' %}" width="30%" height="30%" border-radius="50%">
-                    <p style="float:right">This is some text that goes next to the image</p>
-
+                <div style="float:right; display:inline-block;">
+                    <img class="circularimg" style="float:right; width: 62%;" src="{% static 'imgs/design_panelist_2.jpg' %}">
+                    <p style="float:right; margin-top: 6%;">Name</p>
                 </div>
-                <div style="float:left">
-                    <img  src="{% static 'imgs/design_panelist_1.jpg' %}" width="30%" height="30%" border-radius="50%">
-                    This is some text that goes next to the image
+                <div style="float:left; display:inline;">
+                  <img class="circularimg" style="float: left; width: 45%;" src="{% static 'imgs/design_panelist_3.jpg' %}" >
+                  <p style="float:left; margin-top: 10%; margin-left: 2%;">Name </p>
                 </div>
                 <div style="float:right">
-                    This is some text that goes next to the image
-                    <img style="float:right" src="{% static 'imgs/design_panelist_2.jpg' %}" width="30%" height="30%" border-radius="50%">
+                  <img class="circularimg" style="float:right; width: 62%;" src="{% static 'imgs/design_panelist_2.jpg' %}" >
+                  <p style="float:right; margin-top: 6%;">Name</p>
                 </div>
             </div>
         </div>
@@ -74,23 +72,23 @@
               <div class="narrative__text">
                   Our goal is for the panel to be an informal dialogue between
                   students and panelists. Share questions you want us to ask during
-                  the panel here!
-
-                  <a href="#" class="narrative__form__submit" role="button">submit questions</a>
+                  the panel here! <br/> <br/>
+                  <a href="#" class="narrative__submit" role="button">submit questions</a>
               </div>
+
           </div>
 
       </div>
 
     </div>
 
-    <!-- lol i attempted to add the icon pls try another idea w/o having the icon tile -->
-    <!-- <div class="container">
+
+    <div class="container">
       <div class="row">
-        <div class="col-4"></div>
-        <div class="col-4"  style="background-image: url('{% static 'imgs/favicon-180x180.png' %}'); height:200px;" ></div>
-        <div class="col-4"></div>
+
+        <img src='{% static 'imgs/favicon.ico' %}' style="height:110px; width:60px; margin: 0 auto; padding-top:10px; padding-bottom:40px;">
+
       </div>
-    </div> -->
+    </div>
 
 {% endblock %}

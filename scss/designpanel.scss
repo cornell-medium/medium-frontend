@@ -2,13 +2,20 @@
 @import 'utilities/margins';
 @import 'utilities/transitions';
 
+.circularimg {
+  border-radius: 50%;
+  height: 25%;
+  border: 10px solid #e2e1e3;
+
+}
+
 .narrative {
     width: 100%;
 
     &_quote {
       text-align: center;
-      font-size: 20px;
-      padding: 100px 250px 50px 250px;
+      font-size: 25px;
+      padding: 100px 200px 50px 200px;
       letter-spacing: 2px;
 
       &_author {
@@ -24,25 +31,23 @@
         background-position: center;
     }
 
-    &__form {
-        margin-top: $med-margin;
 
-        &__submit {
-            margin-left: 230px;
-            background: transparent;
-            color: $darkest-grey;
-            outline: none;
-            border: 2px solid $darkest-grey;
-            padding: $small-margin $small-margin $small-margin $small-margin;
-            cursor: pointer;
-            transition: $default-transition;
+    &__submit {
+        margin-left: 30%;
+        background: transparent;
+        color: $darkest-grey;
+        outline: none;
+        border: 2px solid $darkest-grey;
+        padding: $small-margin $small-margin $small-margin $small-margin;
+        cursor: pointer;
+        transition: $default-transition;
 
-            &:hover {
-                border-color: $dark-grey;
-                color: $dark-grey;
-            }
+        &:hover {
+            border-color: $dark-grey;
+            color: $dark-grey;
         }
     }
+
 
     &__text {
         padding: 20px;
