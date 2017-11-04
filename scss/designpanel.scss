@@ -2,12 +2,28 @@
 @import 'utilities/margins';
 @import 'utilities/transitions';
 
+
 .circularimg {
   border-radius: 50%;
   height: 25%;
   border: 10px solid #e2e1e3;
 
 }
+
+.name{
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 20px;
+  border-bottom: 10px solid #e2e1e3;
+  width: 90%;
+}
+
+.info {
+  font-size: 10px;
+
+}
+
 
 .narrative {
     width: 100%;
@@ -86,6 +102,10 @@
         float: right;
     }
 
+    .designpanelist {
+
+    }
+
     .narrative {
         &__img {
             height: 100%;
@@ -112,4 +132,18 @@
             }
         }
     }
+}
+@media (max-width: 1000px) {
+
+  .narrative {
+    &_quote {
+      padding: 10%;
+    }
+
+  }
+
+  .designpanelist {
+    position: relative;
+  }
+
 }
