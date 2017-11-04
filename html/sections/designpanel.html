@@ -8,43 +8,51 @@
 {% block content %}
 
 <div class="container">
-    <div class="row" style="background-size: auto 100%; background-repeat: no-repeat; background-image: url('{% static 'imgs/designpanel.png' %}')">
-        <div  class="col-md-7 offset-md-6" style="margin-left: 45%;  padding-right:100px;  margin-top: 50px;">
-            <div class="designpanelist" style="float: right;">
-                <div style="float:left; display:inline-block">
-                    <img class="circularimg" src="{% static 'imgs/design_panelist_1.png' %}" style="float: left; width: 30%;">
-                    <div style="margin-left: 32%; margin-top: 8%;">
-                      <p class="name" >   Lee Sean</p>
-                      <p class="info" >   position, <br/> some Communication, <br/> idk College</p>
-                    </div>
-                </div>
-                <div style="float:right; display:inline-block; width: 100%;">
-                    <img class="circularimg" style="float:right; width: 30%;" src="{% static 'imgs/design_panelist_2.jpg' %}">
-                    <div style="margin-left: 45%; margin-top: 8%;">
-                      <p class="name">   Yvette Sterbenk</p>
-                      <p class="info">   Assistant Professor, <br/> Strategic Communication, <br/> Ithaca College</p>
-                    </div>
-                </div>
+    <div class="row" style=" position: absolute; z-index:1; width: 100%;">
+      <img class="banner" src="{% static 'imgs/designpanel.png' %}" >
 
-                <div style="float:left; display:inline-block; width: 100%;">
-                  <img class="circularimg" style="float: left; width: 30%;" src="{% static 'imgs/design_panelist_3.jpg' %}" >
-                  <div style="margin-left: 32%; margin-top: 8%;">
-                    <p class="name">   François Guimbretière</p>
-                    <p class="info">   Assistant Professor, <br/> Information Science, <br/> Cornell University</p>
-                  </div>
+    </div>
+    <div class="design-panel-list" class="col-md-7 offset-md-6" >
+        <div  style="float: right; width: 90%;">
+            <div style="float:left; display:inline-block; ">
+                <img src="{% static 'imgs/design_panelist_1.png' %}" style="float: left; width: 30%; border: 10px solid #e2e1e3; border-radius: 50%;
+                height: 25%;">
+                <div style="margin-left: 32%; margin-top: 8%;">
+                  <p class="name" style="font-weight: bold; text-transform: uppercase; letter-spacing: 2px; font-size: 20px; border-bottom: 10px solid #e2e1e3; width: 50%;">   Lee Sean</p>
+                  <p class="info" style="font-size: 10px;">   position, <br/> some Communication, <br/> idk College</p>
                 </div>
-                <div style="float:right; width: 100%;">
-                  <img class="circularimg" style="float:right; width: 30%;" src="{% static 'imgs/design_panelist_2.jpg' %}" >
-                  <div style="margin-left: 43%; margin-top: 8%;">
-                    <p class="name">   Alvaro Alvarez</p>
-                    <p class="info">   Assistant Professor, <br/> some subject <br/> some College</p>
-                  </div>
+            </div>
+            <div style="float:right; display:inline-block; width: 100%;">
+                <img  style="float:right; width: 30%; border: 10px solid #e2e1e3; border-radius: 50%;
+                height: 25%;" src="{% static 'imgs/design_panelist_2.jpg' %}">
+                <div style="margin-left: 45%; margin-top: 8%;">
+                  <p class="name" style="font-weight: bold; text-transform: uppercase; letter-spacing: 2px; font-size: 20px; border-bottom: 10px solid #e2e1e3; width: 50%;">   Yvette Sterbenk</p>
+                  <p class="info" style="font-size: 10px;">   Assistant Professor, <br/> Strategic Communication, <br/> Ithaca College</p>
                 </div>
+            </div>
+
+            <div style="float:left; display:inline-block; width: 100%;">
+              <img style="float: left; width: 30%; border: 10px solid #e2e1e3; border-radius: 50%;
+              height: 25%;" src="{% static 'imgs/design_panelist_3.jpg' %}" >
+              <div style="margin-left: 32%; margin-top: 8%;">
+                <p class="name" style="font-weight: bold; text-transform: uppercase; letter-spacing: 2px; font-size: 20px; border-bottom: 10px solid #e2e1e3; width: 50%;">   François Guimbretière</p>
+                <p class="info" style="font-size: 10px;">   Assistant Professor, <br/> Information Science, <br/> Cornell University</p>
+              </div>
+            </div>
+            <div style="float:right; width: 100%;">
+              <img style="float:right; width: 30%; border: 10px solid #e2e1e3; border-radius: 50%;
+              height: 25%;" src="{% static 'imgs/design_panelist_2.jpg' %}" >
+              <div style="margin-left: 43%; margin-top: 8%;">
+                <p class="name" style="font-weight: bold; text-transform: uppercase; letter-spacing: 2px; font-size: 20px; border-bottom: 10px solid #e2e1e3; width: 50%;">   Alvaro Alvarez</p>
+                <p class="info" style="font-size: 10px;">   Assistant Professor, <br/> some subject <br/> some College</p>
+              </div>
             </div>
         </div>
     </div>
   </div>
 
+
+<div class="container2">
   <div class="narrative">
     <div class ="narrative_quote">
       "Good Design comes from the successful synthesis of a solution that recognizes
@@ -54,54 +62,49 @@
         Bill Moddrige, Designing Interactions
       </div>
     </div>
-      <div class="narrative__wrap">
-          <div class="narrative__img narrative__right" style="background-image: url('{% static 'imgs/designpanel_2.jpg' %}');"></div>
-          <div class="narrative__text-wrap left">
-              <div class="narrative__text">
-                  Now in its third iteration, discover how design is a way
-                  of thinking and problem solving that can be applied by
-                  any person to any field and any medium. Engage in dialogue
-                  with leading design professionals across iteration, user
-                  experience, design-thinking, architecture, about their approach
-                  and applciation of design across different mediums.
-              </div>
-          </div>
+    <div class="narrative__wrap">
+      <div class="narrative__img narrative__right" style="background-image: url('{% static 'imgs/designpanel_2.jpg' %}');"></div>
+      <div class="narrative__text-wrap left">
+        <div class="narrative__text">
+          Now in its third iteration, discover how design is a way
+          of thinking and problem solving that can be applied by
+          any person to any field and any medium. Engage in dialogue
+          with leading design professionals across iteration, user
+          experience, design-thinking, architecture, about their approach
+          and applciation of design across different mediums.
+        </div>
       </div>
-      <div class="narrative__wrap">
-          <div class="narrative__img narrative__left" style="background-image: url('{% static 'imgs/designpanel_3.jpg' %}');"></div>
-          <div class="narrative__text-wrap right">
-              <div class="narrative__text">
-                  The first half of the event will feature a Q&A session, while
-                  the second half will feature a breakout session to foster
-                  more intimate conversation between attendees and panelists.
-                  Come curious, and prepare to be inspired!
-              </div>
-          </div>
+    </div>
+    <div class="narrative__wrap">
+      <div class="narrative__img narrative__left" style="background-image: url('{% static 'imgs/designpanel_3.jpg' %}');"></div>
+      <div class="narrative__text-wrap right">
+        <div class="narrative__text">
+          The first half of the event will feature a Q&A session, while
+          the second half will feature a breakout session to foster
+          more intimate conversation between attendees and panelists.
+          Come curious, and prepare to be inspired!
+        </div>
       </div>
-      <div class="narrative__wrap">
-          <div class="narrative__img narrative__right" style="background-image: url('{% static 'imgs/designpanel_4.jpg' %}');"></div>
-          <div class="narrative__text-wrap left">
-              <div class="narrative__title"></div>
-              <div class="narrative__text">
-                  Our goal is for the panel to be an informal dialogue between
-                  students and panelists. Share questions you want us to ask during
-                  the panel here! <br/> <br/>
-                  <a href="#" class="narrative__submit" role="button">submit questions</a>
-              </div>
-
-          </div>
+    </div>
+    <div class="narrative__wrap">
+      <div class="narrative__img narrative__right" style="background-image: url('{% static 'imgs/designpanel_4.jpg' %}');"></div>
+      <div class="narrative__text-wrap left">
+        <div class="narrative__title"></div>
+        <div class="narrative__text">
+          Our goal is for the panel to be an informal dialogue between
+          students and panelists. Share questions you want us to ask during
+          the panel here! <br/> <br/>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLScGd310X0yU5UGg38IMbnMeUlrXrHCzq0OZMhrJwWSj9eqaFQ/viewform" class="narrative__submit" role="button">submit questions</a>
+        </div>
 
       </div>
 
     </div>
+    <div class="row">
 
+      <img src='{% static 'imgs/favicon.ico' %}' style="height:110px; width:60px; margin: 0 auto; padding-top:10px; padding-bottom:40px;">
 
-    <div class="container">
-      <div class="row">
-
-        <img src='{% static 'imgs/favicon.ico' %}' style="height:110px; width:60px; margin: 0 auto; padding-top:10px; padding-bottom:40px;">
-
-      </div>
     </div>
+  </div>
 
 {% endblock %}
