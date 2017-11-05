@@ -9,6 +9,7 @@
   margin-left: 45%;
   padding-right:25px;
   margin-top: 50px;
+  overflow: hidden;
 }
 
 .banner {
@@ -48,7 +49,7 @@
         background: transparent;
         color: $darkest-grey;
         outline: none;
-        border: 2px solid $darkest-grey;
+        border: 3px solid $darkest-grey;
         padding: $small-margin $small-margin $small-margin $small-margin;
         cursor: pointer;
         transition: $default-transition;
@@ -56,6 +57,7 @@
         &:hover {
             border-color: $dark-grey;
             color: $dark-grey;
+            text-decoration: none;
         }
     }
 
@@ -88,36 +90,57 @@
 
 }
 
-@media screen and (max-width: 1100px) {
+@media screen and (min-width: 1200px) {
 
-  div.design-panel-list {
 
-    float: none;
-    padding-top: 100%;
-    z-index: 0;
-    margin-left: 0;
-    padding-right: 0;
-    margin-top: 0;
-
+  .left {
+      float: left;
   }
 
-  .banner {
-    width: 100%;
+  .right {
+      float: right;
   }
-
 
 
   .narrative {
-    padding-top: 220%;
+    padding-top: 70%;
     &_quote {
       padding: 10%;
     }
 
+    &__img {
+        height: 100%;
+        width: 50%;
+        position: absolute;
+        top: 0;
+    }
+
+    &__right {
+        right: 0;
+    }
+
+    &__left {
+        left: 0;
+    }
+
+    &__text {
+        max-width: 300px;
+        padding-left: 0;
+        padding-right: 0;
+
+        &-wrap {
+            width: 50%;
+        }
+    }
+
+
+
   }
+
 
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1150px) {
 
   div.design-panel-list {
 
@@ -137,7 +160,7 @@
 
 
   .narrative {
-    padding-top: 210%;
+    padding-top: 200%;
     &_quote {
       padding: 10%;
     }
@@ -167,7 +190,7 @@
 
 
   .narrative {
-    padding-top: 180%;
+    padding-top: 190%;
     &_quote {
       padding: 10%;
     }
