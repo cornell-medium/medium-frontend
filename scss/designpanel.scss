@@ -161,7 +161,7 @@
 
 
   .narrative {
-    padding-top: 200%;
+    padding-top: 210%;
     &_quote {
       padding: 10%;
     }
@@ -171,34 +171,6 @@
 }
 
 
-@media screen and (max-width: 700px) {
-
-  div.design-panel-list {
-
-    float: none;
-    padding-top: 100%;
-    z-index: 0;
-    margin-left: 0;
-    padding-right: 0;
-    margin-top: 0;
-
-  }
-
-  .banner {
-    width: 100%;
-  }
-
-
-
-  .narrative {
-    padding-top: 190%;
-    &_quote {
-      padding: 10%;
-    }
-
-  }
-
-}
 
 
 @media screen and (max-width: 600px) {
@@ -219,6 +191,32 @@
 
     .narrative {
       padding-top: 220%;
+
+      &_quote {
+        padding: 10%;
+      }
+
+    }
+}
+
+@media screen and (orientation: landscape) and (max-width: 480px) {
+
+
+    .narrative {
+      padding-top: 240%;
+
+      &_quote {
+        padding: 10%;
+      }
+
+    }
+}
+
+@media screen and (orientation: portrait) and (max-width: 480px) {
+
+
+    .narrative {
+      padding-top: 260%;
 
       &_quote {
         padding: 10%;
