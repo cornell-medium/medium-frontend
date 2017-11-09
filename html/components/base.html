@@ -20,6 +20,9 @@
         <div class="nav__modal"></div>
         <img class="nav__icon" src="{% static 'imgs/logo_white.png' %}">
         <div class="nav__options">
+            <a class="nav__option unselectable" href="{% url 'people:people' %}">
+                people
+            </a>
             <a class="nav__option unselectable" href="{% url 'index' %}">
                 home
             </a>
