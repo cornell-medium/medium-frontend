@@ -16,6 +16,20 @@
 	color: #000000;
 }
 
+.people-wrapper{
+  float:right;
+  height: 100%;
+  width: 45%;
+  background-color: darkslategrey;
+  color:white;
+}
+
+.team-nav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
 .person_wrapper {
 	float: left;
 	height: 100%;
@@ -30,3 +44,8 @@
   text-align: left;
   color: #4a4a4a;
 }
+
+li {
+  display: inline;
+}
+
