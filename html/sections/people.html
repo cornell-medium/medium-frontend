@@ -10,7 +10,7 @@
 
 {% block content %}
     <div class="person_wrapper">
-{% for person in people %}
+    {% for person in people %}
 
         <div class="bio__image" style="float: right; height: 160px; width: 160px; background-image:url('/media/{{ person.image1 }}');background-size: contain;"></div>
         <div class="name">{{ person.name }}</div>
@@ -65,8 +65,7 @@
             }
         });
         </script>
-        <p>{{ person.bio }}</p>
-
-{% endfor %}
+        <div class="bio">{{ person.bio }}</div>
+    {% endfor %}
     </div>
 {% endblock %}
