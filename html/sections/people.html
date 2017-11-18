@@ -9,63 +9,67 @@
 
 
 {% block content %}
+    <div class="person_wrapper">
 {% for person in people %}
-    <div class="bio__image" style="height: 200px; width: 200px; background-image:url('/media/{{ person.image1 }}');background-size: contain;"></div>
-    <div class="name">
+
+        <div class="bio__image" style="float: right; height: 160px; width: 160px; background-image:url('/media/{{ person.image1 }}');background-size: contain;"></div>
+        <div class="name">{{ person.name }}</div>
+        <div class="title">{{ person.title }}</div>
+
         <canvas id="{{ person.name }}" height="400"></canvas>
-    </div>
-    <script>
-    var ctx = document.getElementById("{{ person.name }}");
-    var myChart = new Chart(ctx, {
-        type: 'radar',
-        data: {
-            labels: ["A", "B", "C", "D", "E", "F"],
-            datasets: [{
-                label: 'character profile',
-                data: [{{ person.stat1 }}, {{ person.stat2 }}, {{ person.stat3 }}, {{ person.stat4 }}, {{ person.stat5 }}, {{ person.stat6 }}],
-                backgroundColor: [
-                    'rgba(255, 99, 132, 0.2)',
-                    'rgba(54, 162, 235, 0.2)',
-                    'rgba(255, 206, 86, 0.2)',
-                    'rgba(75, 192, 192, 0.2)',
-                    'rgba(153, 102, 255, 0.2)',
-                    'rgba(255, 159, 64, 0.2)'
-                ],
-                borderColor: [
-                    'rgba(255,99,132,1)',
-                    'rgba(54, 162, 235, 1)',
-                    'rgba(255, 206, 86, 1)',
-                    'rgba(75, 192, 192, 1)',
-                    'rgba(153, 102, 255, 1)',
-                    'rgba(255, 159, 64, 1)'
-                ],
-                borderWidth: 1
-            }]
-        },
-        options: {
-            legend: {
-                display: false
+
+        <script>
+        var ctx = document.getElementById("{{ person.name }}");
+        var myChart = new Chart(ctx, {
+            type: 'radar',
+            data: {
+                labels: ["connected", "deductive", "spatial", "auditory", "visual", "detailed"],
+                datasets: [{
+                    label: 'character profile',
+                    data: [{{ person.stat1 }}, {{ person.stat2 }}, {{ person.stat3 }}, {{ person.stat4 }}, {{ person.stat5 }}, {{ person.stat6 }}],
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(255, 206, 86, 0.2)',
+                        'rgba(75, 192, 192, 0.2)',
+                        'rgba(153, 102, 255, 0.2)',
+                        'rgba(255, 159, 64, 0.2)'
+                    ],
+                    borderColor: [
+                        'rgba(255,99,132,1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(153, 102, 255, 1)',
+                        'rgba(255, 159, 64, 1)'
+                    ],
+                    borderWidth: 1
+                }]
             },
-            tooltips: {
-                enabled: false
-            },
-            responsive: false,
-            scale: {
-                ticks: {
-                    beginAtZero:true,
-                    stepSize:20,
-                    max: 100,
+            options: {
+                legend: {
                     display: false
+                },
+                tooltips: {
+                    enabled: false
+                },
+                responsive: false,
+                scale: {
+                    ticks: {
+                        beginAtZero:true,
+                        stepSize:20,
+                        max: 100,
+                        display: false
+                    }
                 }
             }
-        }
-    });
-    </script>
-    <div id='title'>{{ person.title }}</div>
-    <p>{{ person.bio }}</p>
+        });
+        </script>
+        <p>{{ person.bio }}</p>
+
 {% endfor %}
 
-   
+    </div>
     <div class="people-wrapper">
         People stuff goes here
     </div>
