@@ -26,9 +26,21 @@
   color:white;
 }
 
+.team-nav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
 .person_wrapper {
 	float: left;
 	height: 100%;
 	width: 55%;
 	background-color: ivory;
 }
+
+li {
+  display: inline;
+}
+
+
