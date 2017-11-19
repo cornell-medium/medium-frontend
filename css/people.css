@@ -22,14 +22,29 @@
   float:right;
   height: 100%;
   width: 45%;
-  background-color: darkslategrey;
-  color:white;
 }
 
-.team-nav {
+
+.team-nav{
+  margin-top: 96px;
   list-style-type: none;
-  margin: 0;
-  padding: 0;
+}
+
+.team-nav li{
+  float:left;
+}
+
+.team-nav li a{
+  display: block;
+  padding: 8px;
+  font-size: 20px;
+  color:black;
+}
+
+.team-nav a:hover{
+  text-decoration: none;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
 }
 
 .person_wrapper {
@@ -39,8 +54,29 @@
 	background-color: ivory;
 }
 
-li {
-  display: inline;
+/*3x3 grid of team images*/
+
+.row:after{
+  content = "";
+  display: table;
+  clear:both;
 }
 
+.column {
+  float:left;
+  width:33%;
+  padding:10px;
+}
 
+.small-img {
+  width:100%;
+  border-radius: 50%;
+  margin-top: 12px;
+}
+
+/* responsive */
+@media (max-width: 800px){
+  .column {
+        width: 100%;
+    }
+}
