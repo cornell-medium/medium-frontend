@@ -81,11 +81,10 @@
     
     <div class="people-wrapper">
         <ul class="team-nav">
-            <li><a href="#">exec</a></li>
-            <li><a href="#">editorial</a></li>
-            <li><a href="#">events</a></li>
-            <li><a href="#">design</a></li>
-            <li><a href="#">web</a></li>
+            <li><a id = "cat1" href="#" onclick='updateCategory(1)'>editorial</a></li>
+            <li><a id = "cat2" href="#" onclick='updateCategory(2)'>events</a></li>
+            <li><a id = "cat3"href="#" onclick='updateCategory(3)'>design</a></li>
+            <li><a id = "cat4" href="#" onclick='updateCategory(4)'>web</a></li>
         </ul>
 
         <div class="grid-container">
@@ -105,6 +104,9 @@
 
         <script>
         var currID = 1;
+        var currCategory = 1;
+
+        updateCategory(currCategory);
 
         function updateProfile(id) {
         	console.log(id);
@@ -115,6 +117,26 @@
             currID = id;
 
             //should generate graph here, pass in the whole person
+        }
+
+        function updateCategory(catID) {
+            if(currCategory == 1)
+                cat1.style.color = "black";
+            else if(currCategory == 2)
+                cat2.style.color = "black";
+            else if(currCategory == 3)
+                cat3.style.color = "black";
+            else if(currCategory == 4)
+                cat4.style.color = "black";
+            if(catID == 1)
+                cat1.style.color = "red";
+            else if(catID == 2)
+                cat2.style.color = "red";
+            else if(catID == 3)
+                cat3.style.color = "red";
+            else if(catID == 4)
+                cat4.style.color = "red";
+            currCategory = catID;
         }
         </script>
 
