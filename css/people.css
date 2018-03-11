@@ -41,11 +41,13 @@
   float:right;
   height: 100%;
   width: 45%;
-  padding-right: 50px;
 }
 
 
 .team-nav{
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
   margin-top: 96px;
   list-style-type: none;
 }
@@ -59,10 +61,18 @@
   padding: 8px;
   font-size: 20px;
   color:black;
+  border-bottom-style: solid;
+  border-bottom-color: transparent;
+  border-bottom-width: 2px;
 }
 
-.team-nav a:hover{
+.team-nav a{
   text-decoration: none;
+}
+
+
+.team-nav a:hover{
+  border-bottom-color: black;
   border-bottom-style: solid;
   border-bottom-width: 2px;
 }
@@ -84,8 +94,9 @@
 /*3x3 grid of team images*/
 
 .small-img {
-  width:150px;
-  height:150px;
+  margin: 15px;
+  width:125px;
+  height:125px;
   border-radius: 50%;
 }
 
@@ -93,7 +104,6 @@
   display:inline-grid;
   width: 100%;
   grid-template-columns: auto auto auto;/*Make the grid smaller than the container*/
-  background-color: #2196F3;
 }
 .grid-container > div {
   background-color: rgba(255, 255, 255, 0.8);
