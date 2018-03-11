@@ -88,15 +88,9 @@
         </ul>
 
         <div class="grid-container">
-  			<div class="small-img" style="cursor:pointer" background-size: contain; background-image:url('{% static 'imgs/team.jpg' %}')" onclick="updateProfile(1)"></div>
-  			<div class="small-img" style="cursor:pointer" background-size: contain; background-image:url('{% static 'imgs/team.jpg' %}')" onclick="updateProfile(2)"></div>
-  			<div class="small-img" style="background-size: contain; background-image:url('{% static 'imgs/team.jpg' %}')"></div> 
-  			<div class="small-img" style="background-size: contain; background-image:url('{% static 'imgs/team.jpg' %}')"></div>
-  			<div class="small-img" style="background-size: contain; background-image:url('{% static 'imgs/team.jpg' %}')"></div>
-  			<div class="small-img" style="background-size: contain; background-image:url('{% static 'imgs/team.jpg' %}')"></div> 
-  			<div class="small-img" style="background-size: contain; background-image:url('{% static 'imgs/team.jpg' %}')"></div>
-  			<div class="small-img" style="background-size: contain; background-image:url('{% static 'imgs/team.jpg' %}')"></div>
-  			<div class="small-img" style="background-size: contain; background-image:url('{% static 'imgs/team.jpg' %}')"></div>
+            {% for person in people %}
+                <div class="small-img" style="cursor:pointer; background-size: contain; background-image:url('/media/{{person.image2}}')" onclick="updateProfile({{ person.id}})"></div>
+            {% endfor %}
 		</div>
     </div> 
     
@@ -107,6 +101,7 @@
         var currID = 2;
         var currCategory = 1;
 
+        updateProfile(currID);
         updateCategory(currCategory);
 
 
