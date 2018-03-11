@@ -78,39 +78,36 @@
 {% endfor %}
 
     </div>
+    
     <div class="people-wrapper">
         <ul class="team-nav">
-            <li><a href="#"><--</a></li>
             <li><a href="#">exec</a></li>
             <li><a href="#">editorial</a></li>
             <li><a href="#">events</a></li>
             <li><a href="#">design</a></li>
             <li><a href="#">web</a></li>
-             <li><a href="#">--></a></li>
         </ul>
 
-        <div class="row">
-                <div class="column">
-                    <div class="small-img" style="cursor: pointer" onclick="updateProfile(1)"></div>
-                    <div class="small-img" style="cursor: pointer" onclick="updateProfile(2)"></div>
-                    <div class="small-img"></div>
-                </div>
-                <div class="column">
-                    <div class="small-img"></div>
-                    <div class="small-img"></div>
-                    <div class="small-img"></div>
-                </div>
-                <div class="column">
-                    <div class="small-img"></div>
-                    <div class="small-img"></div>
-                    <div class="small-img"></div>
-                </div>
+        <div class="grid-container">
+  			<div class="small-img" style="cursor:pointer" background-size: contain; background-image:url('{% static 'imgs/team.jpg' %}')" onclick="updateProfile(1)"></div>
+  			<div class="small-img" style="cursor:pointer" background-size: contain; background-image:url('{% static 'imgs/team.jpg' %}')" onclick="updateProfile(2)"></div>
+  			<div class="small-img" style="background-size: contain; background-image:url('{% static 'imgs/team.jpg' %}')"></div> 
+  			<div class="small-img" style="background-size: contain; background-image:url('{% static 'imgs/team.jpg' %}')"></div>
+  			<div class="small-img" style="background-size: contain; background-image:url('{% static 'imgs/team.jpg' %}')"></div>
+  			<div class="small-img" style="background-size: contain; background-image:url('{% static 'imgs/team.jpg' %}')"></div> 
+  			<div class="small-img" style="background-size: contain; background-image:url('{% static 'imgs/team.jpg' %}')"></div>
+  			<div class="small-img" style="background-size: contain; background-image:url('{% static 'imgs/team.jpg' %}')"></div>
+  			<div class="small-img" style="background-size: contain; background-image:url('{% static 'imgs/team.jpg' %}')"></div>
+		</div>
+    </div> 
+    
         </div>
 
         <script>
         var currID = 1;
 
         function updateProfile(id) {
+        	console.log(id);
             var selectedPerson = document.getElementById(id);
             var lastPerson = document.getElementById(currID);
             lastPerson.style.display = "none";
