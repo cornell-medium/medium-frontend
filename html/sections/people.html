@@ -89,7 +89,7 @@
 
         <div class="grid-container">
             {% for person in people %}
-                <div class="{{ person.team }}" style="cursor:pointer; background-size: contain; background-image:url('/media/{{person.image2}}')" onclick="updateProfile({{ person.id}})"></div>
+                <div class="{{ person.team }}" style="display: none; cursor:pointer; background-size: contain; background-image:url('/media/{{person.image2}}')" onclick="updateProfile({{ person.id}})"></div>
             {% endfor %}
 		</div>
     </div> 
