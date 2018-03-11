@@ -83,7 +83,7 @@
         <ul class="team-nav">
             <li><a id = "cat1" href="#" onclick='updateCategory("ED")'>editorial</a></li>
             <li><a id = "cat2" href="#" onclick='updateCategory("EV")'>events</a></li>
-            <li><a id = "cat3"href="#" onclick='updateCategory("DS")'>design</a></li>
+            <li><a id = "cat3" href="#" onclick='updateCategory("DS")'>design</a></li>
             <li><a id = "cat4" href="#" onclick='updateCategory("WB")'>web</a></li>
         </ul>
 
@@ -99,7 +99,7 @@
         <script>
 
         var currID = 2;
-        var currCategory = "ED";
+        var currCategory = "WB";
 
         updateProfile(currID);
         updateCategory(currCategory);
@@ -117,14 +117,17 @@
         }
 
         function updateCategory(catID) {
+
         	var x = document.getElementsByClassName(catID);
+
         	var y = document.getElementsByClassName(currCategory);
-        	for(i in x){
-        		i.style.display = 'none';
+
+        	for(j=0;j<y.length;j++){
+        		y[j].style.display = 'none';
         	}
-        	for(j in y){
-        		j.style.display = 'block';
-        	}
+            for(i=0;i<x.length;i++){
+                x[i].style.display = 'block';
+            }
 
             if(currCategory == "ED")
                 cat1.style.color = "black";
