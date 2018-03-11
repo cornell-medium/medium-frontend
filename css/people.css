@@ -92,8 +92,7 @@
 }
 
 /*3x3 grid of team images*/
-
-.small-img {
+.ED, .EX, .EV, .DS, .WB {
   margin: 15px;
   width:125px;
   height:125px;

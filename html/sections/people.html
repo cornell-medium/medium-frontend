@@ -81,15 +81,15 @@
     
     <div class="people-wrapper">
         <ul class="team-nav">
-            <li><a id = "cat1" href="#" onclick='updateCategory(1)'>editorial</a></li>
-            <li><a id = "cat2" href="#" onclick='updateCategory(2)'>events</a></li>
-            <li><a id = "cat3"href="#" onclick='updateCategory(3)'>design</a></li>
-            <li><a id = "cat4" href="#" onclick='updateCategory(4)'>web</a></li>
+            <li><a id = "cat1" href="#" onclick='updateCategory("ED")'>editorial</a></li>
+            <li><a id = "cat2" href="#" onclick='updateCategory("EV")'>events</a></li>
+            <li><a id = "cat3"href="#" onclick='updateCategory("DS")'>design</a></li>
+            <li><a id = "cat4" href="#" onclick='updateCategory("WB")'>web</a></li>
         </ul>
 
         <div class="grid-container">
             {% for person in people %}
-                <div class="small-img" style="cursor:pointer; background-size: contain; background-image:url('/media/{{person.image2}}')" onclick="updateProfile({{ person.id}})"></div>
+                <div class="{{ person.team }}" style="cursor:pointer; background-size: contain; background-image:url('/media/{{person.image2}}')" onclick="updateProfile({{ person.id}})"></div>
             {% endfor %}
 		</div>
     </div> 
@@ -99,7 +99,7 @@
         <script>
 
         var currID = 2;
-        var currCategory = 1;
+        var currCategory = "ED";
 
         updateProfile(currID);
         updateCategory(currCategory);
@@ -117,21 +117,30 @@
         }
 
         function updateCategory(catID) {
-            if(currCategory == 1)
+        	var x = document.getElementsByClassName(catID);
+        	var y = document.getElementsByClassName(currCategory);
+        	for(i in x){
+        		i.style.display = 'none';
+        	}
+        	for(j in y){
+        		j.style.display = 'block';
+        	}
+
+            if(currCategory == "ED")
                 cat1.style.color = "black";
-            else if(currCategory == 2)
+            else if(currCategory == "EV")
                 cat2.style.color = "black";
-            else if(currCategory == 3)
+            else if(currCategory == "DS")
                 cat3.style.color = "black";
-            else if(currCategory == 4)
+            else if(currCategory == "WB")
                 cat4.style.color = "black";
-            if(catID == 1)
+            if(catID == "ED")
                 cat1.style.color = "red";
-            else if(catID == 2)
+            else if(catID == "EV")
                 cat2.style.color = "red";
-            else if(catID == 3)
+            else if(catID == "DS")
                 cat3.style.color = "red";
-            else if(catID == 4)
+            else if(catID == "WB")
                 cat4.style.color = "red";
             currCategory = catID;
         }
