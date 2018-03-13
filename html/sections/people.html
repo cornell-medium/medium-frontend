@@ -23,18 +23,61 @@
 
 
             <div>
-                <canvas class="stats" id="{{ person.name }}"></canvas>
+                <canvas class="stats" id="G{{ person.id }}"></canvas>
             </div>
 
             <script>
-            var ctx = document.getElementById("{{ person.name }}");
+
+            </script>
+            <div class="bio">{{ person.bio }}</div>
+        </div>
+{% endfor %}
+
+    </div>
+    
+    <div class="people-wrapper">
+        <ul class="team-nav">
+            <li><a id = "cat1" href="#" onclick='updateCategory("ED")'>editorial</a></li>
+            <li><a id = "cat2" href="#" onclick='updateCategory("EV")'>events</a></li>
+            <li><a id = "cat3" href="#" onclick='updateCategory("DS")'>design</a></li>
+            <li><a id = "cat4" href="#" onclick='updateCategory("WB")'>web</a></li>
+        </ul>
+
+        <div class="grid-container">
+            {% for person in people %}
+                <div class="{{ person.team }}" style="display: none; cursor:pointer; background-size: contain; background-image:url('/media/{{person.image2}}')" onclick="updateProfile({{ person.id}}, 
+                    {{ person.stat1}}, {{ person.stat2}}, {{ person.stat3}}, {{ person.stat4}}, {{ person.stat5}}, {{ person.stat6}})"></div>
+            {% endfor %}
+		</div>
+    </div> 
+    
+        </div>
+
+        <script>
+
+        //INITIAL LOAD, MUST UPDATE
+        var currID = 2;
+        var currCategory = "WB";
+        updateProfile(currID, 30, 20, 23, 24, 35, 25);
+        updateCategory(currCategory);
+
+
+        function updateProfile(id,stat1, stat2, stat3, stat4, stat5, stat6) {
+        	console.log(id);
+            var selectedPerson = document.getElementById(id);
+            var lastPerson = document.getElementById(currID);
+            lastPerson.style.display = "none";
+            selectedPerson.style.display = "block";
+            currID = id;
+
+            var ctx = document.getElementById("G" + id);
             var myChart = new Chart(ctx, {
                 type: 'radar',
                 data: {
                     labels: ["connected", "deductive", "spatial", "auditory", "visual", "detailed"],
                     datasets: [{
                         label: 'character profile',
-                        data: [{{ person.stat1 }}, {{ person.stat2 }}, {{ person.stat3 }}, {{ person.stat4 }}, {{ person.stat5 }}, {{ person.stat6 }}],
+                        data: [stat1, stat2, stat3, stat4, stat5, stat6],
                         backgroundColor: [
                             'rgba(255, 99, 132, 0.2)',
                             'rgba(54, 162, 235, 0.2)',
@@ -72,48 +115,6 @@
                     }
                 }
             });
-            </script>
-            <div class="bio">{{ person.bio }}</div>
-        </div>
-{% endfor %}
-
-    </div>
-    
-    <div class="people-wrapper">
-        <ul class="team-nav">
-            <li><a id = "cat1" href="#" onclick='updateCategory("ED")'>editorial</a></li>
-            <li><a id = "cat2" href="#" onclick='updateCategory("EV")'>events</a></li>
-            <li><a id = "cat3" href="#" onclick='updateCategory("DS")'>design</a></li>
-            <li><a id = "cat4" href="#" onclick='updateCategory("WB")'>web</a></li>
-        </ul>
-
-        <div class="grid-container">
-            {% for person in people %}
-                <div class="{{ person.team }}" style="display: none; cursor:pointer; background-size: contain; background-image:url('/media/{{person.image2}}')" onclick="updateProfile({{ person.id}})"></div>
-            {% endfor %}
-		</div>
-    </div> 
-    
-        </div>
-
-        <script>
-
-        var currID = 2;
-        var currCategory = "WB";
-
-        updateProfile(currID);
-        updateCategory(currCategory);
-
-
-        function updateProfile(id) {
-        	console.log(id);
-            var selectedPerson = document.getElementById(id);
-            var lastPerson = document.getElementById(currID);
-            lastPerson.style.display = "none";
-            selectedPerson.style.display = "block";
-            currID = id;
-
-            //should generate graph here, pass in the whole person
         }
 
         function updateCategory(catID) {
