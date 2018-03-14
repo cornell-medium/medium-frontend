@@ -1,17 +1,48 @@
 {% extends "components/base.html" %}
 {% load static %}
 
-<div>
-	<div class="article">
+{% block resources %}
+    <link rel="stylesheet" href="{% static 'css/editorial.css' %}">
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+{% endblock %}
+
+{% block content %}
+	<div class="title"><span id="titlespan"><i><b>Editorial</b>Editorial</i></span></div>
+	<div class="article-outer">
+		<div class="article" id="a1" onmouseover="hoverArt(1)" onmouseleave="resetArt()" style="background-image:url('/media/people/github-logo.png')"></div>
+		<div class="article" id="a2" onmouseover="hoverArt(2)" onmouseleave="resetArt()" style="background-image:url('/media/people/85150bb187fa3ed4e3048eb627001fc2_1.jpg')"></div>
+		<div class="article" id="a3" onmouseover="hoverArt(3)" onmouseleave="resetArt()" style="background-image:url('/media/people/github-logo.png')"></div>
+		<div class="article" id="a4" onmouseover="hoverArt(4)" onmouseleave="resetArt()" style="background-image:url('/media/people/85150bb187fa3ed4e3048eb627001fc2_1.jpg')"></div>
+		<div class="article" id="a5" onmouseover="hoverArt(5)" onmouseleave="resetArt()" style="background-image:url('/media/people/github-logo.png')"></div>
+		<div class="article" id="a6" onmouseover="hoverArt(6)" onmouseleave="resetArt()" style="background-image:url('/media/people/85150bb187fa3ed4e3048eb627001fc2_1.jpg')"></div>
 	</div>
-	<div class="article">
-	</div>
-	<div class="article">
-	</div>
-	<div class="article">
-	</div>
-	<div class="article">
-	</div>
-	<div class="article">
-	</div>
-</div>
+	<div class="hovertext"><span id="hoverspan">Hover over an image to preview the story</span></div>
+
+<script>
+	colors = ["#F7F7F7","red","orange","yellow","green","blue","purple"]
+	titles = ["<i><b>Editorial</b>Editorial</i>","My","Very","Earnest","Mother","Just","Sat"]
+	x = document.getElementsByClassName("article");
+
+	function resetArt(){
+		document.body.style.backgroundColor = colors[0];
+		titlespan.style.color = "black";
+		titlespan.innerHTML = titles[0];
+		hoverspan.innerHTML = "Hover over an image to preview the story";
+		for(i=0;i<x.length;i++){
+    		x[i].style.height = "320px";
+    	}
+	}
+
+	function hoverArt(article){
+    	for(i=0;i<x.length;i++){
+    		x[i].style.height = "320px";
+    	}
+    	hoverspan.innerHTML = "";
+		titlespan.style.color = "white";
+		document.body.style.backgroundColor = colors[article];
+		titlespan.innerHTML = titles[article];
+		document.getElementById("a"+article).style.height = "350px";
+	}
+</script>
+
+{% endblock %}

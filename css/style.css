@@ -4,9 +4,14 @@ h1, h2, h3, h4, h5 {
 
 @font-face {
   font-family: 'Cooper Hewitt';
-  src: url("../fonts/CooperHewitt-Book.woff");
+  src: url("../fonts/CooperHewitt-LightItalic.woff");
+  font-style: italic;
+  font-weight: 200; }
+@font-face {
+  font-family: 'Cooper Hewitt';
+  src: url("../fonts/CooperHewitt-Light.woff");
   font-style: normal;
-  font-weight: 300; }
+  font-weight: 200; }
 @font-face {
   font-family: 'Cooper Hewitt';
   src: url("../fonts/CooperHewitt-BookItalic.woff");
