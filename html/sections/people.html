@@ -22,9 +22,7 @@
             </div>
 
 
-            <div>
-                <canvas class="stats" id="G{{ person.id }}"></canvas>
-            </div>
+            <canvas class="stats" id="G{{ person.id }}"></canvas>
 
             <script>
 
@@ -37,16 +35,20 @@
     
     <div class="people-wrapper">
         <ul class="team-nav">
-            <li style='width:15%'><a id = "WB" href="#" onclick='updateCategory("WB")'>web</a></li>
-            <li style='width:22%'><a id = "EV" href="#" onclick='updateCategory("EV")'>events</a></li>
+            <li style='width:13%'><a id = "EX" href="#" onclick='updateCategory("EX")'>exec</a></li>
+            <li style='width:18%'><a id = "EV" href="#" onclick='updateCategory("EV")'>events</a></li>
             <li style='width:18%'><a id = "DS" href="#" onclick='updateCategory("DS")'>design</a></li>
-            <li style='width:25%'><a id = "ED" href="#" onclick='updateCategory("ED")'>editorial</a></li>
+            <li style='width:20%'><a id = "ED" href="#" onclick='updateCategory("ED")'>editorial</a></li>
+            <li style='width:13%'><a id = "WB" href="#" onclick='updateCategory("WB")'>web</a></li>
         </ul>
 
         <div class="grid-container">
             {% for person in people %}
-                <div class="{{ person.team }}" style="display: none; cursor:pointer; background-size: contain; background-image:url('/media/{{person.image2}}')" onclick="updateProfile({{ person.id}}, 
-                    {{ person.stat1}}, {{ person.stat2}}, {{ person.stat3}}, {{ person.stat4}}, {{ person.stat5}}, {{ person.stat6}})"></div>
+                <div class="outer-{{ person.team }}" style="background-color: transparent; font-size: 18px">
+                    <div class="{{ person.team }}" style="display: none; cursor:pointer; background-size: contain; background-image:url('/media/{{person.image2}}')" onclick="updateProfile({{ person.id}}, 
+                        {{ person.stat1}}, {{ person.stat2}}, {{ person.stat3}}, {{ person.stat4}}, {{ person.stat5}}, {{ person.stat6}})"></div>
+                    {{person.name}}
+                </div>
             {% endfor %}
 		</div>
     </div> 
@@ -74,7 +76,7 @@
             var myChart = new Chart(ctx, {
                 type: 'radar',
                 data: {
-                    labels: ["connected", "deductive", "spatial", "auditory", "visual", "detailed"],
+                    labels: ["Crunchy", "Squishy", "Savory", "Smooth", "Firm", "Sweet"],
                     datasets: [{
                         label: 'character profile',
                         data: [stat1, stat2, stat3, stat4, stat5, stat6],
@@ -104,30 +106,35 @@
                     tooltips: {
                         enabled: false
                     },
-                    responsive: false,
                     scale: {
                         ticks: {
                             beginAtZero:true,
                             stepSize:20,
                             max: 100,
                             display: false
+                        },
+                        pointLabels: {
+                            fontSize: 12
                         }
-                    }
+                    },
                 }
             });
         }
 
         function updateCategory(catID) {
 
-        	var x = document.getElementsByClassName(catID);
-
-        	var y = document.getElementsByClassName(currCategory);
+        	var x = document.getElementsByClassName("outer-" + catID);
+            var y = document.getElementsByClassName("outer-" + currCategory);
+            var z = document.getElementsByClassName(catID);
 
         	for(j=0;j<y.length;j++){
         		y[j].style.display = 'none';
         	}
             for(i=0;i<x.length;i++){
                 x[i].style.display = 'block';
+            }
+            for(i=0;i<z.length;i++){
+                z[i].style.display = 'block';
             }
 
             document.getElementById(''+currCategory).style.fontWeight = 300;
