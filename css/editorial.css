@@ -1,0 +1,56 @@
+.article-outer{
+	margin: auto;
+	width: 720px;
+	height: 320px;
+	background-color: blue;
+}
+
+.top-title{
+	margin: auto; 
+	width: 720px; 
+	height: 23%;
+	position:relative;
+}
+
+.top-title span{
+	color: white;
+	position: absolute; 
+	bottom: 0; 
+	font-size: 36px; 
+	font-weight: 200;
+}
+
+.title{
+	margin: auto; 
+	width: 720px; 
+	margin-top: 36px;
+	position:relative;
+}
+
+.title span{
+	position: absolute; 
+	bottom: 0; 
+	font-size: 36px; 
+	font-weight: 200;
+}
+
+.hovertext{
+	padding-top: 2px;
+	font-size: 12px;
+	margin: auto; 
+	width: 720px; 
+	position: relative;
+}
+
+.hovertext span{
+	position: absolute;
+	right: 0;
+}
+
+.article {
+	cursor: pointer;
+	width: 120px;
+	height: 320px;
+	background-color: orange;
+	float: left;
+}

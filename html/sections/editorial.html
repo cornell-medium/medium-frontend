@@ -39,12 +39,16 @@
 		"Music Rocks The World",
 		"Climate Changing My Life",
 		"Roses Are Red",
-		"Vroom Vroom".
+		"Vroom Vroom",
 		"Life On Mars?"];
 
 	authors = [
 		"Alan Turing",
-		"Schrodinger Cat",]
+		"Schrodinger Cat",
+		"Chess Game",
+		"Safe Space",
+		"Evaluate Them",
+		"Programs Try"];
 
 
 	x = document.getElementsByClassName("article");
@@ -70,7 +74,7 @@
 
     	hoverspan.innerHTML = "";
 
-    	topspan.innerHTML = "<i><b>" + toptitles[article] + "</b>" + ;
+    	topspan.innerHTML = "<i><b>" + toptitles[article - 1] + "</b>   " + authors[article - 1] + "</i>";
 
 		titlespan.style.color = "white";
 		titlespan.style.fontSize = "20px";
