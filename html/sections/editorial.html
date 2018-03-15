@@ -7,10 +7,8 @@
 {% endblock %}
 
 {% block content %}
-	<div class="top-title">
-		<span id="topspan""></span>
-	</div>
 	<div class="title">
+		<span id="topspan""></span>
 		<span id="titlespan""><i><b>Editorial</b>Editorial</i></span>
 	</div>
 	<div class="article-outer">
@@ -74,7 +72,7 @@
 
     	hoverspan.innerHTML = "";
 
-    	topspan.innerHTML = "<i><b>" + toptitles[article - 1] + "</b>   " + authors[article - 1] + "</i>";
+    	topspan.innerHTML = "<i><b>" + toptitles[article - 1] + "</b>       " + authors[article - 1] + "</i>";
 
 		titlespan.style.color = "white";
 		titlespan.style.fontSize = "20px";
