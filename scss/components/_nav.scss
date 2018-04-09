@@ -5,6 +5,7 @@
     padding: $med-margin;
     color: white;
     font-weight: 300;
+    font-size: 16px;
     position: fixed; /* Stay in place */
     z-index: 998; /* Stay on top */
     height: 100vh;
@@ -107,7 +108,7 @@
         &__divider {
             display: none;
         }
-        
+
         &__blurb {
             display: none;
         }
@@ -125,7 +126,7 @@
 
     .content {
         margin-left: 180px;
-    
+
         .container {
             margin-left: 0px;
         }

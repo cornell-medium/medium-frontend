@@ -2,25 +2,43 @@
 {% load static %}
 
 {% block content %}
-<div class="header section" style="background-image: url('{% static 'imgs/raw.jpg' %}');">
+
+<div class="raw">
+
+<div class="header section" style="background-color: #111;">
 <div class="header__overlay">
-	<div class="header__text">
-		<div class="header__tagline">
-			come curious
-			<div style="text-align:right">leave inspired</div>
-		</div>
-		<div class="header__date">spring 2018</div>
-		<div class="header__rawexpo">raw expo</div>
-		<div class="header__rawexpo dark-grey">raw expo</div>
-		<div class="header__rawexpo light-grey">raw expo</div>
-		<div class="header__place">milstein dome</div>
-		<center><a
-		href="https://goo.gl/forms/G1MQIyqMogSxSkah2"
-		><button class="header__button"> Register Here </button></a></center>
+<div class="header__text">
+	<div class="header__date">
+		4.28.2018
+		<span style="float:right;">
+			MILSTEIN DOME
+		</span>
+	</div>
+	<div class="header__title">
+		RAW EXPO IV
 	</div>
 </div>
+<div class="header__marrow">
+		<p>
+			<span id="m">m</span> <br/>
+			<span id="scroll" class="glyphicon glyphicon-arrow-down"></span>
+		</p>
+	</div>
 </div>
-<div class="about section">
+
+
+<script>
+$(document).ready(function() {
+  $("#scroll").on("click", function() {
+    $('html, body').animate({
+          scrollTop: $(".about").offset().top
+      }, 600);
+  });
+
+});
+</script>
+</div>
+<div class="about section" style="background-image: url('{% static 'imgs/raw_posters.png' %}');">
 <div class="about__content">
 	<div class="about__header">
 	what is raw expo?
@@ -31,23 +49,31 @@
 	</div>
 </div>
 </div>
-<div class="video section">
-<iframe class="video__embed" src="https://www.youtube.com/embed/Z4S7TwntSUk" frameborder="0" allowfullscreen></iframe>
-</div>
-<div class="news section">
-<div class="news__content">
-	<div class="news__header">in the news</div>
-	<div class="news__accent"></div>
-	<div class="news__articles">
-		<div class="news__articles__title"><a class="news__articles__link" href="http://www.association.aap.cornell.edu/raw-expo/" target="_blank">RAW EXPO 2015 </a><div class="news__articles__author">-- Cornell Daily Sun</div></div>
-		<div class="news__articles__title"><a class="news__articles__link" href="http://cornellsun.com/2016/05/06/design-empathy-collaboration-raw-expo-at-milstein-hall/" target="_blank">RAW EXPO at Milstein Hall </a><div class="news__articles__author"> -- Cornell Daily Sun</div></div>
-		<div class="news__articles__title"><a class="news__articles__link" href="http://cornellsun.com/2017/05/02/raw-expo-iii-the-raw-appeal-of-collaboration/" target="_blank">RAW Expo III </a><div class="news__articles__author"> -- Cornell Daily Sun</div></div>
+
+<div class="picture section">
+	<div class="picture__img">
+		<img id="pic_1" src="{% static 'imgs/raw.jpg' %}"/>
+		<img id="pic_2" src="{% static 'imgs/raw_gallery_1.jpg' %}"/>
+		<img id="pic_3" src="{% static 'imgs/raw_gallery_2.jpg' %}"/>
+		<img id="pic_4" src="{% static 'imgs/raw_gallery_3.jpg' %}"/>
 	</div>
+
 </div>
+<div class="banner section" >
+	<div class="banner__banner">
+		<img src="{% static 'imgs/raw_banner.png' %}" />
+	</div>
+	<div class="banner__rsvp">
+		<a href="https://docs.google.com/forms/d/e/1FAIpQLSd7KuT7RCA27iglNCHU4_GgzycEPIYzN-3eYIbJVdGu0VFSVA/viewform">RSVP</a>
+	</div>
 </div>
 <div class="medium section">
 	<div class="medium__content">
 		-m-
 	</div>
 </div>
+</div>
+<div id="line1" class="line"><div class="inner"></div></div>
+<div id="line2" class="line"><div class="inner"></div></div>
+<div id="line3" class="line"><div class="inner"></div></div>
 {% endblock %}

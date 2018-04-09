@@ -14,11 +14,63 @@
 	width:100%;
 }
 
+.content {
+	position: relative;
+	height: 100%;
+
+}
+
+.raw {
+	position: relative ;
+	background-color: black;
+	height: 100%;
+}
+
+.line {
+  width: 2px;
+  margin: auto;
+  position: absolute;
+	background-color: white;
+  overflow-y: hidden;
+	height: 100%;
+}
+.inner {
+  position: absolute;
+  width:100%;
+  height: 100%;
+  background: white;
+  box-shadow: 0px 0px 30px 20px white;
+}
+
+
+#line1 {
+	height: 390%;
+	left:89.5%;
+	top:0%;
+
+}
+
+#line2 {
+	left: 87%;
+	height: 300%;
+	top:10%;
+	opacity: .5;
+
+}
+
+#line3 {
+	left: 85.5%;
+	height: 350%;
+	top: 10%;
+	opacity: .3;
+
+}
+
 .header {
 	background-color:$mid-grey;
 	position: relative;
 	height: 100vh;
-	min-height: 750px;
+	min-height: 650px;
 	background-size: cover;
   background-repeat: no-repeat;
 
@@ -30,6 +82,7 @@
 
 	&__text {
 		width:auto;
+		height: auto;
 		margin: auto auto;
 		position: absolute;
 		top: 45%; left: 50%;
@@ -37,61 +90,62 @@
 		color:white;
 	}
 
-	&__tagline {
+	&__title {
 		text-transform: uppercase;
 		font-style: italic;
 		font-size: 36px;
 		line-height: 30px;
+		top: 45%; left: 50%;
 	}
 
-	&__date {
-		text-transform: uppercase;
-		font-style: italic;
-		font-size: 24px;
-		padding-top:24px;
-		margin-bottom: -8px;
-		margin-left: 5px
+
+	&__marrow {
+		width:auto;
+		margin: auto auto;
+		position: absolute;
+		top: 90%; right: 15%;
+		transform: translate(-50%,-50%);
+		color:white;
+		font-size: 48px;
+		font-weight: 600;
+
+		p {
+			height: auto;
+		}
+
+		#scroll:hover {
+			cursor: pointer;
+			opacity: .9;
+		}
+
 	}
 
-	&__rawexpo {
-		line-height: 49px;
-		text-transform: uppercase;
-		font-family: 'Roboto';
-		font-size: 65px;
-		font-weight: 500;
-	}
 
-	&__place {
-		padding-left: 2px;
-		text-transform: uppercase;
-		line-height: 52px;
-		font-size: 45px;
-	}
 
-	&__button {
-		margin-left: $smallest-margin;
-		background: transparent;
-		color: $light-grey;
-		outline: none;
-		border: 3px solid $light-grey;
-		padding: $smallest-margin $small-margin $smallest-margin $small-margin;
-		cursor: pointer;
-		transition: $default-transition;
-	}
 }
 
 .about {
 	position: relative;
-	margin-top: $xlarge-margin;
-	margin-bottom: $xlarge-margin;
+	// margin-top: $xlarge-margin;
+	// margin-bottom: $xlarge- margin;
+	background-size: cover;
+  background-repeat: no-repeat;
+	height:70vh;
+	min-height: 400px;
+	color: #FFF;
 
 	&__content {
+		padding: 2% 12% 2% 2%;
 		width:60%;
+		position: absolute;
+		top: 25%;
+		background-color: #111;
+		right: 8%;
 		margin: auto;
 	}
 
 	&__header {
-		font-size: 48px;
+		font-size: 32px;
 		font-weight: 400;
 		font-family: 'Roboto';
 	}
@@ -104,8 +158,8 @@
 	}
 
 	&__text {
-		width:60%;
-		font-size: 18px;
+		width:100%;
+		font-size: 14px;
 	}
 
 	@media (max-width: 980px) {
@@ -122,117 +176,157 @@
 
 .medium {
 	position: relative;
-	top: $large-margin;
-	padding-top: $xlarge-margin;
-	padding-bottom: $xlarge-margin;
 	text-align: center;
+	background-color: black;
 
 	&__content {
 		font-family: 'Roboto';
 		font-size: 72px;
+		color: white;
 		font-weight: 700;
 	}
 }
 
-.video {
+.picture {
 	height:100vh;
+	min-height: 800px;
+	padding: 10% 10% 0% 0;
+	background: linear-gradient(black, white, white, black);
+
+
+	&__img {
+
+		position: relative;
+
+		img {
+		height:auto;
+		// padding: 2%;
+		filter: grayscale(100%);
+		}
+
+	}
+
+	#pic_1 {
+		width: 30%;
+	}
+
+	#pic_2 {
+		width: 68%;
+		padding-left: 2%;
+	}
+
+	#pic_3 {
+		width: 40%;
+		padding: 5%;
+	}
+
+	#pic_4 {
+		width: 35%;
+		padding: 2%;
+
+	}
+
+}
+
+.banner {
+	position: relative;
+	// margin-top: $xlarge-margin;
+	// margin-bottom: $xlarge- margin;
+	height:100vh;
+	min-height: 400px;
 	background-color: black;
 
-	&__embed {
-		height:100%;
-		width:100%;
-	}
-}
-
-.news {
-	position: relative;
-	margin-top: $xlarge-margin;
-	margin-bottom: $xlarge-margin;
-
-	&__content {
-		width:60%;
+	&__banner {
+		width:67%;
 		margin: auto;
-		position: relative;
-	}
+		margin-top: 100px;
+		left:16%;
+		position: absolute;
+		background-size: cover;
+	  background-repeat: no-repeat;
 
-	&__header {
-		font-size: 48px;
-		font-weight: 400;
-		font-family: 'Roboto';
-	}
-
-	&__accent {
-		width: 10px;
-		height: 110px;
-		background-color: $mid-grey;
-		position: relative;
-		float:left;
-		margin-left: 100px;
-		margin-right: 100px;
-	}
-
-	&__articles {
-		font-size:18px;
-
-		&__link {
-			color: black;
-			border-bottom: 3px solid transparent;
-			transition: $default-transition;
-
-			&:hover {
-				color: black;
-				text-decoration: none;
-				border-bottom: 3px solid black;
-			}
+		img {
+			width: 100%;
+			height: auto;
 		}
-		&__title {
-			font-weight: 500;
-			padding-top:$small-margin;
-		}
-		&__author {
-			display:inline-block;
+
+	}
+
+	&__rsvp {
+		top: 78%;
+		left: 47%;
+		position: absolute;
+
+		a {
+			color: white;
+			font-size: 30px;
 			font-style: italic;
-			font-weight: 300;
 		}
 	}
+
+
 }
 
-.gallery {
+@media (max-width: 450px) {
+    .picture {
+			padding-top: 50%;
+			width:100%;
+			margin: 0 auto;
+			padding-left: 10%;
+			min-height: 1200px;
 
-	&__row {
-		margin-bottom: $small-margin;
-		margin-left: $small-margin;
-		height: 33vh;
-	}
+			#pic_1, #pic_2, #pic_3, #pic_4 {
+				width: 100%;
+				padding: 1%;
+				text-align: center;
 
-	&__img {
-		margin-right: $small-margin;
-		width: 32%;
-		height: 100%;
-		float: left;
-		background-size: cover;
-		background-repeat: no-repeat;
-	}
+			}
+
+
+		}
+
+		.banner {
+			position: relative;
+			// margin-top: $xlarge-margin;
+			// margin-bottom: $xlarge- margin;
+			height:100vh;
+			min-height: 400px;
+			background-color: black;
+			overflow: hidden;
+
+			&__banner {
+				width:100%;
+				margin: auto;
+				margin-top: 100px;
+				left:-3%;
+				position: absolute;
+				background-size: cover;
+			  background-repeat: no-repeat;
+
+
+				img {
+					width: 100%;
+					height: auto;
+				}
+
+			}
+
+			&__rsvp {
+
+				position: absolute;
+				left: 40%;
+				top: 60%;
+
+				a {
+					color: white;
+					font-size: 30px;
+					font-style: italic;
+				}
+			}
+
+
+
+
 }
 
-.collaborators {
-	margin-top: $large-margin;
-	width: 100%;
-	text-align: center;
-
-	&__row {
-		display: inline-block;
-	}
-	&__img {
-		height: 150px;
-		width: 150px;
-		float: left;
-		background-size: cover;
-		background-repeat: no-repeat;
-		margin: $small-margin;
-	}
-
-	h1 {
-		margin-bottom: $large-margin;
-	}
 }
