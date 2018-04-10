@@ -15,7 +15,9 @@
 .banner {
   width: 70%;
   height: 100%;
+  background-color: #f7f7f7;
 }
+
 
 
 .narrative {
@@ -37,7 +39,7 @@
       }
     }
     &__img {
-        background-color: black;
+        // background-color: black;
         height: 382px;
         background-size: cover;
         border: solid 50px $white;
