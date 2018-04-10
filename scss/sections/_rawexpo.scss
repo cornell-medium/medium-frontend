@@ -44,7 +44,7 @@
 
 
 #line1 {
-	height: 390%;
+	height: 400%;
 	left:89.5%;
 	top:0%;
 
@@ -52,7 +52,7 @@
 
 #line2 {
 	left: 87%;
-	height: 300%;
+	height: 350%;
 	top:10%;
 	opacity: .5;
 
@@ -60,7 +60,7 @@
 
 #line3 {
 	left: 85.5%;
-	height: 350%;
+	height: 375%;
 	top: 10%;
 	opacity: .3;
 
@@ -80,14 +80,16 @@
 		background-color: rgba(0,0,0,.5)
 	}
 
-	&__text {
-		width:auto;
-		height: auto;
+	&__pic {
+		width:60%;
+		height: 40%;
 		margin: auto auto;
 		position: absolute;
 		top: 45%; left: 50%;
 		transform: translate(-50%,-50%);
 		color:white;
+		background-size: cover;
+	  background-repeat: no-repeat;
 	}
 
 	&__title {
@@ -103,7 +105,7 @@
 		width:auto;
 		margin: auto auto;
 		position: absolute;
-		top: 90%; right: 15%;
+		top: 90%; right: 50%;
 		transform: translate(-50%,-50%);
 		color:white;
 		font-size: 48px;
@@ -128,18 +130,19 @@
 	position: relative;
 	// margin-top: $xlarge-margin;
 	// margin-bottom: $xlarge- margin;
-	background-size: cover;
-  background-repeat: no-repeat;
-	height:70vh;
-	min-height: 400px;
-	color: #FFF;
+	// background-size: cover;
+  // background-repeat: no-repeat;
+	width: 100%;
+	height:auto;
+	min-height: 600px;
+	color: #111;
 
 	&__content {
 		padding: 2% 12% 2% 2%;
 		width:60%;
 		position: absolute;
-		top: 25%;
-		background-color: #111;
+		top: 17%;
+		background-color: #FFF;
 		right: 8%;
 		margin: auto;
 	}
@@ -178,10 +181,11 @@
 	position: relative;
 	text-align: center;
 	background-color: black;
+	padding-top: 5%;
 
 	&__content {
 		font-family: 'Roboto';
-		font-size: 72px;
+		font-size: 24px;
 		color: white;
 		font-weight: 700;
 	}
@@ -189,8 +193,8 @@
 
 .picture {
 	height:100vh;
-	min-height: 800px;
-	padding: 10% 10% 0% 0;
+	min-height: 950px;
+	padding: 18% 10% 0% 0;
 	background: linear-gradient(black, white, white, black);
 
 
@@ -201,28 +205,30 @@
 		img {
 		height:auto;
 		// padding: 2%;
-		filter: grayscale(100%);
+		// filter: grayscale(100%);
 		}
 
 	}
 
 	#pic_1 {
-		width: 30%;
+		width: 38%;
 	}
 
 	#pic_2 {
-		width: 68%;
-		padding-left: 2%;
+		width: 60%;
+		padding-left: 3%;
 	}
 
 	#pic_3 {
 		width: 40%;
-		padding: 5%;
+		padding-left: 5%;
+		padding-right: 2%;
 	}
 
 	#pic_4 {
-		width: 35%;
-		padding: 2%;
+		width: 40%;
+		padding-left: 1%;
+		padding-top: 3%;
 
 	}
 
@@ -237,10 +243,10 @@
 	background-color: black;
 
 	&__banner {
-		width:67%;
+		width:50%;
 		margin: auto;
 		margin-top: 100px;
-		left:16%;
+		left:25%;
 		position: absolute;
 		background-size: cover;
 	  background-repeat: no-repeat;
@@ -253,9 +259,11 @@
 	}
 
 	&__rsvp {
-		top: 78%;
-		left: 47%;
+		top: 84%;
+		left: 45%;
 		position: absolute;
+		padding: 1% 1% 0 1%;
+		border: 1px solid white;
 
 		a {
 			color: white;
@@ -268,6 +276,89 @@
 }
 
 @media (max-width: 450px) {
+
+	#line1 {
+		height: 480%;
+		left:89.5%;
+		top:0%;
+
+	}
+
+	#line2 {
+		left: 87%;
+		height: 450%;
+		top:10%;
+		opacity: .5;
+
+	}
+
+	#line3 {
+		left: 85.5%;
+		height: 490%;
+		top: 10%;
+		opacity: .3;
+
+	}
+
+	.header {
+		background-color:$mid-grey;
+		position: relative;
+		height: 100vh;
+		min-height: 650px;
+		background-size: cover;
+	  background-repeat: no-repeat;
+
+		&__overlay {
+			height: 100%;
+			width: 100%;
+			background-color: rgba(0,0,0,.5)
+		}
+
+		&__pic {
+			width:70%;
+			height: 15%;
+			margin: auto auto;
+			position: absolute;
+			top: 45%; left: 50%;
+			transform: translate(-50%,-50%);
+			color:white;
+			background-size: cover;
+		  background-repeat: no-repeat;
+		}
+
+
+		&__marrow {
+			width:auto;
+			margin: auto auto;
+			position: absolute;
+			top: 90%; right: 42%;
+			transform: translate(-50%,-50%);
+			color:white;
+			font-size: 48px;
+			font-weight: 600;
+
+		}
+
+
+
+	}
+
+
+	.about {
+		position: relative;
+		// margin-top: $xlarge-margin;
+		// margin-bottom: $xlarge- margin;
+		// background-size: cover;
+	  // background-repeat: no-repeat;
+		width: 100%;
+		height:auto;
+		min-height: 1200px;
+		color: #111;
+
+
+	}
+
+
     .picture {
 			padding-top: 50%;
 			width:100%;
@@ -295,10 +386,10 @@
 			overflow: hidden;
 
 			&__banner {
-				width:100%;
+				width:90%;
 				margin: auto;
 				margin-top: 100px;
-				left:-3%;
+				left:3.5%;
 				position: absolute;
 				background-size: cover;
 			  background-repeat: no-repeat;
@@ -316,6 +407,7 @@
 				position: absolute;
 				left: 40%;
 				top: 60%;
+
 
 				a {
 					color: white;

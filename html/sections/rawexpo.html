@@ -7,27 +7,19 @@
 
 <div class="header section" style="background-color: #111;">
 <div class="header__overlay">
-<div class="header__text">
-	<div class="header__date">
-		4.28.2018
-		<span style="float:right;">
-			MILSTEIN DOME
-		</span>
-	</div>
-	<div class="header__title">
-		RAW EXPO IV
+<div class="header__pic" style="background-image: url('{% static 'imgs/raw_logo.png' %}');">
 	</div>
 </div>
 <div class="header__marrow">
 		<p>
 			<span id="m">m</span> <br/>
-			<span id="scroll" class="glyphicon glyphicon-arrow-down"></span>
+
 		</p>
 	</div>
 </div>
 
 
-<script>
+<!-- <script>
 $(document).ready(function() {
   $("#scroll").on("click", function() {
     $('html, body').animate({
@@ -36,9 +28,9 @@ $(document).ready(function() {
   });
 
 });
-</script>
+</script> -->
 </div>
-<div class="about section" style="background-image: url('{% static 'imgs/raw_posters.png' %}');">
+<div class="about section" style="background-image: url('{% static 'imgs/raw_posters.jpg' %}');">
 <div class="about__content">
 	<div class="about__header">
 	what is raw expo?
@@ -46,16 +38,21 @@ $(document).ready(function() {
 	<div class="about__accent"></div>
 	<div class="about__text">
 	RAW EXPO is an exposition of the creative process across campus. Student groups from any of Cornell's colleges are free to show off their work. RAW puts an emphansis on works in progress, so projects in the process of iteration are ideal. RAW provides an environment for the public to give feedback on projects, and participating organizations gain visibility within Cornell's design community.
+	<br/><br/>
+	Our focus is to look at the iterations of the design process which are often hidden or covered up.
+	<br/><br/>
+	We want to see the prototypes that were never released because they were not considered polished enough and the rough sketches that were thrown out because they might not be well received. These often hidden products reflect points of vulnerability in the creative process.
+
 	</div>
 </div>
 </div>
 
 <div class="picture section">
 	<div class="picture__img">
-		<img id="pic_1" src="{% static 'imgs/raw.jpg' %}"/>
-		<img id="pic_2" src="{% static 'imgs/raw_gallery_1.jpg' %}"/>
-		<img id="pic_3" src="{% static 'imgs/raw_gallery_2.jpg' %}"/>
-		<img id="pic_4" src="{% static 'imgs/raw_gallery_3.jpg' %}"/>
+		<img id="pic_1" src="{% static 'imgs/raw.png' %}"/>
+		<img id="pic_2" src="{% static 'imgs/raw_gallery_1.png' %}"/>
+		<img id="pic_3" src="{% static 'imgs/raw_gallery_2.png' %}"/>
+		<img id="pic_4" src="{% static 'imgs/raw_gallery_3.png' %}"/>
 	</div>
 
 </div>
