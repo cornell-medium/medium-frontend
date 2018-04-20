@@ -16,6 +16,9 @@
 
 		</p>
 	</div>
+	<div id="line1" class="line"><div class="inner"></div></div>
+	<div id="line2" class="line"><div class="inner"></div></div>
+	<div id="line3" class="line"><div class="inner"></div></div>
 </div>
 
 
@@ -37,12 +40,21 @@ $(document).ready(function() {
 	</div>
 	<div class="about__accent"></div>
 	<div class="about__text">
-	RAW EXPO is an exposition of the creative process across campus. Student groups from any of Cornell's colleges are free to show off their work. RAW puts an emphansis on works in progress, so projects in the process of iteration are ideal. RAW provides an environment for the public to give feedback on projects, and participating organizations gain visibility within Cornell's design community.
-	<br/><br/>
+	In America we have a tendency to create a filter, a well-meaning deception, which hides the unpleasant and unlikeable. A common phenomenon is the use of “friendly” branding, the use of design to make products feel warm and approachable even if they are not.
 	Our focus is to look at the iterations of the design process which are often hidden or covered up.
 	<br/><br/>
 	We want to see the prototypes that were never released because they were not considered polished enough and the rough sketches that were thrown out because they might not be well received. These often hidden products reflect points of vulnerability in the creative process.
 	<br/><br/>
+	One may ask: what good will it do to expose this vulnerability?
+	<br/><br/>
+	Aside from stimulating critical thinking about the creative process it provides space for reflection: this way of thinking aims to guide the designer into elaborating on the idea that design holds intentions, purpose, and goals, giving concrete gestalt to a certain social purpose. Most importantly, however, the designer comes closer to understanding the complications which may arise if they overlook the “underexposed”.
+	<br/><br/>
+	RAW is an intellectually-stimulating dialogue for anyone who cares about the ethical and social implications of innovation and design, a call to action to take on social responsibility, NOT clubfest or career fair.
+
+	RAW is informative, NOT “just cool.”
+	RAW is interdisciplinary, NOT siloed.
+	RAW is a celebration of creativity, NOT just quarter cards and swag (although we will have them).
+	<br/>
 	RAW EXPO will be held on <b>April 26th</b> from <b>7:30pm - 9:30pm</b> in <b>Milstein Dome.</b>
 	<br/><a style="color:black; text-decoration:underline;" href="https://www.facebook.com/events/168087643848813/">RSVP</a> to see how your peers create.
 	</div>
@@ -51,11 +63,32 @@ $(document).ready(function() {
 
 <div class="picture section">
 	<div class="picture__img">
-		<img id="pic_1" src="{% static 'imgs/raw.png' %}"/>
-		<img id="pic_2" src="{% static 'imgs/raw_gallery_1.png' %}"/>
-		<img id="pic_3" src="{% static 'imgs/raw_gallery_2.png' %}"/>
-		<img id="pic_4" src="{% static 'imgs/raw_gallery_3.png' %}"/>
+		<div  class='picture__img__img'><img id='pic_1' src='{% static 'imgs/raw/1.jpg' %}'/></div>
+		<div  class='picture__img__img'><img id='pic_2' src='{% static 'imgs/raw/2.jpg' %}'/></div>
+		<div  class='picture__img__img'><img id='pic_3' src='{% static 'imgs/raw/3.jpg' %}'/></div>
+		<div  class='picture__img__img'><img id='pic_4' src='{% static 'imgs/raw/4.jpg' %}'/></div>
+		<div  class='picture__img__img'><img id='pic_5' src='{% static 'imgs/raw/5.jpg' %}'/></div>
+		<div  class='picture__img__img'><img id='pic_6' src='{% static 'imgs/raw/6.jpg' %}'/></div>
+		<div  class='picture__img__img'><img id='pic_7' src='{% static 'imgs/raw/7.jpg' %}'/></div>
+		<div  class='picture__img__img'><img id='pic_8' src='{% static 'imgs/raw/8.jpg' %}'/></div>
+		<div  class='picture__img__img'><img id='pic_9' src='{% static 'imgs/raw/9.jpg' %}'/></div>
+		<div class="picture__heading1"><h1>RAW EXPO</h1></div>
+		<div  class='picture__img__img'><img id='pic_10' src='{% static 'imgs/raw/10.jpg' %}'/></div>
+		<div  class='picture__img__img'><img id='pic_11' src='{% static 'imgs/raw/11.jpg' %}'/></div>
+		<div  class='picture__img__img'><img id='pic_12' src='{% static 'imgs/raw/12.jpg' %}'/></div>
+		<div  class='picture__img__img'><img id='pic_13' src='{% static 'imgs/raw/13.jpg' %}'/></div>
+		<div  class='picture__img__img'><img id='pic_14' src='{% static 'imgs/raw/14.jpg' %}'/></div>
+		<div  class='picture__img__img'><img id='pic_15' src='{% static 'imgs/raw/15.jpg' %}'/></div>
+		<div  class='picture__img__img'><img id='pic_16' src='{% static 'imgs/raw/16.jpg' %}'/></div>
+		<div class="picture__heading2"><h6>4.28.18<br/>MILSTEIN DOME<br/>730-930PM</h6></div>
+		<div  class='picture__img__img'><img id='pic_17' src='{% static 'imgs/raw/17.jpg' %}'/></div>
+		<div  class='picture__img__img'><img id='pic_18' src='{% static 'imgs/raw/18.jpg' %}'/></div>
+		<div  class='picture__img__img'><img id='pic_19' src='{% static 'imgs/raw/19.jpg' %}'/></div>
+		<div  class='picture__img__img'><img id='pic_20' src='{% static 'imgs/raw/20.jpg' %}'/></div>
+		<div id="last_pic" class='picture__img__img'><img style="filter: none;" id='pic_21' src='{% static 'imgs/raw/21.jpg' %}'/></div>
 	</div>
+
+
 
 </div>
 <div class="banner section" >
@@ -72,7 +105,5 @@ $(document).ready(function() {
 	</div>
 </div>
 </div>
-<div id="line1" class="line"><div class="inner"></div></div>
-<div id="line2" class="line"><div class="inner"></div></div>
-<div id="line3" class="line"><div class="inner"></div></div>
+
 {% endblock %}
