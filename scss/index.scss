@@ -31,26 +31,28 @@
         color: white;
         text-align: center;
         z-index: 10;
-    }
 
+        &__apply {
+            margin-left: $smallest-margin;
+            background: transparent;
 
-    &__apply {
-        margin-left: $smallest-margin;
-        background: transparent;
-
-        color:#FFF;
-        outline: none;
-        border: 3px solid #FFF;
-        padding: $smallest-margin $small-margin $smallest-margin $small-margin;
-        cursor: pointer;
-        transition: $default-transition;
-
-        &:hover {
-            opacity:.7;
-            text-decoration: none;
             color:#FFF;
+            outline: none;
+            border: 3px solid #FFF;
+            padding: $smallest-margin $small-margin $smallest-margin $small-margin;
+            cursor: pointer;
+            transition: $default-transition;
+
+            &:hover {
+                opacity:.7;
+                text-decoration: none;
+                color:#FFF;
+            }
         }
     }
+
+
+
 
 }
 
