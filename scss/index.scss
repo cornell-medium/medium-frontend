@@ -17,14 +17,16 @@
     &__promo {
         overflow: none;
         max-width: 100%;
-        min-height: 100vh;
+        min-height: 90vh;
         display: block;
-        background-color: #111;
+        background-color: #0b0b0b;
     }
 
-    &__videoclick:hover {
-      opacity:.4;
+    &__promo:hover {
+      opacity: 0.9;
+      cursor: pointer;
     }
+
 
     &__overlay {
         height: 100%;
