@@ -1,0 +1,67 @@
+{% extends "components/base.html" %}
+{% load static %}
+
+{% block resources %}
+<link rel="stylesheet" href="{% static 'css/teams.css' %}">
+<link rel="stylesheet" href="{% static 'css/index.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="narrative">
+    <div class="narrative__wrap">
+        <div class="narrative__img narrative__right" style="background-image: url('{% static 'imgs/events.jpg' %}');"></div>
+        <div class="narrative__text-wrap left">
+            <div class="narrative__text">
+                <div class="narrative__title">events team</div>
+                The events team develops and hosts numerous workshops, panels,
+                and talks throughout the semester, culminating with our annual
+                exposition of creative processes, RAW EXPO, in the spring.
+                Additionally, our team works to collaborate on events with
+                other organizations across campus, in line with Medium's mission
+                to further strengthen and expand Cornell's design community.
+            </div>
+        </div>
+    </div>
+    <div class="narrative__wrap">
+        <div class="narrative__img narrative__left" style="background-image: url('{% static 'imgs/design.jpg' %}');"></div>
+        <div class="narrative__text-wrap right">
+            <div class="narrative__text">
+                <div class="narrative__title">design team</div>
+                The design team is in charge of developing a compelling
+                brand around Medium. Members of the design team
+                work with the web, editorial, and events teams
+                to iterate upon and ideate design solutions that further
+                Medium’s mission.
+            </div>
+        </div>
+    </div>
+    <div class="narrative__wrap">
+        <div class="narrative__img narrative__right" style="background-image: url('{% static 'imgs/web.jpg' %}');"></div>
+        <div class="narrative__text-wrap left">
+            <div class="narrative__title"></div>
+            <div class="narrative__text">
+                <div class="narrative__title">web team</div>
+                The web team is responsible for maintaining Medium’s
+                site. Members of the web team learn how
+                to build and deploy web apps in Python, as well as
+                become proficient with Unix environments, version
+                control, front end web development, and UI + UX design.
+            </div>
+        </div>
+    </div>
+    <div class="narrative__wrap">
+        <div class="narrative__img narrative__left" style="background-image: url('{% static 'imgs/publication.jpg' %}');"></div>
+        <div class="narrative__text-wrap right">
+            <div class="narrative__title"></div>
+            <div class="narrative__text">
+                <div class="narrative__title">editorial team</div>
+                The editorial team researches and authors articles
+                concerning Cornell’s design community. Members
+                of the publication team work closely with
+                the web team in order to generate content for Medium’s
+                digital publication (new for 2017-18!).
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
