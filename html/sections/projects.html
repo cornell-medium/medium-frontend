@@ -1,0 +1,74 @@
+{% extends "components/base.html" %}
+{% load static %}
+
+{% block resources %}
+<link rel="stylesheet" href="{% static 'css/teams.css' %}">
+<link rel="stylesheet" href="{% static 'css/index.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="narrative">
+    <div class="narrative__wrap">
+        <div class="narrative__img narrative__right" style="background-image: url('{% static 'imgs/events.jpg' %}');"></div>
+        <div class="narrative__text-wrap left">
+            <div class="narrative__text">
+                <div class="narrative__title">events team</div>
+                The events team develops and hosts numerous workshops, panels,
+                and talks throughout the semester, culminating with our annual
+                exposition of creative processes, RAW EXPO, in the spring.
+                Additionally, our team works to collaborate on events with
+                other organizations across campus, in line with Medium's mission
+                to further strengthen and expand Cornell's design community.
+            </div>
+        </div>
+    </div>
+    <div class="narrative__wrap">
+        <div class="narrative__img narrative__left" style="background-image: url('{% static 'imgs/design.jpg' %}');"></div>
+        <div class="narrative__text-wrap right">
+            <div class="narrative__text">
+                <div class="narrative__title">competition team</div>
+                The Medium Competition Team will participate in various student design contests throughout the year.
+                Schedule and participation is flexible based on competition deadlines but ideally the core team will
+                work together to craft the best submission possible.
+            </div>
+        </div>
+    </div>
+    <div class="narrative__wrap">
+        <div class="narrative__img narrative__right" style="background-image: url('{% static 'imgs/web.jpg' %}');"></div>
+        <div class="narrative__text-wrap left">
+            <div class="narrative__title"></div>
+            <div class="narrative__text">
+                <div class="narrative__title">web project</div>
+                This team will work on creating an installment on the medium website that visualizes and/or promotes design.
+                There will be need for front and back end developers as well as designers to work on the UX and UI aspects.
+            </div>
+        </div>
+    </div>
+    <div class="narrative__wrap">
+        <div class="narrative__img narrative__left" style="background-image: url('{% static 'imgs/publication.jpg' %}');"></div>
+        <div class="narrative__text-wrap right">
+            <div class="narrative__title"></div>
+            <div class="narrative__text">
+                <div class="narrative__title">editorial: utopia</div>
+                An editorial project that will curate both external and internal submissions on the design,
+                critique and speculation on the steps our society is taking to achieve utopia in the distant future.
+                Topics for submissions can range from any aspect of society (Environment, government, economy, technology,
+                ethics, etc), and form for submission can range from essays to fictional creations, critiques, creative writing,
+                artworks, literary analyses, research, op-eds, etc.   Potential sub project focused on destigmatizing mental health.
+            </div>
+        </div>
+    </div>
+    <div class="narrative__wrap">
+        <div class="narrative__img narrative__right" style="background-image: url('{% static 'imgs/raw_gallery_2.jpg' %}');"></div>
+        <div class="narrative__text-wrap left">
+            <div class="narrative__text">
+                <div class="narrative__title">design tree</div>
+                The Design Tree team will be creating an interactive pop-up that raises awareness about design.  There will be a virtual and a
+                physical element to this. The virtual element is a network graph of people where individuals can add drawings, music, etc. to
+                their node and connect with others. The physical element would be a physical tree that moves around campus with design prompts
+                as "leaves". An individual could then open up an app/website and answer the prompt on their node.
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
